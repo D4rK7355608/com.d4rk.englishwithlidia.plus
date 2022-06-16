@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="@string/privacy_policy"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/terms_of_service"
+        android:title="@string/terms_of_service"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/code_of_conduct"
+        android:title="@string/code_of_conduct"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/feedback"
+        android:title="@string/feedback"
+        app:showAsAction="never"/>
+</menu>

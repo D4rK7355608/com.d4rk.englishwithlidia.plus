@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#e3968f</color>
+    <color name="colorAccent1">#c57c76</color>
+    <color name="colorAccent2">#a5625d</color>
+    <color name="colorAccent3">#8a4b47</color>
+    <color name="colorAccent4">#6e3431</color>
+    <color name="colorAccent5">#fefbfa</color>
+    <color name="colorAccent6">#370a0a</color>
+    <color name="colorBackground">#f9eeec</color>
+    <color name="colorBackground2">#fefbfa</color>
+    <color name="colorBackground3">#fefbfa</color>
+    <color name="colorBackground4">#fcedea</color>
+    <color name="colorBackground5">#fcedea</color>
+    <color name="colorContainer">#f9dbd7</color>
+    <color name="colorSurface">#725755</color>
+    <color name="colorDivider">#c57c76</color>
+    <color name="colorTransparent">@android:color/transparent</color>
+</resources>

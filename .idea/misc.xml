@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_about.xml" value="0.136" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_feedback.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_github.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_libraries.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_stars.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/menu_card.xml" value="0.136" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/banner.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_about.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_community.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_find_us.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_flag.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_github.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_home.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_language.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_lessons.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_libraries.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_media_play.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_pause.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_play.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_play_pause.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_replay.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_settings.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_settings_themes.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_settings_tinted.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_twitter.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_web.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_xda.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/ic_youtube.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable/menu_card.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout-v26/fragment_about.xml" value="0.2828197551709582" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout-v26/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_feedback.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_language.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_lesson1.xml" value="0.2777777777777778" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_lesson2.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_rate.xml" value="0.1796875" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/app_bar_main.xml" value="0.1703125" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/content_main.xml" value="0.2" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/fragment_about.xml" value="0.22" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/fragment_lesson1.xml" value="0.17239583333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/fragment_lessons.xml" value="0.22" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/nav_header_main.xml" value="0.2" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/settings_activity.xml" value="0.2" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/menu/about_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/menu/activity_main_drawer.xml" value="3.0" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/menu/menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher_round.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/xml/settings_preferences.xml" value="0.16" />
+        <entry key="..\:/Users/d4rk7/Desktop/com.d4rk.englishwithlidia.plus/app/src/main/res/layout-v26/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/d4rk7/Desktop/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/fragment_lessons.xml" value="0.3489583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

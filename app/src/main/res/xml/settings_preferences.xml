@@ -1,0 +1,24 @@
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.PreferenceCategory
+        app:title="@string/settings"
+        android:icon="@drawable/ic_settings_tinted">
+        <androidx.preference.ListPreference
+            app:defaultValue="@string/theme_def_value"
+            app:entries="@array/dark_mode_entries"
+            app:entryValues="@array/dark_mode_values"
+            android:icon="@drawable/ic_settings_themes"
+            app:key="@string/theme"
+            app:title="@string/theme"
+            app:useSimpleSummaryProvider="true"/>
+        <androidx.preference.Preference
+            app:title="@string/language"
+            android:icon="@drawable/ic_language"
+            android:summary="Set application language.">
+            <intent
+                android:targetPackage="com.d4rk.englishwithlidia.plus"
+                android:targetClass="com.d4rk.englishwithlidia.plus.ui.settings.LanguageActivity"/>
+        </androidx.preference.Preference>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

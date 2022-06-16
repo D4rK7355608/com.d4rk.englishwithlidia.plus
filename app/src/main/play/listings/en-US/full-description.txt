@@ -1,0 +1,47 @@
+📚English with Lidia Plus📚
+
+╔╦╦╦═╦╗╔═╦═╦══╦═╗
+║║║║╩╣╚╣═╣║║║║║╩╣
+╚══╩═╩═╩═╩═╩╩╩╩═╝
+
+Learn English by reading our blog. 📗 Or, instead you can listen to us. 📻 This is the official app developed by D4rK for Lidia, our English teacher who want to give us best lessons. 📖
+This app is made with love and passion for everyone! 💖
+
+🌐 Official website/blog: https://sites.google.com/view/englishwithlidia/home
+
+⚠ Opening Issues⚠
+Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues
+
+• Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. For support, informations and requests, please contact d4rk7355608@gmail.com.
+
+Create an audio/text/general bug. 🐞
+
+GiHub: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus
+
+💿 Features!
+⭐️ No internet required.
+⭐️ Material-You.
+⭐️ Free.
+⭐️ Fast and lightweight.
+⭐️ Play audio instead of reading.
+⭐️ Open source & secure.
+
+🛑 Disclaimer!
+• English with Lidia Plus is a blog type app witch can help you learn english with relaxing and easy to understand lessons for everyone.
+• Some music from our audios belong to their respective owners and principal voice is from Lidia Melinte.
+
+👨‍💻 More about me:
+● Google Developers - https://developers.google.com/profile/u/D4rK7355608
+● XDA - https://forum.xda-developers.com/m/d4rk7355608.10095012/
+● YouTube - https://www.youtube.com/c/D4rK7355608
+● DeviantArt - https://www.deviantart.com/d4rk7355608
+● GameJolt - https://gamejolt.com/@D4rK_S-A-D
+● Twitter - https://twitter.com/D4rK7355608/
+● GitHub - https://github.com/D4rK7355608
+
+💬 Feedback!
+If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
+
+❗️Note❗️ Some features are still in progress or needs more improvements and investigations.
+
+Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.

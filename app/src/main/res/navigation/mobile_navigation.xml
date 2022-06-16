@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.d4rk.englishwithlidia.plus.ui.home.HomeFragment"
+        android:label="@string/home"/>
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.d4rk.englishwithlidia.plus.ui.about.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/nav_lessons"
+        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.LessonsFragment"
+        android:label="@string/lessons"
+        tools:layout="@layout/fragment_lessons"/>
+    <activity
+        android:id="@+id/nav_lesson1"
+        android:label="@string/lesson_1"
+        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity"/>
+    <activity
+        android:id="@+id/nav_lesson2"
+        android:label="@string/lesson_2"
+        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson2Activity"/>
+    <activity
+        android:id="@+id/nav_settings"
+        android:name="com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_activity"/>
+</navigation>
