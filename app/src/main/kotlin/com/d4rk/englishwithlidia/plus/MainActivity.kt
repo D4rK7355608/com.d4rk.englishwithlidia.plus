@@ -4,6 +4,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -17,6 +19,7 @@ import androidx.preference.PreferenceManager
 import com.d4rk.englishwithlidia.plus.databinding.ActivityMainBinding
 import com.d4rk.englishwithlidia.plus.ui.feedback.FeedbackActivity
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.textview.MaterialTextView
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -63,6 +66,25 @@ class MainActivity : AppCompatActivity() {
         R.id.terms_of_service -> {
             val newIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/code-of-conduct"))
             startActivity(newIntent)
+            true
+        }
+        R.id.more_apps -> {
+            val alertDialog: AlertDialog.Builder = AlertDialog.Builder(this)
+            alertDialog.setTitle(R.string.more_apps)
+            val view: View = layoutInflater.inflate(R.layout.fragment_dialog, null)
+            val musicSleepTimerString: MaterialTextView = view.findViewById(R.id.musicSleepTimerString)
+            alertDialog.setView(view)
+            alertDialog.create()
+            view.findViewById<View?>(R.id.musicSleepTimer)?.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus"))
+                startActivity(intent)
+            }
+            musicSleepTimerString.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus"))
+                startActivity(intent)
+            }
+            alertDialog.setNegativeButton(R.string.cool, null)
+            alertDialog.show()
             true
         }
         R.id.feedback -> {

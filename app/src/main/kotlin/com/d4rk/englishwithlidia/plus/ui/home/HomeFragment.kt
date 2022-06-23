@@ -20,15 +20,11 @@ class HomeFragment : Fragment(R.layout.fragment_lessons) {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.ourWebSiteBtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/englishwithlidia"))
-            if (intent.resolveActivity(requireContext().packageManager) != null) {
-                startActivity(intent)
-            }
+            startActivity(intent)
         }
         binding.findUsBtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/lidia.melinte"))
-            if (intent.resolveActivity(requireContext().packageManager) != null) {
-                startActivity(intent)
-            }
+            startActivity(intent)
         }
         binding.lesson1Banner.setOnClickListener {
             val intent = Intent(activity, Lesson1Activity::class.java)

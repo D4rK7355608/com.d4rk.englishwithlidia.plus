@@ -18,7 +18,7 @@ class AboutFragment : Fragment(R.layout.fragment_about) {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         ViewModelProvider(this)[ViewModel::class.java]
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
-        val content = context !!.getString(R.string.app_version, BuildConfig.VERSION_NAME)
+        val content = requireContext().getString(R.string.app_version, BuildConfig.VERSION_NAME)
         binding.itemSettingsMoreAboutVersion.text = content
         binding.itemSettingsMoreAboutIcon.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608"))
@@ -37,7 +37,7 @@ class AboutFragment : Fragment(R.layout.fragment_about) {
             startActivity(intent)
         }
         binding.itemSettingsMoreAboutGithub.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/D4rK7355608"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus"))
             startActivity(intent)
         }
         binding.itemSettingsMoreAboutTwitter.setOnClickListener {
