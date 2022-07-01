@@ -1,0 +1,15 @@
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.PreferenceCategory
+        app:title="@string/normal"
+        app:iconSpaceReserved="false">
+        <androidx.preference.Preference
+            app:title="@string/internet"
+            app:summary="@string/internet_sum"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"
+            android:enabled="false"
+            android:shouldDisableView="false"/>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

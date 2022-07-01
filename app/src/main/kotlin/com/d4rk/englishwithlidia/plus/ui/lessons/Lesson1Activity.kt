@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.ActivityLesson1Binding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.kieronquinn.monetcompat.app.MonetCompatActivity
 import kotlin.math.ceil
 import kotlin.math.roundToInt
-class Lesson1Activity: AppCompatActivity(), Runnable  {
+class Lesson1Activity: MonetCompatActivity(), Runnable  {
     private var mediaPlayer: MediaPlayer = MediaPlayer()
     private lateinit var seekBar: SeekBar
     private var wasPlaying = false

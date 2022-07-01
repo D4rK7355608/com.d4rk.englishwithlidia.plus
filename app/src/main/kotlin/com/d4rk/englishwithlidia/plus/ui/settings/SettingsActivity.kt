@@ -1,13 +1,13 @@
 package com.d4rk.englishwithlidia.plus.ui.settings
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.SettingsActivityBinding
-class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
+import com.kieronquinn.monetcompat.app.MonetCompatActivity
+class SettingsActivity : MonetCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var binding: SettingsActivityBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

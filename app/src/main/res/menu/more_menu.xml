@@ -14,11 +14,23 @@
         android:title="@string/code_of_conduct"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/more_apps"
-        android:title="@string/more_apps"
+        android:id="@+id/check_for_updates"
+        android:title="@string/check_for_updates"
         app:showAsAction="never"/>
     <item
         android:id="@+id/feedback"
         android:title="@string/feedback"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/changelog"
+        android:title="@string/changelog"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/more_apps"
+        android:title="@string/more_apps"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/permissions"
+        android:title="@string/permissions"
         app:showAsAction="never"/>
 </menu>

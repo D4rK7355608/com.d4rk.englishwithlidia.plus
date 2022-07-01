@@ -1,4 +1,5 @@
 package com.d4rk.englishwithlidia.plus
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -18,6 +19,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.d4rk.englishwithlidia.plus.databinding.ActivityMainBinding
 import com.d4rk.englishwithlidia.plus.ui.feedback.FeedbackActivity
+import com.d4rk.englishwithlidia.plus.ui.permissions.PermissionsActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.textview.MaterialTextView
 class MainActivity : AppCompatActivity() {
@@ -61,6 +63,24 @@ class MainActivity : AppCompatActivity() {
         R.id.code_of_conduct -> {
             val newIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/code-of-conduct"))
             startActivity(newIntent)
+            true
+        }
+        R.id.check_for_updates -> {
+            val newIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus"))
+            startActivity(newIntent)
+            true
+        }
+        R.id.permissions -> {
+            val intent = Intent(this, PermissionsActivity::class.java)
+            startActivity(intent)
+            true
+        }
+        R.id.changelog -> {
+            val alertDialog = AlertDialog.Builder(this)
+            alertDialog.setTitle(R.string.changelog)
+            alertDialog.setMessage(R.string.changes)
+            alertDialog.setPositiveButton("Cool!") { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+            alertDialog.show()
             true
         }
         R.id.terms_of_service -> {

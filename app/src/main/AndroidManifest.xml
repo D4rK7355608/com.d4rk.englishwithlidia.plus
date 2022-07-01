@@ -64,6 +64,14 @@
                 android:value=".ui.settings.SettingsActivity"/>
         </activity>
         <activity
+            android:name=".ui.permissions.PermissionsActivity"
+            android:exported="false"
+            android:label="@string/permissions">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.permissions.PermissionsActivity"/>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">

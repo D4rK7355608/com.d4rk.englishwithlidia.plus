@@ -1,12 +1,12 @@
 package com.d4rk.englishwithlidia.plus.ui.feedback
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.ActivityFeedbackBinding
 import com.google.android.play.core.review.ReviewManager
 import com.google.android.play.core.review.ReviewManagerFactory
-class FeedbackActivity : AppCompatActivity() {
+import com.kieronquinn.monetcompat.app.MonetCompatActivity
+class FeedbackActivity : MonetCompatActivity() {
     private lateinit var reviewManager: ReviewManager
     private lateinit var binding: ActivityFeedbackBinding
     override fun onCreate(savedInstanceState: Bundle?) {

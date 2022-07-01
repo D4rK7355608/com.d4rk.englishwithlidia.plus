@@ -7,6 +7,9 @@
     <string name="home">Home.</string>
     <string name="about">About.</string>
     <string name="cool">Cool!</string>
+    <string name="check_for_updates">Check for updates.</string>
+    <string name="changelog">Changelog.</string>
+    <string name="permissions">Permissions.</string>
     <string name="music_sleep_timer">Music Sleep Timer.</string>
     <string name="feedback">Feedback.</string>
     <string name="more_apps">More apps.</string>
@@ -25,6 +28,11 @@
     <string name="try_right_now">Try right now.</string>
     <string name="theme">Theme.</string>
     <string name="theme_def_value">MODE_NIGHT_FOLLOW_SYSTEM</string>
+
+    <string name="normal">Normal!</string>
+    <string name="internet">Internet.</string>
+    <string name="internet_sum">Used to send error reports. This can be disabled in settings.</string>
+
     <string name="find_us">Find us on</string>
     <string name="about_us">About us</string>
     <string name="website">Website</string>
@@ -73,4 +81,12 @@
     <string name="lesson2SumPart10">Mai există și expresia <i><b>blue color worker</b></i>, muncitorii care prestează munca fizică, <i><b>blue color worker, distinct de white color worker</b></i>, de cei care prestează munca la birou. Dar mai există și <i><b>pink color</b></i>, pentru femeile care, sunt secretare sau au munca de asistente, <i><b>pink color related to jobs and secretarial work</b></i>. <i><b>Cu pink</b></i>, ar fi <i><b>pink elephants</b></i> frumoasă expresie care arată că există o halucinație undeva în creierul nostru sau <i><b>pink slip</b></i>, o metaforă folosită pentru atunci când cineva este concendiat, iar <i><b>fired to received a pinks slip</b></i>, n-am vrea să se întâmple asta.</string>
     <string name="lesson2SumPart11">Ummm.. cu verde, verde îmi place foarte mult expresia <i><b>have a green thumb</b></i> de data aceasta nu am folosit <i><b>I am, ci am folosit to have, have a green thumb</b></i>, avea talent pentru grădinărit, <i><b>I think I have a green thumb. I like flowers and I loved plant and take care of them</b></i>.</string>
     <string name="lesson2SumPart12"><i><b>Red</b></i>, pentru exprimarea stărilor mai puternice. <i><b>I see red, I become very angry!</b></i> Văd rosu înaintea ochilor, <i><b>I see red sau I am in the red. I am in red, I am in depth</b></i>, în datorii, am datorii. <i><b>Red herring</b></i>, o expresie folosită pentru ceva care ne distrage atenția, <i><b>something unimportant that distract attention from the real issue. A red herring. I have something important to write but there is the red herring that disturbs me</b></i>. Ceva care ne distrage. <i><b>Red tape</b></i>, birocrație, mai ales în România. <i><b>I had to go to much red tape to open this company</b></i>.</string>
+    <string name="changes"><b>Version 1.1_r1:\n</b>
+        • Added Check for updates button;\n
+        • Added Changelog;\n
+        • Fixed some icons;\n
+        • Added some bindings;\n
+        • Under the hood changes.\n
+        <br> </br>
+    </string>
 </resources>
