@@ -35,11 +35,11 @@ __English with Lidia Plus is 100% free, open source, ad free, and have a clean d
 
 ## 💿 Features!
 - ⭐️ No internet required.
-- ⭐️ Material-You.
-- ⭐️ Free.
+- ⭐️ Adaptive themes + Material-You.
+- ⭐️ Simple and easy to use.
 - ⭐️ Fast and lightweight.
 - ⭐️ Play audio instead of reading.
-- ⭐️ Open source & secure.
+- ⭐️ Free Open source & secure.
 
 __❗️Note❗️__ Some features are still in progress or needs more improvements and investigations.
 

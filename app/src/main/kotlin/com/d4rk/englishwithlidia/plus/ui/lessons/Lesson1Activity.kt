@@ -1,54 +1,44 @@
 package com.d4rk.englishwithlidia.plus.ui.lessons
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.view.View
 import android.widget.SeekBar
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.ActivityLesson1Binding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kieronquinn.monetcompat.app.MonetCompatActivity
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 class Lesson1Activity: MonetCompatActivity(), Runnable  {
     private var mediaPlayer: MediaPlayer = MediaPlayer()
-    private lateinit var seekBar: SeekBar
     private var wasPlaying = false
-    private lateinit var fab: FloatingActionButton
+    private var startPoint = 0
     private lateinit var binding: ActivityLesson1Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLesson1Binding.inflate(layoutInflater)
-        setContentView(R.layout.activity_lesson1)
-        fab = findViewById(R.id.lesson1PlayButton)
-        fab.setOnClickListener { playSong() }
-        val seekBarHint = findViewById<TextView>(R.id.lesson1LengthText)
-        seekBar = findViewById(R.id.lesson1Seekbar)
-        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        setContentView(binding.root)
+        binding.lesson1PlayButton.setOnClickListener {
+            playSong()
+        }
+        binding.lesson1Seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onStartTrackingTouch(seekBar: SeekBar) {
-                seekBarHint.visibility = View.INVISIBLE
+                startPoint = seekBar.progress
             }
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromTouch: Boolean) {
-                seekBarHint.visibility = View.INVISIBLE
-                val x = ceil((progress / 1000f).toDouble()).toInt()
-                val i = "0:$x"
-                if (x < 10) seekBarHint.text = i else seekBarHint.text = i
+                ceil((progress / 1000f).toDouble()).toInt()
                 val percent = progress / seekBar.max.toDouble()
                 val offset = seekBar.thumbOffset
                 val seekWidth = seekBar.width
-                val `val` = (percent * (seekWidth - 2 * offset)).roundToInt()
-                val labelWidth = seekBarHint.width
-                seekBarHint.x = (offset + seekBar.x + `val` - (percent * offset).roundToInt() - (percent * labelWidth / 2).roundToInt())
+                (percent * (seekWidth - 2 * offset)).roundToInt()
                 if (progress > 0 && !mediaPlayer.isPlaying) {
-                    clearMediaPlayer()
-                    fab.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_media_play))
-                    this@Lesson1Activity.seekBar.progress = 0
+                    onDestroy()
+                    binding.lesson1PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_media_play))
+                    this@Lesson1Activity.binding.lesson1Seekbar.progress = 0
                 }
             }
             override fun onStopTrackingTouch(seekBar: SeekBar) {
                 if (mediaPlayer.isPlaying) {
-                    mediaPlayer.seekTo(seekBar.progress)
+                    mediaPlayer.seekTo(binding.lesson1Seekbar.progress)
                 }
             }
         })
@@ -56,20 +46,20 @@ class Lesson1Activity: MonetCompatActivity(), Runnable  {
     private fun playSong() {
         try {
             if (mediaPlayer.isPlaying) {
-                clearMediaPlayer()
-                seekBar.progress = 0
+                onDestroy()
+                binding.lesson1Seekbar.progress = 0
                 wasPlaying = true
-                fab.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_play))
+                binding.lesson1PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_play))
             }
-            if (! wasPlaying) {
-                fab.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_pause))
+            if (!wasPlaying) {
+                binding.lesson1PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_pause))
                 val descriptor = assets.openFd("lesson1.ogg")
                 mediaPlayer.setDataSource(descriptor.fileDescriptor, descriptor.startOffset, descriptor.length)
                 descriptor.close()
                 mediaPlayer.prepare()
                 mediaPlayer.setVolume(0.5f, 0.5f)
                 mediaPlayer.isLooping = false
-                seekBar.max = mediaPlayer.duration
+                binding.lesson1Seekbar.max = mediaPlayer.duration
                 mediaPlayer.start()
                 Thread(this).start()
             }
@@ -88,18 +78,11 @@ class Lesson1Activity: MonetCompatActivity(), Runnable  {
             } catch (e: Exception) {
                 return
             }
-            seekBar.progress = currentPosition
+            binding.lesson1Seekbar.progress = currentPosition
         }
     }
     override fun onDestroy() {
-        if (!mediaPlayer.isPlaying) {
-            mediaPlayer.stop()
-            clearMediaPlayer()
-        }
-        super.onDestroy()
-    }
-    private fun clearMediaPlayer() {
         mediaPlayer.stop()
-        mediaPlayer.release()
+        super.onDestroy()
     }
 }

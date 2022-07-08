@@ -8,7 +8,8 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.d4rk.englishwithlidia.plus.ui.home.HomeFragment"
-        android:label="@string/home"/>
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/nav_about"
         android:name="com.d4rk.englishwithlidia.plus.ui.about.AboutFragment"
@@ -22,11 +23,13 @@
     <activity
         android:id="@+id/nav_lesson1"
         android:label="@string/lesson_1"
-        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity"/>
+        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity"
+        tools:layout="@layout/activity_lesson1"/>
     <activity
         android:id="@+id/nav_lesson2"
         android:label="@string/lesson_2"
-        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson2Activity"/>
+        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson2Activity"
+        tools:layout="@layout/activity_lesson2"/>
     <activity
         android:id="@+id/nav_settings"
         android:name="com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity"
