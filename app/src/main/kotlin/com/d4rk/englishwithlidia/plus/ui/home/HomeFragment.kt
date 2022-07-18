@@ -26,7 +26,7 @@ class HomeFragment : Fragment(R.layout.fragment_lessons) {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/lidia.melinte"))
             startActivity(intent)
         }
-        binding.lesson1Banner.setOnClickListener {
+        binding.lesson1Card.setOnClickListener {
             val intent = Intent(activity, Lesson1Activity::class.java)
             startActivity(intent)
         }

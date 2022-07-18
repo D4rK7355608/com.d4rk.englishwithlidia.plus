@@ -1,3 +1,13 @@
+# Version 1.3_r1:
+- Target SDK now is 26;
+- Removed unused resources;
+- Added mail to dev;
+- Changed themes;
+- Changed colors;
+- Added launcher shortcuts;
+- Added license in more menu;
+- Maybe is more but I forget.
+
 # Version 1.2_r1:
 - Fixed theme settings;
 - Reduced app size;

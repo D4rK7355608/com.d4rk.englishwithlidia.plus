@@ -2,11 +2,12 @@
 <resources>
     <color name="colorAccent">#8a4b47</color>
     <color name="colorBackground">#231918</color>
-    <color name="colorBackground2">#392e2c</color>
-    <color name="colorBackground3">#504442</color>
-    <color name="colorBackground4">#392e2c</color>
-    <color name="colorBackground5">#392e2c</color>
+    <color name="colorOverflowMenuBackground">#504442</color>
+    <color name="colorDialogBackground">#392e2c</color>
     <color name="colorContainer">#402b29</color>
     <color name="colorSurface">#c2a3a0</color>
     <color name="colorDivider">#a5625d</color>
+    <color name="colorLauncherBackground">#2D2D2D</color>
+    <color name="colorShortcutBackground">#392e2c</color>
+    <color name="colorShortcutForeground">#c2a3a0</color>
 </resources>

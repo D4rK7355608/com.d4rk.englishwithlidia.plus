@@ -8,12 +8,12 @@
     <color name="colorAccent5">#fefbfa</color>
     <color name="colorAccent6">#370a0a</color>
     <color name="colorBackground">#f9eeec</color>
-    <color name="colorBackground2">#fefbfa</color>
-    <color name="colorBackground3">#fefbfa</color>
-    <color name="colorBackground4">#fcedea</color>
-    <color name="colorBackground5">#fcedea</color>
+    <color name="colorOverflowMenuBackground">#fcedea</color>
+    <color name="colorDialogBackground">#fcedea</color>
     <color name="colorContainer">#f9dbd7</color>
     <color name="colorSurface">#725755</color>
     <color name="colorDivider">#c57c76</color>
-    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="colorLauncherBackground">#FFFFFF</color>
+    <color name="colorShortcutBackground">#f9dbd7</color>
+    <color name="colorShortcutForeground">#725755</color>
 </resources>

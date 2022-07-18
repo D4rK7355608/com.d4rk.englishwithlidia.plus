@@ -14,6 +14,10 @@
         android:title="@string/code_of_conduct"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/license"
+        android:title="@string/license"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/check_for_updates"
         android:title="@string/check_for_updates"
         app:showAsAction="never"/>

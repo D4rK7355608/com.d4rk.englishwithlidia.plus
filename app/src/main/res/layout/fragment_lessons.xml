@@ -33,15 +33,15 @@
                 android:layout_width="320dp"
                 android:layout_height="155dp"
                 android:layout_marginTop="12dp"
-                app:cardCornerRadius="21dp"
+                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lessons_lesson1_text"
                 app:strokeWidth="0dp">
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/lesson1_banner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:src="@drawable/lesson_1"/>
             </com.google.android.material.card.MaterialCardView>
             <View
@@ -71,14 +71,15 @@
                 android:layout_width="320dp"
                 android:layout_height="155dp"
                 android:layout_marginTop="12dp"
-                app:cardCornerRadius="21dp"
+                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lesson2_text"
                 app:strokeWidth="0dp">
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:src="@drawable/lesson_2"/>
             </com.google.android.material.card.MaterialCardView>
             <com.airbnb.lottie.LottieAnimationView

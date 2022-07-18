@@ -44,12 +44,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/divider">
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ourWebSiteBtn"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                     android:layout_width="144dp"
                     android:layout_height="58dp"
                     android:layout_marginStart="32dp"
                     android:text="@string/website"
-                    app:backgroundTint="@color/colorBackground4"
+                    android:tooltipText="@string/website_tooltip"
                     app:icon="@drawable/ic_web"
                     app:iconGravity="end"
                     app:layout_columnWeight="1"/>
@@ -59,12 +59,12 @@
                     android:layout_weight="1"/>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/findUsBtn"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                     android:layout_width="144dp"
                     android:layout_height="58dp"
                     android:layout_marginEnd="32dp"
-                    app:backgroundTint="@color/colorBackground4"
                     android:text="@string/find_us"
+                    android:tooltipText="@string/facebook_tooltip"
                     app:icon="@drawable/ic_find_us"
                     app:iconGravity="end"
                     app:layout_columnWeight="1"/>
@@ -96,16 +96,16 @@
                 android:layout_width="320dp"
                 android:layout_height="155dp"
                 android:layout_marginTop="12dp"
-                app:cardCornerRadius="21dp"
+                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:focusable="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lesson1_text"
                 app:strokeWidth="0dp">
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/lesson1_banner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:src="@drawable/lesson_1"/>
             </com.google.android.material.card.MaterialCardView>
             <View
@@ -135,15 +135,16 @@
                 android:layout_width="320dp"
                 android:layout_height="155dp"
                 android:layout_marginTop="12dp"
-                app:cardCornerRadius="21dp"
+                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:focusable="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lesson2_text"
                 app:strokeWidth="0dp">
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:src="@drawable/lesson_2"/>
             </com.google.android.material.card.MaterialCardView>
             <View

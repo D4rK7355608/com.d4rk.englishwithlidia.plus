@@ -1,10 +1,10 @@
 package com.d4rk.englishwithlidia.plus.ui.permissions
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.PermissionsActivityBinding
-import com.kieronquinn.monetcompat.app.MonetCompatActivity
-class PermissionsActivity : MonetCompatActivity() {
+class PermissionsActivity : AppCompatActivity() {
     private lateinit var binding: PermissionsActivityBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

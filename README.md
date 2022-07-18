@@ -9,43 +9,43 @@
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.englishwithlidia.plus?style=for-the-badge&logo=github)
 ![GitHub License](https://img.shields.io/github/license/D4rK7355608/com.d4rk.englishwithlidia.plus?style=for-the-badge&logo=github)
 
-## English with Lidia Plus
+## 📚 English with Lidia Plus 📚
 
 - ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-## Learn english and relax in the same time!
+## Learn english and relax in the same time! 📚
 
 Learn English by reading our blog. 📗 Or, instead you can listen to us. 📻 This is the official app developed by D4rK for Lidia, our English teacher who want to give us best lessons. 📖
 This app is made with love and passion for everyone! 💖
 
 🌐 Official website/blog is [here](https://sites.google.com/view/englishwithlidia/home).
 
-Bugs can be reported here.
+## ⚠ Opening Issues ⚠
 
-## Opening Issues :warning:
+Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues).
 
 > Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk.
 > For support, informations and requests, please contact <d4rk7355608@gmail.com>.
 
 - Create an audio/text/general bug. 🐞
 
-__English with Lidia Plus is 100% free, open source, ad free, and have a clean design!__
+__🖤 English with Lidia Plus is 100% free, open source, ad free, and have a clean design! 🖤__
 
-## 💿 Features!
+## 🛠️ Features!
 - ⭐️ No internet required.
+- ⭐️ Play audio instead of reading.
 - ⭐️ Adaptive themes + Material-You.
 - ⭐️ Simple and easy to use.
 - ⭐️ Fast and lightweight.
-- ⭐️ Play audio instead of reading.
 - ⭐️ Free Open source & secure.
 
 __❗️Note❗️__ Some features are still in progress or needs more improvements and investigations.
 
 ## Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.englishwithlidia.plus/master/CHANGELOG.md)!
 
-## Screenshots:
+## 🖼️ App preview:
 
 <img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png"  width="400">
 

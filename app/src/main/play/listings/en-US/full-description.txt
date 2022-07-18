@@ -1,4 +1,4 @@
-📚English with Lidia Plus📚
+📚 English with Lidia Plus 📚
 
 ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 ║║║║╩╣╚╣═╣║║║║║╩╣
@@ -10,6 +10,7 @@ This app is made with love and passion for everyone! 💖
 🌐 Official website/blog: https://sites.google.com/view/englishwithlidia/home
 
 ⚠ Opening Issues⚠
+
 Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues
 
 • Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. For support, informations and requests, please contact d4rk7355608@gmail.com.
@@ -18,12 +19,14 @@ Create an audio/text/general bug. 🐞
 
 GitHub: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus
 
-💿 Features!
+🖤 English with Lidia Plus is 100% free, open source, ad free, and have a clean design!
+
+🛠️ Features!
 ⭐️ No internet required.
+⭐️ Play audio instead of reading.
 ⭐️ Adaptive themes + Material-You.
 ⭐️ Simple and easy to use.
 ⭐️ Fast and lightweight.
-⭐️ Play audio instead of reading.
 ⭐️ Free Open source & secure.
 
 🛑 Disclaimer!
@@ -42,6 +45,6 @@ GitHub: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus
 💬 Feedback!
 If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
 
-❗️Note❗️ Some features are still in progress or needs more improvements and investigations.
+❗Note❗Some features are still in progress or needs more improvements and investigations.
 
 Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.

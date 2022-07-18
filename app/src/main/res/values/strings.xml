@@ -11,6 +11,8 @@
     <string name="changelog">Changelog.</string>
     <string name="permissions">Permissions.</string>
     <string name="music_sleep_timer">Music Sleep Timer.</string>
+    <string name="qr_code_scanner">QR &amp; Bar Code Scanner.</string>
+    <string name="android_studio_tutorials">Android Studio Tutorials</string>
     <string name="feedback">Feedback.</string>
     <string name="more_apps">More apps.</string>
     <string name="feedback_tooltip">Send us your review on Google Play Store.</string>
@@ -25,6 +27,7 @@
     <string name="lesson_1">Tell me about yourself (in a job interview):</string>
     <string name="lesson_2">To be or not to be:</string>
     <string name="settings">Settings.</string>
+    <string name="license">License.</string>
     <string name="try_right_now">Try right now.</string>
     <string name="theme">Theme.</string>
     <string name="dark_mode">Dark Mode</string>
@@ -36,6 +39,7 @@
     <string name="about_us">About us</string>
     <string name="website">Website</string>
     <string name="twitter">Twitter</string>
+    <string name="dev_mail">Mail to dev.</string>
     <string name="seek_bar_hint">0:$x</string>
     <string name="youtube">YouTube</string>
     <string name="github">GitHub</string>
@@ -78,10 +82,15 @@
     <string name="lesson2SumPart10">Mai există și expresia <i><b>blue color worker</b></i>, muncitorii care prestează munca fizică, <i><b>blue color worker, distinct de white color worker</b></i>, de cei care prestează munca la birou. Dar mai există și <i><b>pink color</b></i>, pentru femeile care, sunt secretare sau au munca de asistente, <i><b>pink color related to jobs and secretarial work</b></i>. <i><b>Cu pink</b></i>, ar fi <i><b>pink elephants</b></i> frumoasă expresie care arată că există o halucinație undeva în creierul nostru sau <i><b>pink slip</b></i>, o metaforă folosită pentru atunci când cineva este concendiat, iar <i><b>fired to received a pinks slip</b></i>, n-am vrea să se întâmple asta.</string>
     <string name="lesson2SumPart11">Ummm.. cu verde, verde îmi place foarte mult expresia <i><b>have a green thumb</b></i> de data aceasta nu am folosit <i><b>I am, ci am folosit to have, have a green thumb</b></i>, avea talent pentru grădinărit, <i><b>I think I have a green thumb. I like flowers and I loved plant and take care of them</b></i>.</string>
     <string name="lesson2SumPart12"><i><b>Red</b></i>, pentru exprimarea stărilor mai puternice. <i><b>I see red, I become very angry!</b></i> Văd rosu înaintea ochilor, <i><b>I see red sau I am in the red. I am in red, I am in depth</b></i>, în datorii, am datorii. <i><b>Red herring</b></i>, o expresie folosită pentru ceva care ne distrage atenția, <i><b>something unimportant that distract attention from the real issue. A red herring. I have something important to write but there is the red herring that disturbs me</b></i>. Ceva care ne distrage. <i><b>Red tape</b></i>, birocrație, mai ales în România. <i><b>I had to go to much red tape to open this company</b></i>.</string>
-    <string name="changes"><b>Version 1.2_r1:\n</b>
-        • Fixed theme settings;\n
-        • Reduced app size;\n
-        • Removed seekbar unseen text.\n
+    <string name="changes"><b>Version 1.3_r1:\n</b>
+        • Target SDK now is 26;\n
+        • Removed unused resources;\n
+        • Added mail to dev;\n
+        • Changed themes;\n
+        • Changed colors;\n
+        • Added launcher shortcuts;\n
+        • Added license in more menu;\n
+        • Maybe is more but i forget.
         <br> </br>
     </string>
 </resources>

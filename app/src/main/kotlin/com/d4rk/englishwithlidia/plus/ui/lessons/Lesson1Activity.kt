@@ -2,13 +2,13 @@ package com.d4rk.englishwithlidia.plus.ui.lessons
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.ActivityLesson1Binding
-import com.kieronquinn.monetcompat.app.MonetCompatActivity
 import kotlin.math.ceil
 import kotlin.math.roundToInt
-class Lesson1Activity: MonetCompatActivity(), Runnable  {
+class Lesson1Activity: AppCompatActivity(), Runnable  {
     private var mediaPlayer: MediaPlayer = MediaPlayer()
     private var wasPlaying = false
     private var startPoint = 0
