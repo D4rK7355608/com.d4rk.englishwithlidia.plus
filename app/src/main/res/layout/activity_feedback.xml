@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.feedback.FeedbackActivity">
     <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Elevated"
         android:id="@+id/feedbackCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +15,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        style="@style/Widget.Material3.CardView.Elevated"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/rateAnimation">
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,8 +22,8 @@
             android:layout_height="match_parent"
             android:padding="24dp">
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRateNow"
                 style="@style/Widget.Material3.Button"
+                android:id="@+id/btnRateNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rate_us"
@@ -47,7 +47,7 @@
                 android:id="@+id/feedbackImage"
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
-                android:src="@drawable/ic_feedback"
+                android:src="@drawable/ic_feedback_card"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/appCompatImageView"/>

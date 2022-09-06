@@ -1,12 +1,18 @@
 package com.d4rk.englishwithlidia.plus.ui.settings
+import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.SettingsActivityBinding
+import com.google.android.material.textview.MaterialTextView
 class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var binding: SettingsActivityBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,9 +24,10 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this)
     }
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
-        val darkModeString = getString(R.string.dark_mode)
+        val darkModeString = getString(R.string.theme)
         key?.let {
-            if (it == darkModeString) sharedPreferences?.let { pref -> val darkModeValues = resources.getStringArray(R.array.dark_mode_values)
+            if (it == darkModeString) sharedPreferences?.let { pref ->
+                val darkModeValues = resources.getStringArray(R.array.dark_mode_values)
                 when (pref.getString(darkModeString, darkModeValues[0])) {
                     darkModeValues[0] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
                     darkModeValues[1] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -33,6 +40,77 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.settings_preferences, rootKey)
+            val moreApps: Preference? = findPreference("more_apps")
+            if (moreApps != null) {
+                moreApps.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                    val alertDialog: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+                    alertDialog.setTitle(R.string.more_apps)
+                    val view: View = layoutInflater.inflate(R.layout.fragment_dialog, null)
+                    val musicSleepTimerString: MaterialTextView = view.findViewById(R.id.musicSleepTimerString)
+                    val qrCodeScannerString: MaterialTextView = view.findViewById(R.id.qrCodeScannerString)
+                    val androidStudioTutorialsString: MaterialTextView = view.findViewById(R.id.androidStudioTutorialsString)
+                    val lowBrightnessString: MaterialTextView = view.findViewById(R.id.lowBrightnessString)
+                    alertDialog.setView(view)
+                    alertDialog.create()
+                    view.findViewById<View?>(R.id.musicSleepTimer)?.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus"))
+                        startActivity(intent)
+                    }
+                    musicSleepTimerString.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus"))
+                        startActivity(intent)
+                    }
+                    view.findViewById<View?>(R.id.qrCodeScanner)?.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner.plus"))
+                        startActivity(intent)
+                    }
+                    qrCodeScannerString.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner.plus"))
+                        startActivity(intent)
+                    }
+                    view.findViewById<View?>(R.id.androidStudioTutorials)?.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"))
+                        startActivity(intent)
+                    }
+                    androidStudioTutorialsString.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"))
+                        startActivity(intent)
+                    }
+                    view.findViewById<View?>(R.id.lowBrightness)?.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness"))
+                        startActivity(intent)
+                    }
+                    lowBrightnessString.setOnClickListener {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness"))
+                        startActivity(intent)
+                    }
+                    alertDialog.setNegativeButton(R.string.cool, null)
+                    alertDialog.show()
+                    true
+                }
+            }
+            val changelog: Preference? = findPreference("changelog")
+            if (changelog != null) {
+                changelog.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                    val alertDialog: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+                    alertDialog.setTitle(R.string.changelog)
+                    alertDialog.setMessage(R.string.changes)
+                    alertDialog.setNegativeButton(R.string.cool, null)
+                    alertDialog.show()
+                    true
+                }
+            }
+            val share: Preference? = findPreference("share")
+            if (share != null) {
+                share.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                    val sharingIntent = Intent(Intent.ACTION_SEND)
+                    sharingIntent.type = "text/plain"
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus")
+                    sharingIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.share_subject)
+                    startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_using)))
+                    true
+                }
+            }
         }
     }
 }

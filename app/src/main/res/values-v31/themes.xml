@@ -3,7 +3,8 @@
     <style name="AppThemeActionBar" parent="Theme.Material3.DynamicColors.DayNight">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="colorPrimary">@color/colorAccent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>

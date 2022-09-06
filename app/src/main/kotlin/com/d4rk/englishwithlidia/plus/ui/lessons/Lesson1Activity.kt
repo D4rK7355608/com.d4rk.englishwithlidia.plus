@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.ActivityLesson1Binding
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 class Lesson1Activity: AppCompatActivity(), Runnable  {
@@ -17,9 +18,8 @@ class Lesson1Activity: AppCompatActivity(), Runnable  {
         super.onCreate(savedInstanceState)
         binding = ActivityLesson1Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.lesson1PlayButton.setOnClickListener {
-            playSong()
-        }
+        FastScrollerBuilder(binding.lesson1ScrollView).useMd2Style().build()
+        binding.lesson1PlayButton.setOnClickListener { playSong() }
         binding.lesson1Seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onStartTrackingTouch(seekBar: SeekBar) {
                 startPoint = seekBar.progress
@@ -31,14 +31,14 @@ class Lesson1Activity: AppCompatActivity(), Runnable  {
                 val seekWidth = seekBar.width
                 (percent * (seekWidth - 2 * offset)).roundToInt()
                 if (progress > 0 && !mediaPlayer.isPlaying) {
-                    onDestroy()
+                    clearMediaPlayer()
                     binding.lesson1PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_media_play))
                     this@Lesson1Activity.binding.lesson1Seekbar.progress = 0
                 }
             }
             override fun onStopTrackingTouch(seekBar: SeekBar) {
                 if (mediaPlayer.isPlaying) {
-                    mediaPlayer.seekTo(binding.lesson1Seekbar.progress)
+                    mediaPlayer.seekTo(seekBar.progress)
                 }
             }
         })
@@ -46,14 +46,14 @@ class Lesson1Activity: AppCompatActivity(), Runnable  {
     private fun playSong() {
         try {
             if (mediaPlayer.isPlaying) {
-                onDestroy()
+                clearMediaPlayer()
                 binding.lesson1Seekbar.progress = 0
                 wasPlaying = true
                 binding.lesson1PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_play))
             }
             if (!wasPlaying) {
                 binding.lesson1PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson1Activity, R.drawable.ic_pause))
-                val descriptor = assets.openFd("lesson1.ogg")
+                val descriptor = assets.openFd("lesson2.ogg")
                 mediaPlayer.setDataSource(descriptor.fileDescriptor, descriptor.startOffset, descriptor.length)
                 descriptor.close()
                 mediaPlayer.prepare()
@@ -82,7 +82,14 @@ class Lesson1Activity: AppCompatActivity(), Runnable  {
         }
     }
     override fun onDestroy() {
-        mediaPlayer.stop()
         super.onDestroy()
+        if (!mediaPlayer.isPlaying) {
+            mediaPlayer.stop()
+            clearMediaPlayer()
+        }
+    }
+    private fun clearMediaPlayer() {
+        mediaPlayer.stop()
+        mediaPlayer.release()
     }
 }

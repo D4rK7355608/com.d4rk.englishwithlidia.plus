@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.lessons.Lesson1Activity">
-    <ScrollView
+    <me.zhanghai.android.fastscroll.FastScrollScrollView
         android:id="@+id/lesson1ScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -52,13 +52,6 @@
                         app:layout_constraintStart_toEndOf="@id/lesson1PlayButton"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
-                    <TextView
-                        android:id="@+id/lesson1LengthText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintEnd_toStartOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/lesson1PlayButton"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
             <View
@@ -245,5 +238,5 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/copyright"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

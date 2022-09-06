@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.lessons.LessonsFragment">
-    <ScrollView
+    <me.zhanghai.android.fastscroll.FastScrollScrollView
         android:id="@+id/lessonsScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -95,7 +95,7 @@
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/anim_swing"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollScrollView>
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
         android:layout_width="wrap_content"

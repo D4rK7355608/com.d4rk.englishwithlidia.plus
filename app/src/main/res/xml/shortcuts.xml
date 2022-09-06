@@ -9,4 +9,14 @@
             android:targetPackage="com.d4rk.englishwithlidia.plus"
             android:targetClass="com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity"/>
     </shortcut>
+    <shortcut
+        android:shortcutId="openLessons"
+        android:enabled="true"
+        android:icon="@mipmap/ic_shortcut_lessons"
+        android:shortcutShortLabel="@string/lessons">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.d4rk.englishwithlidia.plus"
+            android:targetClass="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity"/>
+    </shortcut>
 </shortcuts>

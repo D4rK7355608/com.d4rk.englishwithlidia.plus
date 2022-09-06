@@ -23,7 +23,7 @@ class FeedbackActivity : AppCompatActivity() {
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.dev_mail -> {
+        R.id.dev_feedback-> {
             val email = Intent(Intent.ACTION_SEND)
             email.type = "text/email"
             email.putExtra(Intent.EXTRA_EMAIL, arrayOf("d4rk7355608@gmail.com"))

@@ -10,7 +10,8 @@
         <item name="colorSecondaryContainer">@color/colorContainer</item>
         <item name="colorOnSurface">@color/colorSurface</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <item name="android:windowLightNavigationBar">false</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.ActivityLesson2Binding
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 class Lesson2Activity: AppCompatActivity(), Runnable  {
@@ -17,6 +18,7 @@ class Lesson2Activity: AppCompatActivity(), Runnable  {
         super.onCreate(savedInstanceState)
         binding = ActivityLesson2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        FastScrollerBuilder(binding.lesson2ScrollView).useMd2Style().build()
         binding.lesson2PlayButton.setOnClickListener { playSong() }
         binding.lesson2Seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -49,7 +51,7 @@ class Lesson2Activity: AppCompatActivity(), Runnable  {
                 wasPlaying = true
                 binding.lesson2PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson2Activity, R.drawable.ic_play))
             }
-            if (! wasPlaying) {
+            if (!wasPlaying) {
                 binding.lesson2PlayButton.setImageDrawable(ContextCompat.getDrawable(this@Lesson2Activity, R.drawable.ic_pause))
                 val descriptor = assets.openFd("lesson2.ogg")
                 mediaPlayer.setDataSource(descriptor.fileDescriptor, descriptor.startOffset, descriptor.length)

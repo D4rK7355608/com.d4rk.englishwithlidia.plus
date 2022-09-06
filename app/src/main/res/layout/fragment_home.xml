@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <me.zhanghai.android.fastscroll.FastScrollScrollView
+        android:id="@+id/scrollViewHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -178,5 +178,5 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/copyright"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

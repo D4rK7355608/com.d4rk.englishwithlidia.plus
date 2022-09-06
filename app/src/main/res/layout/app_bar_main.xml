@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,8 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.App.Starting.PopupOverlay"
-            app:menu="@menu/menu_main"/>
+            app:popupTheme="@style/Theme.App.Starting.PopupOverlay"/>
     </com.google.android.material.appbar.AppBarLayout>
     <include layout="@layout/content_main"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

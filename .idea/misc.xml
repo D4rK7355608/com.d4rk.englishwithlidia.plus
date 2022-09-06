@@ -13,10 +13,13 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_home.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_language.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground.xml" value="0.1505" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground_android_studio_tutorials.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground_music_sleep_timer.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground_qr_codes_scanner.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_lessons.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_libraries.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_media_play.xml" value="0.188" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_more.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_pause.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_play.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_play_pause.xml" value="0.188" />
@@ -24,6 +27,8 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_settings.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_settings_themes.xml" value="0.188" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_settings_tinted.xml" value="0.188" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_share.xml" value="0.116" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_shortcut_lessons_foreground.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_shortcut_settings_foreground.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_shortcut_website_foreground.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/drawable-anydpi/ic_stars.xml" value="0.205" />
@@ -62,6 +67,7 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_language.xml" value="0.2828197551709582" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_lesson1.xml" value="0.33" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_lesson2.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_lesson3.xml" value="0.22" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/activity_rate.xml" value="0.1796875" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/layout/app_bar_main.xml" value="0.1703125" />
@@ -85,13 +91,16 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_launcher.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_launcher_android_studio_tutorials.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_launcher_music_sleep_timer.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_launcher_qr_codes_scanner.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_shortcut_lessons.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_shortcut_settings.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-anydpi/ic_shortcut_website.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher.xml" value="0.1505" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher_round.xml" value="0.1505" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-night-anydpi/ic_launcher.xml" value="0.205" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/mipmap-night-anydpi/ic_launcher_music_sleep_timer.xml" value="0.205" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/xml/locales_config.xml" value="0.1" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/xml/permissions_preferences.xml" value="0.33" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.englishwithlidia.plus/app/src/main/res/xml/settings_preferences.xml" value="0.25" />
         <entry key="..\:/Users/d4rk7/Desktop/com.d4rk.englishwithlidia.plus/app/src/main/res/layout-v26/fragment_home.xml" value="0.22" />

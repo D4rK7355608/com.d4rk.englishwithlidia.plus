@@ -9,7 +9,7 @@ This app is made with love and passion for everyone! 💖
 
 🌐 Official website/blog: https://sites.google.com/view/englishwithlidia/home
 
-⚠ Opening Issues⚠
+⚠ Opening Issues ⚠
 
 Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues
 
@@ -19,7 +19,7 @@ Create an audio/text/general bug. 🐞
 
 GitHub: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus
 
-🖤 English with Lidia Plus is 100% free, open source, ad free, and have a clean design!
+🖤 English with Lidia Plus is 100% Free, Open Source and have a clean design! 🖤
 
 🛠️ Features!
 ⭐️ No internet required.

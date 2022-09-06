@@ -12,12 +12,14 @@ import com.d4rk.englishwithlidia.plus.databinding.FragmentHomeBinding
 import com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity
 import com.d4rk.englishwithlidia.plus.ui.lessons.Lesson2Activity
 import com.d4rk.englishwithlidia.plus.ui.viewmodel.ViewModel
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class HomeFragment : Fragment(R.layout.fragment_lessons) {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         ViewModelProvider(this)[ViewModel::class.java]
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        FastScrollerBuilder(binding.scrollViewHome).useMd2Style().build()
         binding.ourWebSiteBtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/englishwithlidia"))
             startActivity(intent)
