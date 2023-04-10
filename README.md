@@ -27,10 +27,10 @@ This app offers you a variety of features that will help you improve your Englis
 
 By using this app, you will be able to:
 
-• Read Lidia's blog posts on various topics related to English language and culture, and learn new words and expressions in context. 📗
-• Listen to Lidia's podcasts and improve your listening and pronunciation skills, as well as your knowledge of English culture and idioms. 📻
-• Access exclusive content and resources that will help you master English grammar, vocabulary, and more, with clear explanations and examples. 📖
-• Enjoy a beautiful and user-friendly design that makes learning English a pleasure, with interactive quizzes, games, and feedback. 💖
+- Read Lidia's blog posts on various topics related to English language and culture, and learn new words and expressions in context. 📗
+- Listen to Lidia's podcasts and improve your listening and pronunciation skills, as well as your knowledge of English culture and idioms. 📻
+- Access exclusive content and resources that will help you master English grammar, vocabulary, and more, with clear explanations and examples. 📖
+- Enjoy a beautiful and user-friendly design that makes learning English a pleasure, with interactive quizzes, games, and feedback. 💖
 
 English with Lidia Plus  is more than just an app. It's a learning journey that will inspire you to achieve your goals and have fun along the way. 🚀
 
