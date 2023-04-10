@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,18 +20,8 @@
         android:label="@string/lessons"
         tools:layout="@layout/fragment_lessons"/>
     <activity
-        android:id="@+id/nav_lesson1"
-        android:label="@string/lesson_1"
-        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity"
-        tools:layout="@layout/activity_lesson1"/>
-    <activity
-        android:id="@+id/nav_lesson2"
-        android:label="@string/lesson_2"
-        android:name="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson2Activity"
-        tools:layout="@layout/activity_lesson2"/>
-    <activity
         android:id="@+id/nav_settings"
         android:name="com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity"
         android:label="@string/settings"
-        tools:layout="@layout/settings_activity"/>
+        tools:layout="@layout/activity_settings"/>
 </navigation>

@@ -9,30 +9,29 @@ import androidx.lifecycle.ViewModelProvider
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.databinding.FragmentLessonsBinding
 import com.d4rk.englishwithlidia.plus.ui.viewmodel.ViewModel
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
-
 class LessonsFragment : Fragment(R.layout.fragment_lessons) {
     private var _binding: FragmentLessonsBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         ViewModelProvider(this)[ViewModel::class.java]
         _binding = FragmentLessonsBinding.inflate(inflater, container, false)
-        FastScrollerBuilder(binding.lessonsScrollView).useMd2Style().build()
+        MobileAds.initialize(requireContext())
+        binding.adView.loadAd(AdRequest.Builder().build())
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
         binding.lessonsLesson1Card.setOnClickListener {
-            val intent = Intent(activity, Lesson1Activity::class.java)
-            startActivity(intent)
+            startActivity(Intent(activity, Lesson1Activity::class.java))
         }
         binding.lessonsLesson1Text.setOnClickListener {
-            val intent = Intent(activity, Lesson1Activity::class.java)
-            startActivity(intent)
+            startActivity(Intent(activity, Lesson1Activity::class.java))
         }
         binding.lesson2Card.setOnClickListener {
-            val intent = Intent(activity, Lesson2Activity::class.java)
-            startActivity(intent)
+            startActivity(Intent(activity, Lesson2Activity::class.java))
         }
         binding.lesson2Text.setOnClickListener {
-            val intent = Intent(activity, Lesson2Activity::class.java)
-            startActivity(intent)
+            startActivity(Intent(activity, Lesson2Activity::class.java))
         }
         return binding.root
     }

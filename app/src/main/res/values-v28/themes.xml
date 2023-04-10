@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="DialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="android:colorBackground">@color/colorDialogBackground</item>
-        <item name="android:dialogCornerRadius">24dp</item>
-    </style>
-</resources>

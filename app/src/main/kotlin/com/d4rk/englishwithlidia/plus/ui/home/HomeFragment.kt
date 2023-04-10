@@ -12,6 +12,8 @@ import com.d4rk.englishwithlidia.plus.databinding.FragmentHomeBinding
 import com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity
 import com.d4rk.englishwithlidia.plus.ui.lessons.Lesson2Activity
 import com.d4rk.englishwithlidia.plus.ui.viewmodel.ViewModel
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class HomeFragment : Fragment(R.layout.fragment_lessons) {
     private var _binding: FragmentHomeBinding? = null
@@ -19,30 +21,26 @@ class HomeFragment : Fragment(R.layout.fragment_lessons) {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         ViewModelProvider(this)[ViewModel::class.java]
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        FastScrollerBuilder(binding.scrollViewHome).useMd2Style().build()
-        binding.ourWebSiteBtn.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/englishwithlidia"))
-            startActivity(intent)
+        MobileAds.initialize(requireContext())
+        binding.adView.loadAd(AdRequest.Builder().build())
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
+        binding.buttonWebSite.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/englishwithlidia")))
         }
-        binding.findUsBtn.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/lidia.melinte"))
-            startActivity(intent)
+        binding.buttonFacebook.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/lidia.melinte")))
         }
-        binding.lesson1Card.setOnClickListener {
-            val intent = Intent(activity, Lesson1Activity::class.java)
-            startActivity(intent)
+        binding.cardViewFirstLesson.setOnClickListener {
+            startActivity(Intent(activity, Lesson1Activity::class.java))
         }
-        binding.lesson1Text.setOnClickListener {
-            val intent = Intent(activity, Lesson1Activity::class.java)
-            startActivity(intent)
+        binding.textViewFirstLessonTitle.setOnClickListener {
+            startActivity(Intent(activity, Lesson1Activity::class.java))
         }
-        binding.lesson2Card.setOnClickListener {
-            val intent = Intent(activity, Lesson2Activity::class.java)
-            startActivity(intent)
+        binding.cardViewSecondLesson.setOnClickListener {
+            startActivity(Intent(activity, Lesson2Activity::class.java))
         }
-        binding.lesson2Text.setOnClickListener {
-            val intent = Intent(activity, Lesson2Activity::class.java)
-            startActivity(intent)
+        binding.textViewSecondLessonTitle.setOnClickListener {
+            startActivity(Intent(activity, Lesson2Activity::class.java))
         }
         return binding.root
     }

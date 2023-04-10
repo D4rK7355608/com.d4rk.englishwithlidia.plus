@@ -4,47 +4,72 @@
 ║║║║╩╣╚╣═╣║║║║║╩╣
 ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-Learn English by reading our blog. 📗 Or, instead you can listen to us. 📻 This is the official app developed by D4rK for Lidia, our English teacher who want to give us best lessons. 📖
-This app is made with love and passion for everyone! 💖
+English with Lidia Plus is the app for you! 😍
 
-🌐 Official website/blog: https://sites.google.com/view/englishwithlidia/home
+If you are looking for a fun and easy way to learn English, you should try English with Lidia! 😍
 
-⚠ Opening Issues ⚠
+English with Lidia Plus is the official app of Lidia, a professional English teacher who creates engaging and effective lessons for learners of all levels. 📚
 
+This app offers you a variety of features that will help you improve your English skills and enjoy the learning process. 🙌
+
+By using this app, you will be able to:
+
+• Read Lidia's blog posts on various topics related to English language and culture, and learn new words and expressions in context. 📗
+• Listen to Lidia's podcasts and improve your listening and pronunciation skills, as well as your knowledge of English culture and idioms. 📻
+• Access exclusive content and resources that will help you master English grammar, vocabulary, and more, with clear explanations and examples. 📖
+• Enjoy a beautiful and user-friendly design that makes learning English a pleasure, with interactive quizzes, games, and feedback. 💖
+
+English with Lidia Plus  is more than just an app. It's a learning journey that will inspire you to achieve your goals and have fun along the way. 🚀
+
+🌐 Visit the official website/blog to learn more: https://sites.google.com/view/englishwithlidia/home
+
+⚠ Opening Issues!
 Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues
-
-• Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. For support, informations and requests, please contact d4rk7355608@gmail.com.
 
 Create an audio/text/general bug. 🐞
 
-GitHub: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus
-
-🖤 English with Lidia Plus is 100% Free, Open Source and have a clean design! 🖤
-
 🛠️ Features!
-⭐️ No internet required.
 ⭐️ Play audio instead of reading.
 ⭐️ Adaptive themes + Material-You.
 ⭐️ Simple and easy to use.
 ⭐️ Fast and lightweight.
 ⭐️ Free Open source & secure.
 
-🛑 Disclaimer!
-• English with Lidia Plus is a blog type app witch can help you learn English with relaxing and easy to understand lessons for everyone.
-• Some music from our audios belong to their respective owners and principal voice is from Lidia Melinte.
+👨‍💻 More about me!
+● Music:
+⇨ YouTube Music: https://music.youtube.com/channel/UCb2zXzO03OM7U9xeIsqqEQw
+⇨ Spotify: https://open.spotify.com/artist/5Q58DBSe2tpBb3qqq9WVfo
+⇨ Deezer: https://www.deezer.com/us/artist/408659
+⇨ SoundCloud: https://soundcloud.com/d4rk7355608
+⇨ BandLab: https://www.bandlab.com/d4rk7355608
 
-👨‍💻 More about me:
-● Google Developers - https://developers.google.com/profile/u/D4rK7355608
-● XDA - https://forum.xda-developers.com/m/d4rk7355608.10095012/
-● YouTube - https://www.youtube.com/c/D4rK7355608
-● DeviantArt - https://www.deviantart.com/d4rk7355608
-● GameJolt - https://gamejolt.com/@D4rK_S-A-D
-● Twitter - https://twitter.com/D4rK7355608/
-● GitHub - https://github.com/D4rK7355608
+● Graphics:
+⇨ DeviantArt: https://www.deviantart.com/d4rk7355608
+
+● Social:
+⇨ GameJolt: https://gamejolt.com/@D4rK7355608
+⇨ Twitter: https://twitter.com/D4rK7355608
+⇨ Skype: d4rk7355608
+⇨ Steam Profile: https://steamcommunity.com/id/d4rk7355608
+⇨ Steam Trade Link: https://steamcommunity.com/tradeoffer/new/?partner=892981294&token=pxsUtrm3
+
+● Developer stuff:
+⇨ GitHub: https://github.com/D4rK7355608
+⇨ Google Play Store: https://play.google.com/store/apps/dev?id=5390214922640123642
+⇨ Google Developers: https://g.dev/D4rK7355608
+
+🛑 Disclaimer!
+• This Application is made only for Education Purpose.
+• English with Lidia Plus is a blog type app witch can help you learn English with relaxing and easy to understand lessons for everyone.
+• We acknowledge the ownership of some of the music in our audios and credit Lidia Melinte as the main voice.
+• Only use the GitHub Issues section if you discover issues with the code itself. Do not mistake the Issues page as a help desk. For support, information and requests, please contact d4rk7355608@gmail.com.
 
 💬 Feedback!
-If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
+We are constantly updating and improving English with Lidia Plus to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-❗Note❗Some features are still in progress or needs more improvements and investigations.
+Thank you for choosing English with Lidia Plus. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
 
-Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.
+╔╦╦══╦══╦═╦╗
+║╔╣║║╠╗╔╣═╣║
+║║║╔╗║║║║═╬╣
+╚╝╚╝╚╝╚╝╚═╩╝
