@@ -41,7 +41,6 @@
     <string name="device_model">Model Perangkat:</string>
     <string name="android_version">Versi Android:</string>
     <string name="api_level">Tingkat API:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Notifikasi</string>
     <string name="notification_settings">Pengaturan pemberitahuan</string>
     <string name="app_usage_notifications">Pemberitahuan Penggunaan Aplikasi</string>

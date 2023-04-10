@@ -41,7 +41,6 @@
     <string name="device_model">Cihaz modeli:</string>
     <string name="android_version">Android Sürümü:</string>
     <string name="api_level">API Düzeyi:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Bildirimler</string>
     <string name="notification_settings">Bildirim ayarları</string>
     <string name="app_usage_notifications">Uygulama Kullanım Bildirimleri</string>

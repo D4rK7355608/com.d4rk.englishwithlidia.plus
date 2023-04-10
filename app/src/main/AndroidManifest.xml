@@ -48,7 +48,7 @@
         </activity>
         <activity
             android:name=".ui.startup.StartupActivity"
-            android:theme="@style/AppTheme.Startup"/>
+            android:theme="@style/AppThemeActionBar"/>
         <activity
             android:name=".ui.lessons.Lesson2Activity"
             android:label="@string/lesson_2"

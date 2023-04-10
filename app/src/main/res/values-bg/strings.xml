@@ -41,7 +41,6 @@
     <string name="device_model">Модел на устройството:</string>
     <string name="android_version">Версия на Android:</string>
     <string name="api_level">API ниво:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Известия</string>
     <string name="notification_settings">Настройки за известията</string>
     <string name="app_usage_notifications">Известия за използване на приложението</string>
@@ -50,7 +49,7 @@
     <string name="appearance">Външен вид</string>
     <string name="share">Дял</string>
     <string name="share_subject">Опитай сега!!!</string>
-    <string name="share_using">Споделяне чрез...</string>
+    <string name="share_using">Споделяне чрез…</string>
     <string name="made_in">Произведено с ❤ в Румъния!</string>
     <string name="copyright">© Copyright %1$s, направено от D4rK!</string>
     <string name="agree">Съгласен</string>

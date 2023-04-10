@@ -8,7 +8,7 @@
     <string name="about">Acerca de</string>
     <string name="more">Más</string>
     <string name="support_me">Apoyarme</string>
-    <string name="check_for_updates">Buscar actualizaciones...</string>
+    <string name="check_for_updates">Buscar actualizaciones…</string>
     <string name="changelog">registro de cambios</string>
     <string name="permissions">permisos</string>
     <string name="more_apps">Más aplicaciones…</string>
@@ -41,7 +41,6 @@
     <string name="device_model">Modelo de dispositivo:</string>
     <string name="android_version">Versión de Android:</string>
     <string name="api_level">Nivel API:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Notificaciones</string>
     <string name="notification_settings">Configuración de las notificaciones</string>
     <string name="app_usage_notifications">Notificaciones de uso de aplicaciones</string>

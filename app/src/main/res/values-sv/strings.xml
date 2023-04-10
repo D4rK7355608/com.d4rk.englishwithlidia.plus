@@ -41,7 +41,6 @@
     <string name="device_model">Enhetsmodell:</string>
     <string name="android_version">Android-version:</string>
     <string name="api_level">API-nivå:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Aviseringar</string>
     <string name="notification_settings">Aviseringsinställningar</string>
     <string name="app_usage_notifications">Aviseringar om appanvändning</string>
@@ -50,7 +49,7 @@
     <string name="appearance">Utseende</string>
     <string name="share">Dela med sig</string>
     <string name="share_subject">Prova det nu!!!</string>
-    <string name="share_using">Dela med...</string>
+    <string name="share_using">Dela med…</string>
     <string name="made_in">Tillverkad med ❤ i Rumänien!</string>
     <string name="copyright">© Copyright %1$s, gjord av D4rK!</string>
     <string name="agree">Hålla med</string>

@@ -41,7 +41,6 @@
     <string name="device_model">Modello del dispositivo:</string>
     <string name="android_version">Versione Android:</string>
     <string name="api_level">Livello dell\'API:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Notifiche</string>
     <string name="notification_settings">Impostazioni di notifica</string>
     <string name="app_usage_notifications">Notifiche sull\'utilizzo dell\'app</string>
@@ -50,7 +49,7 @@
     <string name="appearance">Aspetto</string>
     <string name="share">Condividere</string>
     <string name="share_subject">Provalo ora!!!</string>
-    <string name="share_using">Condividi usando...</string>
+    <string name="share_using">Condividi usando…</string>
     <string name="made_in">Fatto con ❤ in Romania!</string>
     <string name="copyright">© Copyright %1$s, realizzato da D4rK!</string>
     <string name="agree">Essere d\'accordo</string>

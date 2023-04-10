@@ -41,7 +41,6 @@
     <string name="device_model">デバイスモデル：</string>
     <string name="android_version">Android バージョン:</string>
     <string name="api_level">API レベル:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">通知</string>
     <string name="notification_settings">通知設定</string>
     <string name="app_usage_notifications">アプリ使用通知</string>

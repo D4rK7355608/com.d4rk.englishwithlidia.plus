@@ -41,7 +41,6 @@
     <string name="device_model">डिवाइस का मॉडल:</string>
     <string name="android_version">Android संस्करण:</string>
     <string name="api_level">एपीआई स्तर:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">सूचनाएं</string>
     <string name="notification_settings">अधिसूचना सेटिंग्स</string>
     <string name="app_usage_notifications">ऐप उपयोग सूचनाएं</string>

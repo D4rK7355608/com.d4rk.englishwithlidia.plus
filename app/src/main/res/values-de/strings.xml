@@ -41,7 +41,6 @@
     <string name="device_model">Gerätemodell:</string>
     <string name="android_version">Android-Version:</string>
     <string name="api_level">API-Ebene:</string>
-    <string name="arch" translatable="false">Arch:</string>
     <string name="notifications">Benachrichtigungen</string>
     <string name="notification_settings">Benachrichtigungseinstellungen</string>
     <string name="app_usage_notifications">App-Nutzungsbenachrichtigungen</string>
