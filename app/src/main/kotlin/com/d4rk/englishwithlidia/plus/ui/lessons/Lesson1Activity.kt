@@ -78,6 +78,7 @@ class Lesson1Activity : AppCompatActivity() {
             }
             it.release()
         }
+        handler.removeCallbacks(seekbarUpdater)
         super.onDestroy()
     }
 }

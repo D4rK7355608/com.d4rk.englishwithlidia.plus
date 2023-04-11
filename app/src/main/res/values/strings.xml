@@ -128,19 +128,7 @@
     <string name="summary_notification_update">A new version of the app is available. Click to update!</string>
     <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
     <string name="changes" translatable="false">\n
-        • Added an FAQ section to the app.\n\n
-        • Added update notifications to inform users of new content and features.\n\n
-        • Added welcome back notifications to greet returning users.\n\n
-        • Added an exit dialog to confirm the user\'s intention to leave the app.\n\n
-        • Added in-app updates to allow users to easily update the app without going through the Play Store.\n\n
-        • Added a new setting for notifications.\n\n
-        • Added a scroll view to the \"More apps\" dialog for easier navigation.\n\n
-        • Added app updater dialog and ability to update in background.\n\n
-        • Added language support for Bulgarian, French, German, Hindi, Indonesian, Italian, Japanese, Polish, Spanish, Russian, Swedish, Turkish and Ukrainian.\n\n
-        • Enhanced project structure for better readability and maintainability.\n\n
-        • Reworked and improved animations.\n\n
         • Fixed all crash reports from Google Play Console and Google Firebase.\n\n
-        • Improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.\n\n
-        • Made various under-the-hood improvements for a better overall app experience.
+        • Made minor under-the-hood improvements for a better overall app experience.
     </string>
 </resources>

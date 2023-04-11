@@ -1,3 +1,7 @@
+# Version 3.1_r1:
+- Fixed all crash reports from Google Play Console and Google Firebase.
+- Made minor under-the-hood improvements for a better overall app experience.
+
 # Version 3.0_r1:
 - Added an FAQ section to the app.
 - Added update notifications to inform users of new content and features.
