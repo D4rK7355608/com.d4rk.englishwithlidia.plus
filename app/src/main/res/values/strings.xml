@@ -128,7 +128,6 @@
     <string name="summary_notification_update">A new version of the app is available. Click to update!</string>
     <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
     <string name="changes" translatable="false">\n
-        • Fixed all crash reports from Google Play Console and Google Firebase.\n\n
-        • Made minor under-the-hood improvements for a better overall app experience.
+        • Made various under-the-hood improvements for a better overall app experience.
     </string>
 </resources>

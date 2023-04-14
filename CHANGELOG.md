@@ -1,3 +1,6 @@
+# Version 3.2_r1:
+- Made various under-the-hood improvements for a better overall app experience.
+
 # Version 3.1_r1:
 - Fixed all crash reports from Google Play Console and Google Firebase.
 - Made minor under-the-hood improvements for a better overall app experience.

@@ -12,8 +12,8 @@ android {
         applicationId 'com.d4rk.englishwithlidia.plus'
         minSdk 26
         targetSdk 33
-        versionCode 50
-        versionName '3.1_r1'
+        versionCode 51
+        versionName '3.2_r1'
         archivesBaseName = "${applicationId}-v${versionName}"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         resConfigs 'en', 'de', 'es', 'fr', 'hi', 'in', 'it', 'ja', 'ro', 'ru', 'tr', 'sv', 'bg', 'pl', 'uk'
@@ -42,7 +42,8 @@ android {
         jvmTarget = '11'
     }
     buildFeatures {
-        viewBinding true
+        viewBinding = true
+        buildConfig = true
     }
     bundle {
         storeArchive {
@@ -52,7 +53,7 @@ android {
 }
 dependencies {
     implementation 'com.google.firebase:firebase-crashlytics-ktx:18.3.6'
-    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.1'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.2'
     implementation 'com.google.firebase:firebase-perf:20.3.1'
     implementation 'com.google.android.gms:play-services-ads:22.0.0'
     implementation 'com.google.android.material:material:1.8.0'
