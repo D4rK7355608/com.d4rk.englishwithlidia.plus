@@ -68,10 +68,6 @@
     <string name="firebase">Firebase</string>
     <string name="close">Schließen?</string>
     <string name="mail_to_dev">E-Mail an Entwickler</string>
-    <string name="system_default">Systemfehler</string>
-    <string name="current_language">Die aktuelle In-App-Sprache ist %1$s!</string>
-    <string name="recommended">Empfohlen</string>
-    <string name="all_languages">Alle Sprachen</string>
     <string name="question_1">Was ist Englisch mit Lidia Plus?</string>
     <string name="question_2">Wie kann ich die App nutzen?</string>
     <string name="question_3">Welche Vorteile hat die Nutzung der App?</string>

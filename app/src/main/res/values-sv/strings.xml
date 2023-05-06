@@ -68,10 +68,6 @@
     <string name="firebase">Firebase</string>
     <string name="close">Stänga?</string>
     <string name="mail_to_dev">Mejla till dev</string>
-    <string name="system_default">Systemfel</string>
-    <string name="current_language">Det aktuella språket i appen är %1$s!</string>
-    <string name="recommended">Rekommenderad</string>
-    <string name="all_languages">Alla språk</string>
     <string name="question_1">Vad är engelska med Lidia Plus?</string>
     <string name="question_2">Hur kan jag använda appen?</string>
     <string name="question_3">Vilka är fördelarna med att använda appen?</string>

@@ -68,10 +68,6 @@
     <string name="firebase">ファイアベース</string>
     <string name="close">近い？</string>
     <string name="mail_to_dev">開発者にメール</string>
-    <string name="system_default">システムのデフォルト</string>
-    <string name="current_language">現在のアプリ内言語は %1$s!</string>
-    <string name="recommended">おすすめされた</string>
-    <string name="all_languages">すべての言語</string>
     <string name="question_1">リディアプラスで英語とは？</string>
     <string name="question_2">アプリの使用方法を教えてください。</string>
     <string name="question_3">アプリを使うメリットは？</string>

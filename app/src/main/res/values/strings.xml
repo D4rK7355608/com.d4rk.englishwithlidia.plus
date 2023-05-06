@@ -2,13 +2,6 @@
     <string name="app_name" translatable="false">English with Lidia Plus</string>
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="app_short_description">Learn english and relax in the same time! 📚</string>
-    <string name="android_studio_tutorials_java" translatable="false">Android Studio Tutorials: Java Edition</string>
-    <string name="android_studio_tutorials_kotlin" translatable="false">Android Studio Tutorials: Kotlin Edition</string>
-    <string name="music_sleep_timer" translatable="false">Music Sleep Timer Plus</string>
-    <string name="qr_code_scanner" translatable="false">QR &amp; Bar Code Scanner Plus</string>
-    <string name="low_brightness" translatable="false">Low Brightness</string>
-    <string name="cleaner_plus" translatable="false">Cleaner Plus</string>
-    <string name="cart_calculator" translatable="false">Cart Calculator</string>
     <string name="feedback">Feedback</string>
     <string name="rate_us">Rate our app!</string>
     <string name="lesson_1" translatable="false">Tell me about yourself (in a job interview):</string>
@@ -81,13 +74,24 @@
     <string name="toast_feedback">Thanks for rating us!</string>
     <string name="ad_id">Ad id [AD_ID]</string>
     <string name="language">Language</string>
+    <string name="bulgarian" translatable="false">Български</string>
+    <string name="english" translatable="false">English</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="hungarian" translatable="false">Magyar</string>
+    <string name="german" translatable="false">Deutsch</string>
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="indonesian" translatable="false">Bahasa Indonesia</string>
+    <string name="italian" translatable="false">Italiano</string>
+    <string name="japanese" translatable="false">日本語</string>
+    <string name="polish" translatable="false">Polski</string>
+    <string name="romanian" translatable="false">Română</string>
+    <string name="russian" translatable="false">Русский</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="turkish" translatable="false">Türkçe</string>
+    <string name="ukrainian" translatable="false">Українська</string>
     <string name="firebase">Firebase</string>
     <string name="close">Close?</string>
     <string name="mail_to_dev">Email to dev</string>
-    <string name="system_default">System default</string>
-    <string name="current_language">Current in-app language is %1$s!</string>
-    <string name="recommended">Recommended</string>
-    <string name="all_languages">All languages</string>
     <string name="question_1">What is English with Lidia Plus?</string>
     <string name="question_2">How can I use the app?</string>
     <string name="question_3">What are the benefits of using the app?</string>
@@ -128,6 +132,10 @@
     <string name="summary_notification_update">A new version of the app is available. Click to update!</string>
     <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
     <string name="changes" translatable="false">\n
+        • Added language support for Hungarian.\n\n
+        • Reworked language system, making it more accurate and user-friendly.\n\n
+        • Reworked and improved animations.\n\n
+        • Fixed various bugs and improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.\n\n
         • Made various under-the-hood improvements for a better overall app experience.
     </string>
 </resources>

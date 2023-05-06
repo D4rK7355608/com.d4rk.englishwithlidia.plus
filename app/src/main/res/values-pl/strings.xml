@@ -68,10 +68,6 @@
     <string name="firebase">Baza ogniowa</string>
     <string name="close">Zamknąć?</string>
     <string name="mail_to_dev">E-mail do dev</string>
-    <string name="system_default">Domyślne ustawienie systemowe</string>
-    <string name="current_language">Bieżący język aplikacji to %1$s!</string>
-    <string name="recommended">Zalecana</string>
-    <string name="all_languages">Wszystkie języki</string>
     <string name="question_1">Czym jest angielski z Lidia Plus?</string>
     <string name="question_2">Jak mogę korzystać z aplikacji?</string>
     <string name="question_3">Jakie są korzyści z używania aplikacji?</string>

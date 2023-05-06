@@ -68,10 +68,6 @@
     <string name="firebase">base de fuego</string>
     <string name="close">¿Cerca?</string>
     <string name="mail_to_dev">Enviar correo electrónico al desarrollador</string>
-    <string name="system_default">Sistema por defecto</string>
-    <string name="current_language">¡El idioma actual de la aplicación es %1$s!</string>
-    <string name="recommended">Recomendado</string>
-    <string name="all_languages">Todos los idiomas</string>
     <string name="question_1">¿Qué es Inglés con Lidia Plus?</string>
     <string name="question_2">¿Cómo puedo usar la aplicación?</string>
     <string name="question_3">¿Cuáles son los beneficios de usar la aplicación?</string>

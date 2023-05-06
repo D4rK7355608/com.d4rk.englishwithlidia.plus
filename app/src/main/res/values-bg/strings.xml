@@ -68,10 +68,6 @@
     <string name="firebase">Firebase</string>
     <string name="close">Близо?</string>
     <string name="mail_to_dev">Имейл до разработчиците</string>
-    <string name="system_default">Система по подразбиране</string>
-    <string name="current_language">Текущият език в приложението е %1$s!</string>
-    <string name="recommended">Препоръчва се</string>
-    <string name="all_languages">Всички езици</string>
     <string name="question_1">Какво е английски с Lidia Plus?</string>
     <string name="question_2">Как мога да използвам приложението?</string>
     <string name="question_3">Какви са предимствата от използването на приложението?</string>

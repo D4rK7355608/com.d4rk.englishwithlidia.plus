@@ -68,10 +68,6 @@
     <string name="firebase">Firebase</string>
     <string name="close">Закрити?</string>
     <string name="mail_to_dev">Надіслати електронною поштою розробнику</string>
-    <string name="system_default">Система за умовчанням</string>
-    <string name="current_language">Поточна мова програми – %1$s!</string>
-    <string name="recommended">Рекомендовано</string>
-    <string name="all_languages">Всі мови</string>
     <string name="question_1">Що таке англійська з Lidia Plus?</string>
     <string name="question_2">Як я можу використовувати додаток?</string>
     <string name="question_3">Які переваги використання програми?</string>

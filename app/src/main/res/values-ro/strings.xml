@@ -52,10 +52,6 @@
     <string name="firebase">Firebase</string>
     <string name="close">Închide?</string>
     <string name="mail_to_dev">E-mail către dev</string>
-    <string name="system_default">Defectiune de sistem</string>
-    <string name="current_language">Limba actuală în aplicație este %1$s!</string>
-    <string name="recommended">Recomandat</string>
-    <string name="all_languages">Toate limbile</string>
     <string name="notifications">Notificări</string>
     <string name="notification_settings">Setări notificări</string>
     <string name="app_usage_notifications">Notificări de utilizare a aplicației</string>

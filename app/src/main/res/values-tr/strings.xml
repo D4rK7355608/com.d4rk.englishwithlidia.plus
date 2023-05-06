@@ -68,10 +68,6 @@
     <string name="firebase">Firebase</string>
     <string name="close">Kapalı?</string>
     <string name="mail_to_dev">geliştiriciye e-posta</string>
-    <string name="system_default">Sistem varsayılanı</string>
-    <string name="current_language">Mevcut uygulama içi dil %1$s!</string>
-    <string name="recommended">Tavsiye edilen</string>
-    <string name="all_languages">Bütün diller</string>
     <string name="question_1">Lidia Plus ile İngilizce nedir?</string>
     <string name="question_2">Uygulamayı nasıl kullanabilirim?</string>
     <string name="question_3">Uygulamayı kullanmanın faydaları nelerdir?</string>

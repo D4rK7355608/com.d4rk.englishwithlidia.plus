@@ -68,10 +68,6 @@
     <string name="firebase">फायरबेस</string>
     <string name="close">बंद करना?</string>
     <string name="mail_to_dev">देव को ईमेल करें</string>
-    <string name="system_default">प्रणालीगत चूक</string>
-    <string name="current_language">ऐप्लिकेशन के अंतर्गत वर्तमान भाषा %1$s है!</string>
-    <string name="recommended">अनुशंसित</string>
-    <string name="all_languages">सारी भाषाएँ</string>
     <string name="question_1">लिडिया प्लस के साथ अंग्रेजी क्या है?</string>
     <string name="question_2">मैं ऐप का उपयोग कैसे कर सकता हूं?</string>
     <string name="question_3">ऐप का उपयोग करने के क्या फायदे हैं?</string>
