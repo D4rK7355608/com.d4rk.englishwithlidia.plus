@@ -1,22 +1,12 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="openSettings"
         android:enabled="true"
         android:icon="@mipmap/ic_shortcut_settings"
+        android:shortcutId="openSettings"
         android:shortcutShortLabel="@string/settings">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.englishwithlidia.plus"
-            android:targetClass="com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity"/>
-    </shortcut>
-    <shortcut
-        android:shortcutId="openLessons"
-        android:enabled="true"
-        android:icon="@mipmap/ic_shortcut_lessons"
-        android:shortcutShortLabel="@string/lessons">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.englishwithlidia.plus"
-            android:targetClass="com.d4rk.englishwithlidia.plus.ui.lessons.Lesson1Activity"/>
+            android:targetClass="com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity"
+            android:targetPackage="com.d4rk.englishwithlidia.plus" />
     </shortcut>
 </shortcuts>

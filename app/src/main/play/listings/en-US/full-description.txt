@@ -1,75 +1,32 @@
-📚 English with Lidia Plus 📚
+The Cart Calculator app is a convenient and simple tool that helps you to manage your shopping cart easily and efficiently. Whether you are grocery shopping or just buying household items, this app helps you to keep track of everything in one place.
 
-╔╦╦╦═╦╗╔═╦═╦══╦═╗
-║║║║╩╣╚╣═╣║║║║║╩╣
-╚══╩═╩═╩═╩═╩╩╩╩═╝
+With the Cart Calculator app, you can add items to the cart, set the quantity, and calculate the total cost of your purchase. You can also update the quantity of each item and see the updated total cost in real-time. The app is user-friendly and easy to navigate, making it a perfect choice for people of all ages.
 
-English with Lidia Plus is the app for you! 😍
+The Cart Calculator app features a simple and intuitive interface that allows you to add and manage items quickly and easily. It also provides a detailed list of your purchases, including the name, price, and quantity of each item. You can customize the list according to your preferences, and the app will calculate the total cost for you automatically.
 
-If you are looking for a fun and easy way to learn English, you should try English with Lidia! 😍
+In addition to managing your shopping cart, the Cart Calculator app also allows you to track your expenses and monitor your spending. This feature helps you to stick to your budget and avoid overspending.
 
-English with Lidia Plus is the official app of Lidia, a professional English teacher who creates engaging and effective lessons for learners of all levels. 📚
+Overall, the Cart Calculator app is an essential tool for anyone who wants to manage their shopping cart efficiently and stay on top of their expenses. Whether you are a busy mom or a student on a budget, this app is perfect for you. Download it now and start managing your shopping cart like a pro!
 
-This app offers you a variety of features that will help you improve your English skills and enjoy the learning process. 🙌
+Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
 
-By using this app, you will be able to:
+Features
+• Calculate the total amount of your cart
+• Add or remove items from cart
+• Create multiple carts
 
-• Read Lidia's blog posts on various topics related to English language and culture, and learn new words and expressions in context. 📗
-• Listen to Lidia's podcasts and improve your listening and pronunciation skills, as well as your knowledge of English culture and idioms. 📻
-• Access exclusive content and resources that will help you master English grammar, vocabulary, and more, with clear explanations and examples. 📖
-• Enjoy a beautiful and user-friendly design that makes learning English a pleasure, with interactive quizzes, games, and feedback. 💖
+Benefits
+• Efficient shopping
+• Budget management
+• Expense tracking
 
-English with Lidia Plus  is more than just an app. It's a learning journey that will inspire you to achieve your goals and have fun along the way. 🚀
+How it works
+Cart Calculator streamlines your shopping experience by allowing you to effortlessly manage your shopping cart. It provides a real-time calculation of your total purchase cost as you add or update item quantities. This user-friendly app is designed for shoppers of all ages, ensuring that managing your cart is a breeze.
 
-🌐 Visit the official website/blog to learn more: https://sites.google.com/view/englishwithlidia/home
+Get started today
+Embark on a smarter shopping journey with Cart Calculator. Download it from the Google Play Store now and take the first step towards efficient shopping management. It’s free, open-source, and incredibly easy to use—perfect for enhancing your shopping efficiency. Enjoy a seamless shopping experience today!
 
-⚠ Opening Issues!
-Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues
+Feedback
+We are constantly updating and improving Cart Calculator to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-Create an audio/text/general bug. 🐞
-
-🛠️ Features!
-⭐️ Play audio instead of reading.
-⭐️ Adaptive themes + Material-You.
-⭐️ Simple and easy to use.
-⭐️ Fast and lightweight.
-⭐️ Free Open source & secure.
-
-👨‍💻 More about me!
-● Music:
-⇨ YouTube Music: https://music.youtube.com/channel/UCb2zXzO03OM7U9xeIsqqEQw
-⇨ Spotify: https://open.spotify.com/artist/5Q58DBSe2tpBb3qqq9WVfo
-⇨ Deezer: https://www.deezer.com/us/artist/408659
-⇨ SoundCloud: https://soundcloud.com/d4rk7355608
-⇨ BandLab: https://www.bandlab.com/d4rk7355608
-
-● Graphics:
-⇨ DeviantArt: https://www.deviantart.com/d4rk7355608
-
-● Social:
-⇨ GameJolt: https://gamejolt.com/@D4rK7355608
-⇨ Twitter: https://twitter.com/D4rK7355608
-⇨ Skype: d4rk7355608
-⇨ Steam Profile: https://steamcommunity.com/id/d4rk7355608
-⇨ Steam Trade Link: https://steamcommunity.com/tradeoffer/new/?partner=892981294&token=pxsUtrm3
-
-● Developer stuff:
-⇨ GitHub: https://github.com/D4rK7355608
-⇨ Google Play Store: https://play.google.com/store/apps/dev?id=5390214922640123642
-⇨ Google Developers: https://g.dev/D4rK7355608
-
-🛑 Disclaimer!
-• This Application is made only for Education Purpose.
-• English with Lidia Plus is a blog type app witch can help you learn English with relaxing and easy to understand lessons for everyone.
-• We acknowledge the ownership of some of the music in our audios and credit Lidia Melinte as the main voice.
-• Only use the GitHub Issues section if you discover issues with the code itself. Do not mistake the Issues page as a help desk. For support, information and requests, please contact d4rk7355608@gmail.com.
-
-💬 Feedback!
-We are constantly updating and improving English with Lidia Plus to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
-
-Thank you for choosing English with Lidia Plus. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
-
-╔╦╦══╦══╦═╦╗
-║╔╣║║╠╗╔╣═╣║
-║║║╔╗║║║║═╬╣
-╚╝╚╝╚╝╚╝╚═╩╝
+Thank you for choosing Cart Calculator! We hope you enjoy using our app as much as we enjoyed creating it for you!

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">English with Lidia</string>
+    <string name="app_full_name" translatable="false">English with Lidia Plus</string>
+    <string name="arch" translatable="false">Arch:</string>
+    <string name="bulgarian" translatable="false">Български</string>
+    <string name="english" translatable="false">English</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="hungarian" translatable="false">Magyar</string>
+    <string name="german" translatable="false">Deutsch</string>
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="indonesian" translatable="false">Bahasa Indonesia</string>
+    <string name="italian" translatable="false">Italiano</string>
+    <string name="japanese" translatable="false">日本語</string>
+    <string name="polish" translatable="false">Polski</string>
+    <string name="romanian" translatable="false">Română</string>
+    <string name="russian" translatable="false">Русский</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="turkish" translatable="false">Türkçe</string>
+    <string name="ukrainian" translatable="false">Українська</string>
+    <string name="summary_preference_settings_license" translatable="false">General Public License-3.0</string>
+    <string name="feedback_for" translatable="false">Feedback for </string>
+    <string name="dear_developer" translatable="false">Dear developer, </string>
+    <string name="send_email_using" translatable="false">Send mail using:</string>
+    <string name="copyright" translatable="false">Copyright ©2023-2024, D4rK</string>
+</resources>

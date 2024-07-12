@@ -1,69 +1,214 @@
 <resources>
-    <string name="app_name" translatable="false">English with Lidia Plus</string>
-    <string name="app_version">Version %1$s (%2$d)</string>
     <string name="app_short_description">Learn english and relax in the same time! 📚</string>
-    <string name="feedback">Feedback</string>
-    <string name="rate_us">Rate our app!</string>
-    <string name="lesson_1" translatable="false">Tell me about yourself (in a job interview):</string>
-    <string name="lesson_2" translatable="false">To be or not to be:</string>
-    <string name="twitter" translatable="false">Twitter</string>
-    <string name="youtube" translatable="false">YouTube</string>
-    <string name="github" translatable="false">GitHub</string>
-    <string name="xda" translatable="false">XDA</string>
-    <string name="google_dev" translatable="false">Google Dev</string>
-    <string name="lessons">Lessons</string>
-    <string name="home">Home</string>
-    <string name="about">About</string>
-    <string name="more">More</string>
-    <string name="support_me">Support me</string>
-    <string name="check_for_updates">Check for updates…</string>
-    <string name="changelog">Changelog</string>
-    <string name="permissions">Permissions</string>
-    <string name="more_apps">More apps…</string>
-    <string name="privacy_policy">Privacy Policy</string>
-    <string name="terms_of_service">Terms of Service</string>
-    <string name="code_of_conduct">Code of Conduct</string>
+    <string name="notification_update_title">A new update available!</string>
+    <string name="summary_notification_update">A new version of the app is available. Click to update!</string>
+    <string name="notification_last_time_used_title">It\'s been a while!</string>
+    <string name="summary_notification_last_time_used">Let\'s learn something! We are happy you are back!</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Browse the <i><u>Terms of Service</u></i> and <i><u>Privacy Policy</u></i></string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to our Terms of Service and Privacy Policy to continue.</string>
+    <string name="agree">Agree</string>
+
+    <string name="no_carts_available">No carts available</string>
+    <string name="add_new_cart">Add new cart</string>
+    <string name="cart_name">Cart name</string>
+    <string name="shopping_cart">Shopping cart</string>
+    <string name="summary_cart_dialog">We\'re committed to creating a personalized shopping experience for everyone. To make it easier for you to keep track of your selections and enhance your shopping journey, consider giving your cart a name before adding items.</string>
+    <string name="created_on">Created on %1$s</string>
+    <string name="delete_cart_title">Delete Cart</string>
+    <string name="delete_cart_message">Are you sure you want to delete this cart?</string>
+    <string name="delete_cart_warning">Deleting this cart will permanently remove all items from \"%s\" and cannot be undone.</string>
+    <string name="snackbar_cart_deleted_success">Cart deleted successfully!</string>
+    <string name="snackbar_cart_deleted_error">Error deleting cart. Please try again.</string>
+    <string name="close">Close?</string>
+    <string name="summary_close">Are you sure you want to exit?</string>
+    <string name="snack_network_error">Network error occurred while checking for updates</string>
+    <string name="snack_general_error">An error occurred while checking for updates</string>
+
+    <string name="your_shopping_cart_is_empty">Your shopping cart is empty</string>
+    <string name="item_name">Item name</string>
+    <string name="enter_item_name">Enter item name</string>
+    <string name="item_price">Item price</string>
+    <string name="enter_item_price">Enter item price</string>
+    <string name="quantity">Quantity</string>
+    <string name="enter_quantity">Enter quantity</string>
+    <string name="dialog_info_cart_item">To ensure a seamless checkout experience, please provide details about the items you\'re adding to your cart</string>
+    <string name="total">Total</string>
+    <string name="delete_cart_item_title">Delete Cart Item</string>
+    <string name="delete_cart_item_message">Are you sure you want to delete this item?</string>
+    <string name="delete_cart_item_warning">You are about to delete "%s" from your cart.</string>
+
     <string name="settings">Settings</string>
-    <string name="license">License</string>
-    <string name="theme">Theme</string>
-    <string name="normal">Normal</string>
-    <string name="internet">Internet [INTERNET]</string>
-    <string name="access_network_state">Access network state [ACCESS_NETWORK_STATE]</string>
-    <string name="post_notifications">Post notifications [POST_NOTIFICATIONS]</string>
-    <string name="check_license">Check license [CHECK_LICENSE]</string>
-    <string name="foreground_service">Foreground service [FOREGROUND_SERVICE]</string>
-    <string name="access_notification_policy">Access notification policy [ACCESS_NOTIFICATION_POLICY]</string>
-    <string name="find_us">Find us on</string>
-    <string name="website">Website</string>
+
+    <string name="display">Display</string>
+    <string name="summary_preference_settings_display">Personalize your app\'s look and feel</string>
+
+    <string name="appearance">Appearance</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="will_turn_on_automatically_by_system">Will turn on automatically by the system</string>
+    <string name="will_never_turn_on_automatically">Will never turn on automatically</string>
+    <string name="amoled_mode">AMOLED mode</string>
     <string name="follow_system">Follow System Mode</string>
     <string name="light_mode">Light Mode</string>
     <string name="dark_mode">Dark Mode</string>
-    <string name="auto_battery_mode">Auto Battery Dark Mode</string>
-    <string name="faq">FAQ</string>
+    <string name="summary_dark_theme">Dark theme uses a deep background to help keep your battery alive longer</string>
+
+    <string name="dynamic_colors">Dynamic colors</string>
+    <string name="summary_preference_settings_dynamic_colors">Apply colors from wallpapers to the app theme</string>
+
+    <string name="language">Language</string>
+    <string name="summary_preference_settings_language">Changes the language used in the app</string>
+    <string name="dialog_language_subtitle">Select your preferred language</string>
+    <string name="dialog_info_language">Personalize your experience with your preferred language. Any language changes you make take effect right away, ensuring a seamless experience in your chosen language</string>
+
+    <string name="cart_settings">Cart settings</string>
+    <string name="summary_preference_settings_cart">Manage how your cart behaves</string>
+
+    <string name="currency">Currency</string>
+    <string name="summary_preference_settings_currency">Set your preferred currency for displaying prices</string>
+    <string name="dialog_currency_subtitle">Select your preferred currency</string>
+    <string name="dialog_info_currency">This currency selection will be utilized across the platform for displaying product prices, processing transactions, and providing a more personalized shopping experience</string>
+
+    <string name="notifications">Notifications</string>
+    <string name="summary_preference_settings_notifications">Manage app notifications</string>
+
+    <string name="app_usage_notifications">App Usage Notifications</string>
+    <string name="update_notifications">Update Notifications</string>
+
+    <string name="advanced">Advanced</string>
+    <string name="summary_preference_settings_advanced">Explore more advanced settings</string>
+    <string name="error_reporting">Error reporting</string>
+    <string name="bug_report">Bug report</string>
+    <string name="summary_preference_settings_bug_report">Send bug reports and feature requests to the app\'s GitHub repository issues page</string>
+
+    <string name="security_and_privacy">Security &amp; privacy</string>
+    <string name="summary_preference_settings_privacy_and_security">Manage your privacy settings</string>
+    <string name="privacy">Privacy</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="summary_preference_settings_privacy_policy">View the policy that governs how we handle your data</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="summary_preference_settings_terms_of_service">Review the terms you agree to when using our service</string>
+    <string name="code_of_conduct">Code of Conduct</string>
+    <string name="summary_preference_settings_code_of_conduct">Understand the rules and guidelines for behavior within our service</string>
+
+    <string name="permissions">Permissions</string>
+    <string name="summary_preference_settings_permissions">Manage the permissions granted to our service</string>
+    <string name="normal">Normal</string>
+    <string name="ad_id">Ad id [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Allows the app to retrieve and use the advertising identifier associated with the user\'s device, providing personalized ads, measuring ad effectiveness, and showing ads on Android 13 or later devices.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Allows the app to establish an internet connection to send error reports or check for updates.</string>
+    <string name="post_notifications">Post notifications [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Allows the app to display notifications on the devices with Android 13 or later.</string>
     <string name="runtime">Runtime</string>
-    <string name="music">Music</string>
-    <string name="info">Info</string>
+    <string name="access_network_state">Access network state [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Allows the app to check network connectivity and retrieve information about Wi-Fi, including enabled status and connected Wi-Fi device names.</string>
+    <string name="access_notification_policy">Access notification policy [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
+    <string name="billing">Billing [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Allows the app to use the Google Play Billing Library to handle in-app purchases and donations</string>
+    <string name="check_license">Check license [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Allows the app to verify its compliance with the license agreement and enforce licensing terms to protect intellectual property.</string>
+    <string name="foreground_service">Foreground service [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
+
+    <string name="ads">Ads</string>
+    <string name="summary_preference_settings_ads">Control how we use your information to show you relevant ads</string>
+    <string name="display_ads">Display ads</string>
+    <string name="personalized_ads">Personalized ads</string>
+    <string name="summary_ads_personalized_ads">Choose how we personalize ads for you based on your interests</string>
+    <string name="summary_ads">See ads that are relevant to you. Manage the information used to show personalized ads based on your app activity. You can always turn off personalization here.\n</string>
+
+    <string name="usage_and_diagnostics">Usage and diagnostics</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Share data to help improve Cart Calculator</string>
+    <string name="summary_usage_and_diagnostics">Help improve your experience by automatically sending diagnostic, device, and app usage data to us. This will help improve app performance, stability, and other enhancements. Some aggregate data will also help our apps.\n\nThis is general information about your device and how you use our apps (such as battery level, system and app activity, and errors). The data will be used to improve our apps\n\nTurning off this feature doesn\'t affect your device\'s ability to send the information needed for essential services such as app updates and security.\n</string>
+
+    <string name="legal">Legal</string>
+    <string name="legal_notices">Legal notices</string>
+    <string name="summary_preference_settings_legal_notices">View legal information about our service</string>
+    <string name="license">License</string>
+
+    <string name="about">About</string>
+    <string name="summary_preference_settings_about">Learn more about Cart Calculator</string>
+
+    <string name="app_info">App info</string>
+    <string name="app_build_version">Application build version</string>
+    <string name="summary_preference_settings_oss">License details for open source software</string>
     <string name="device_info">Device Info</string>
     <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
     <string name="manufacturer">Manufacturer:</string>
     <string name="device_model">Device Model:</string>
     <string name="android_version">Android Version:</string>
     <string name="api_level">API Level:</string>
-    <string name="arch" translatable="false">Arch:</string>
-    <string name="notifications">Notifications</string>
-    <string name="notification_settings">Notification settings</string>
-    <string name="app_usage_notifications">App Usage Notifications</string>
-    <string name="update_notifications">Update Notifications</string>
-    <string name="open_me">Open me :)</string>
-    <string name="appearance">Appearance</string>
+
+    <string name="help_and_feedback">Help &amp; feedback</string>
+    <string name="help">Help</string>
+    <string name="faq">FAQ</string>
+    <string name="view_in_google_play_store">View in Google Play Store</string>
+    <string name="version_info">Version info</string>
+    <string name="version">Version %1$s</string>
+    <string name="beta_program">Beta program</string>
+    <string name="question_1">What is English with Lidia Plus?</string>
+    <string name="summary_preference_faq_1">English with Lidia Plus is an app that helps you learn English by reading or listening to blog posts written by Lidia, an English teacher.</string>
+    <string name="question_2">How can I use the app?</string>
+    <string name="summary_preference_faq_2">You can use the app without internet connection. You can choose to read the blog posts or play audio instead. You can also adjust the theme and settings according to your preferences.</string>
+    <string name="question_3">What are the benefits of using the app?</string>
+    <string name="summary_preference_faq_3">The app can help you learn English with relaxing and easy to understand lessons for everyone. You can also improve your listening skills by playing audio. The app has adaptive themes and Material-You design for a better user experience.</string>
+    <string name="question_4">How can I report bugs or give feedback?</string>
+    <string name="summary_preference_faq_4">You can report bugs on <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. You can also contact d4rk7355608@gmail.com for support, information, and requests. If you are happy with the app, please rate it 5 stars on Google Play.</string>
+    <string name="question_5">How can I learn more about the app or the developer?</string>
+    <string name="summary_preference_faq_5">You can visit the official <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">website/blog</a> of the app. You can also follow D4rK on various platforms such as Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter, and GitHub.</string>
+    <string name="question_6">How does the app handle my data privacy and security?</string>
+    <string name="summary_preference_faq_6">The app does not share any data with third parties. The app may collect some data types such as app info and performance. The data is encrypted in transit but cannot be deleted. You can learn more about how developers declare sharing on Google Play.</string>
+    <string name="question_7">Who owns the music and voice in the audio lessons?</string>
+    <string name="summary_preference_faq_7">Some music from the audio lessons belong to their respective owners and principal voice is from Lidia Melinte.</string>
+    <string name="question_8">How often are new lessons added to the app?</string>
+    <string name="summary_preference_faq_8">The app is updated regularly with new lessons and features. You can check the Google Play page for the latest updates or follow D4rK on social media for announcements.</string>
+    <string name="question_9">Who is Lidia Melinte and what is her role in the app?</string>
+    <string name="summary_preference_faq_9">Lidia Melinte, an English teacher, creates the lessons and narrates the audios in the app.</string>
+    <string name="feedback">Feedback</string>
+
+    <string name="updates">Updates</string>
+
     <string name="share">Share</string>
+
+    <string name="support_us">Support Us</string>
+    <string name="paid_support">Paid Support</string>
+    <string name="summary_donations">No matter how much you donate, you will help us keep our app running and improve our features. We appreciate your generosity and kindness!</string>
+    <string name="non_paid_support">Non-Paid Support</string>
+    <string name="web_ad">Web Ad</string>
+
+    <string name="snack_app_updated">The app has been successfully updated</string>
+    <string name="snack_update_failed">The update process encountered an issue</string>
+    <string name="try_again">Try again</string>
+    <string name="summary_share_message">Check out this amazing app that I\'m using! It has some really cool features that you might find interesting. You can download it from the Play Store at: %1$s</string>
+    <string name="learn_more">Learn more</string>
+
+
+
+
+
+
+    <string name="lesson_1_title" translatable="false">Tell me about yourself (in a job interview):</string>
+    <string name="lesson_2_title" translatable="false">To be or not to be:</string>
+    <string name="lessons">Lessons</string>
+    <string name="home">Home</string>
+    <string name="more">More</string>
+    <string name="support_me">Support me</string>
+    <string name="check_for_updates">Check for updates…</string>
+    <string name="changelog">Changelog</string>
+    <string name="more_apps">More apps…</string>
+    <string name="theme">Theme</string>
+    <string name="find_us">Find us on</string>
+    <string name="website">Website</string>
+    <string name="auto_battery_mode">Auto Battery Dark Mode</string>
+    <string name="music">Music</string>
+    <string name="info">Info</string>
+    <string name="notification_settings">Notification settings</string>>
     <string name="share_subject">Try it now!!!</string>
     <string name="share_using">Share using…</string>
     <string name="made_in">Made with ❤ in Romania!</string>
-    <string name="copyright">© Copyright %1$s, made by D4rK!</string>
-    <string name="agree">Agree</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Browse the <i><u>Terms of Service</u></i> and <i><u>Privacy Policy</u></i></string>
-    <string name="welcome">Welcome</string>
     <string name="copied_to_clipboard">Copied to clipboard!</string>
     <string name="subscribe_to_beta">Subscribe to beta updates</string>
     <string name="app_updates">App updates</string>
@@ -72,70 +217,4 @@
     <string name="tooltip_website">Visit our official website.</string>
     <string name="tooltip_facebook">Lidia\'s official Facebook profile.</string>
     <string name="toast_feedback">Thanks for rating us!</string>
-    <string name="ad_id">Ad id [AD_ID]</string>
-    <string name="language">Language</string>
-    <string name="bulgarian" translatable="false">Български</string>
-    <string name="english" translatable="false">English</string>
-    <string name="french" translatable="false">Français</string>
-    <string name="hungarian" translatable="false">Magyar</string>
-    <string name="german" translatable="false">Deutsch</string>
-    <string name="hindi" translatable="false">हिन्दी</string>
-    <string name="indonesian" translatable="false">Bahasa Indonesia</string>
-    <string name="italian" translatable="false">Italiano</string>
-    <string name="japanese" translatable="false">日本語</string>
-    <string name="polish" translatable="false">Polski</string>
-    <string name="romanian" translatable="false">Română</string>
-    <string name="russian" translatable="false">Русский</string>
-    <string name="spanish" translatable="false">Español</string>
-    <string name="turkish" translatable="false">Türkçe</string>
-    <string name="ukrainian" translatable="false">Українська</string>
-    <string name="firebase">Firebase</string>
-    <string name="close">Close?</string>
-    <string name="mail_to_dev">Email to dev</string>
-    <string name="question_1">What is English with Lidia Plus?</string>
-    <string name="question_2">How can I use the app?</string>
-    <string name="question_3">What are the benefits of using the app?</string>
-    <string name="question_4">How can I report bugs or give feedback?</string>
-    <string name="question_5">How can I learn more about the app or the developer?</string>
-    <string name="question_6">How does the app handle my data privacy and security?</string>
-    <string name="question_7">Who owns the music and voice in the audio lessons?</string>
-    <string name="question_8">How often are new lessons added to the app?</string>
-    <string name="question_9">Who is Lidia Melinte and what is her role in the app?</string>
-    <string name="summary_preference_faq_1">English with Lidia Plus is an app that helps you learn English by reading or listening to blog posts written by Lidia, an English teacher.</string>
-    <string name="summary_preference_faq_2">You can use the app without internet connection. You can choose to read the blog posts or play audio instead. You can also adjust the theme and settings according to your preferences.</string>
-    <string name="summary_preference_faq_3">The app can help you learn English with relaxing and easy to understand lessons for everyone. You can also improve your listening skills by playing audio. The app has adaptive themes and Material-You design for a better user experience.</string>
-    <string name="summary_preference_faq_4">You can report bugs on <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. You can also contact d4rk7355608@gmail.com for support, information, and requests. If you are happy with the app, please rate it 5 stars on Google Play.</string>
-    <string name="summary_preference_faq_5">You can visit the official <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">website/blog</a> of the app. You can also follow D4rK on various platforms such as Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter, and GitHub.</string>
-    <string name="summary_preference_faq_6">The app does not share any data with third parties. The app may collect some data types such as app info and performance. The data is encrypted in transit but cannot be deleted. You can learn more about how developers declare sharing on Google Play.</string>
-    <string name="summary_preference_faq_7">Some music from the audio lessons belong to their respective owners and principal voice is from Lidia Melinte.</string>
-    <string name="summary_preference_faq_8">The app is updated regularly with new lessons and features. You can check the Google Play page for the latest updates or follow D4rK on social media for announcements.</string>
-    <string name="summary_preference_faq_9">Lidia Melinte, an English teacher, creates the lessons and narrates the audios in the app.</string>
-    <string name="notification_last_time_used_title">It\'s been a while!</string>
-    <string name="notification_update_title">A new update available!</string>
-    <string name="introduction_first_lesson" translatable="false">Bun găsit dragi prieteni. Azi, la ora de engleză vom învăța cum să avem un interview reușit.</string>
-    <string name="introduction_second_lesson" translatable="false">Bun găsit prieteni la lecția de engleză de la radio, sunt Lidia Melinte ghidul vostru printre cuvinte, expresii și puțină muzică în limba engleză, frumoasa limbă a lui William Shakespeare, dar și a lui Freddy Mercury care spunea că tot ceea ce a trebuit să știu am auzit  la radio.</string>
-    <string name="summary_first_lesson" translatable="false">Atunci când vrăbiile cântau minunat prin copaci totul era fericit. Noi eram veseli și jucăuși. Dar… ne-au trimis de acasă. Ne-au trimis… la școală <i><b>they send me away and they thought me how to be sensible</b></i> și ne-au învățat să fim rezonabili <i><b>responsible, logical, practical</b></i> pentru că așa e lumea în care urma să trăim nu-i așa? Dar astăzi este despre interview și așa este lumea interview-urilor <i><b>practical, responsible, logical and we have to be sensible</b></i> și noi chiar trebuie să fim de nădejde.\n\nDe fapt la un interview este despre cum să te vinzi <i><b>how to sell yourself</b></i> spun experții în interview-uri. Știu că sună cinic <i><b>cynical</b></i> ca și în cântecul nostru. Dar chiar așa și este <i><b>and we have to be dependable</b></i> orice angajator are nevoie de oameni în care să aibă încredere dependable, iar noi trebuie să ne descriem cât mai pozitiv putem. Partea bună e că orice CEO AgeO manager, orice director, orice angajator, orice meneger de personal, toți sunt și ei oameni, iar noi trebuie să avem în minte să le oferim cea mai bună versiune a noastră. Nu mai este destul să spui că ești <i><b>onest, hard working, confident, loyal, team player, responsible, sensible, amyrical</b></i>, nu… Acum trebuie s-o arăți. <i><b>You have to show them you are responsible, dependable. But how?</b></i> Pur și simplu le răspunzi cu ceea ce vor să audă la întrebarea <i><b>Tell me about yourself</b></i>\n\n<b><u>So, tell me about yourself.</u></b>\n\nLe spunem povestea vieții noastre? <b><u>So, you want me to tell you the story of my life?</u></b> <i><b>No! He does not want to hear you telling him the story of your life.</b></i> Nu, pentru că nu suntem Brad Pitt în interview cu un vampir. Nu ne întreabă despre viața noastră.. despre cățel, despre părinți. <i><b>It\'s not about your life story.</b></i>\n\n<i><b>Your parents, your background and your dog\'s name...</b></i>\n\n<i><b>No, it\'s not about this.</b></i>\n\n<i><b>What kind of cat do you have. It is not about that. So, when people hear that question they think Oh, let me tell you my life story and 20 minutes into... you had not talk about anything important. So, what they actually asking this? What are you bringing to the table. So, from now on when you hear the question \"Tell me about yourself\" I want you to make a mental switch. That equals what value could you bring to the company.</b></i>\n\n<i><b>What value could you bring to the company.</b></i> Asta vor să audă. Ce valoare aduci companiei. Ce probleme poți să rezolvi. <i><b>Problems can you solve to the company.</b></i> Ce probleme rezolvi pentru companie. Asta este cheia numărul 1 pe care v-o aduc astăzi <i><b>The key number one.</b></i>\n\n<i><b>Key number too… Is to be your best self. Be yourself, of cure, be authentic but be the best version of yourself.</b></i> Fii cea mai bună versiune a ta la interviu. Probabil și în job, dar mai ales la interview trebuie să arăți asta. De ce te potrivești cu ei? Pentru că la urma urmei toți angajatorii vor să știe două lucruri.\n\n1. Dacă poți să-ți faci treaba bine. <i><b>Can you do the job well?</b></i> \n2. Ești tu alegerea corectă în poziția respectivă? <i><b>Are you the right choice for the position?</b></i> \n3. <i><b>Are the 3 S.</b></i> Sunt cei trei S. <i><b>Succes, strength, situation.</b></i> Le aduci povestea ta de succes, de putere și de situație. Dacă ești potrivit în situația respectivă.\n\n<b>Povestea de succes!!!</b>\n\nPovestea de succes, ne putem ajuta de cele 7 cuvinte de putere. Vă voi da acele 7 cuvinte de putere.\n\n<i><b>Seven power words</b></i>. Prin aceste cuvinte îi spuneți <i><b>Yes I can do the job! I am the right choice.</b></i> Primul cuvânt, I am responsible, or responsibility folosim expresii precum <i><b>It was my responsibility to do this</b></i>, când vorbim de un job trecut. Pentru că vom face un mic \"background\", o mică istorie a ceea ce am făcut înainte. Și spui: <i><b>my responsibility was…</b></i>, responsabilitatea mea era să… Prin asta arăți ce responsabil ești tu, cât de bine poți colabora, <i><b>\"Colaborate\"</b></i>, este al doilea cuvânt cheie. <i><b>In my last job I colaborated with… \"Initiative\"</b></i>, al treilea cuvânt de putere. <i><b>I took initiative</b></i>, arătă că făceai ceea ce trebuia să faci, fără ca nimeni să ți-o ceară. <i><b>Okay, it was my initiative to do this… and that…</b></i>, la fel, <i><b>\"initiative\"</b></i> arătă că de fapt aveai încredere în tine și ești un bun muncitor. <i><b>You showself confidence and you are a hardworker for self</b></i>. Alt cuvânt de putere este \"a rezolva\" <i><b>resolve. I resolve the situation when something happened</b></i>. Când ceva s-a întâmplat. <i><b>I resolve the situation that ant that and that and by doing that</b></i>. Alt cuvânt de putere este <i><b>\"lead\"</b></i>. Chiar dacă nu veți fi într-o situație de manager sau de <i><b>leaders</b></i>, cuvântul <i><b>\"lead\" I was leading</b></i>, este un cuvânt de putere. <i><b>\"Result\"</b></i> este un alt cuvânt puternic <i><b>my result was. And example</b></i> este alt cuvânt. Poate vom detalia data viitoare aceste cuvinte. Dar să nu uităm de unde am pornit, de la a fi responsabil. <i><b>Responsibility. And they told me how to be responsible, logical, practical, not clinical, right?</b></i> Asta vor să audă. Nu neapărat să spunem prin cuvinte ca noi suntem responsabili, ci că ne-am achitat și ne achităm bine de job. <i><b>I always follow trought wet I say and gonna go. I am dependable. I hold myself accountable. I take responsibility and do what need to be done</b></i>. Este exact ceea ce vor să audă că faci ceea ce trebuie să faci. You do what need to be done. Vor să audă că ești în controlul situației. <i><b>I show self control</b></i>. Nu îi judeci pe ceilalți, deci știi să colaborezi ești un <i><b>good player. Use good judgement</b></i>. Te gândești la consecințe <i><b>I think about consecuences of my action</b></i>. Și responsabilitatea este <i><b>your duty number 1</b></i>. Îmi îndeplinesc toate obligațiile morale. Și chiar și atunci când greșești, pentru că întotdeauna vă vor întreba despre <i><b>weaknesses. Weaknesses is the same subject</b></i> pentru data viitoare avem <i><b>\"weaknesses\". If I</b></i>, dacă greșești, <i><b>if I mess up, it\'s something I always confess up. I confess, marturisesc. I will keep my head up and neber give up. It is my dudy. And responsibility to follow trought.</b></i> Așa este datoria mea și responsabilitatea să reușesc în tot ceea ce fac și sunt responsabil de asta. <i><b>You can come to me</b></i>, puteți conta pe mine. Acesta ar fi trebuit să fie un cântec pentru copii, ne jucam puțin cu registrele, aceasta e ideea dragii mei, astăzi v-am dat 3 chei despre cum să facem față unui inteview și sper că v-am luat puțin din stresul pe care îl avem cu toții atucni când stăm pe scaun cu CV-ul nostru în fața cuiva care ne pune întrebări și vrea să știe despre noi. Asta vrea să audă despre noi, cât de buni suntem și cum ne îndeplinim datoriile întotdeauna. Cât de minunați regi ai paradisului suntem noi.\n\nVom continua data viitoare cu călătoria noastră în tărâmul interview-urilor și să nu uităm să fim întotdeauna buni cu noi înșine și nu prea clinici într-o lume atât de dură. Pentru că la urma urmei trebuie să știm cine suntem și doar noi singuri ne putem da răspunsul la această întrebare. Pentru că la urma urmei voiam să știm cu toții cine suntem. <i><b>Who I am?</b></i> Iar răspunsul la această întrebare nu ni-l poate da niciun interview. Dar, orice interview ne poate ajuta să știm cine suntem noi cu adevărat. Și poate într-o zi chiar vom afla.</string>
-    <string name="summary_second_lesson" translatable="false"><i><b>My radio, my only friend to teenage nights</b></i> de Freddy Mercury, cântă la început. <i><b>I sit alone and watch your light my only friend to teenage nights</b></i>. Stau singur și-ți privesc lumina unicul meu prieten al nopților mele de adolescent.\n\nBineînțeles putem asculta cântecul optând și pentru <i><b>lyrics</b></i>, versuri și chiar vă rog să faceși astfel, să ascultați muzica împreună cu versurile, astfel ve-ți învăța atât vizual cât și auditiv, dar subiectul de astăzi este <i><b>to be, I am, you are, he is, she is</b></i>. Bineînțeles frumos exemplificat într-un cântecel de început în învățarea limbii engleze.\n\n<i><b>I am here</b></i>, eu sunt aici, <i><b>you are there</b></i>. Și chiar așa se întamplă, <i><b>I am here, you are there, in England I\'m here, in Romanian you are there, in England. He is happy? Who is happy? Somebody is happy</b></i>. Cineva este fericit, <i><b>he is happy</b></i>. <i><b>She is sad</b></i>, altcineva este trist, ea este tristă, <i><b>she is sad</b></i>.\n\n<i><b>It is burning</b></i> ceva poate să ardă undeva, nu ne gândim, nu știu, o inimă, o pădure, din păcate. <i><b>It is burning, it</b></i>, pentru animale, obiecte, fenomene… <i><b>It.. It is burning, the world is turing</b></i>. Toate acestea în timp ce lumea se învârte, <i><b>the world is turning</b></i>.\n\nÎn timp ce, <i><b>we are people</b></i>, noi suntem oameni, <i><b>and they are plants</b></i>, și ele sunt plante.\n\n<i><b>He is blue, she is red</b></i>, acestea două fiind stări de spirit, verbul <i><b>to be</b></i> exprimă de asemenea stări de pirit.\n\nDupă cum am văzut verbul <i><b>to be</b></i> poate exprima și stări de spirit <i><b>he is blue, she is red</b></i>. Sunt aceste expresii folosind culorile din limba engleză, sunt foarte multe expresii care folosesc culorile, care de care mai colorate, <i><b>flying colors. We like to learning English and finish the leason with flying colors</b></i> cu succes, nu? <i><b>White elephant, you know the expression</b></i>, ceva scump și nefolositor. <i><b>A golden boy, a golden girl</b></i>. Vreau începutul la <i><b>he is blue, she is red</b></i>, de la stari de spirit, cineva este trist, el este trist, <i><b>he is blue, she is red</b></i>, dar ea este furioasa. <i><b>Blue,</b></i> de asemenea este un cuvânt care intră în foarte multe expresii. <i><b>True blue</b></i>, care înseamnă <i><b>faithful</b></i>, loial, credincios, <i><b>once in a  blue moon</b></i> foarte rar, aproape niciodata… <i><b>Once in a blue moon, out at the blue</b></i>, din senin, în mod neasteptat, <i><b>it\'s rained yesterday in Romania out at the blue</b></i>. La noi nu ploua, sunt 40 de grade deci ar fi o minune să plouă, chiar și <i><b>in out at the blue</b></i> pe neașteptate.\n\nMai există băieții cu ochi albaștrii, <i><b>blue eyed boy</b></i>, cu altă semnificație decât cea care stă în România, băieți cu ochii albaștrii. Aici se referă la oameni privilegiați. <i><b>He\'s such a blue eyed boy. The manager always treats him as if he\'s special</b></i>, deci cineva care primește un tratament special.\n\nMai există și <i><b>boys in blue</b></i>, să nu confundăm… Băieții în albastru, adică în uniforme folosită pentru a descrie poliția britanică datorită culorii albastre a uniformei. <i><b>I saw boys in blue on the street I think everything is OK</b></i>. Am văzut poliția pe stradă, cred că totul este OK.\n\nMai există și expresia <i><b>blue color worker</b></i>, muncitorii care prestează munca fizică, <i><b>blue color worker, distinct de white color worker</b></i>, de cei care prestează munca la birou. Dar mai există și <i><b>pink color</b></i>, pentru femeile care, sunt secretare sau au munca de asistente, <i><b>pink color related to jobs and secretarial work</b></i>. <i><b>Cu pink</b></i>, ar fi <i><b>pink elephants</b></i> frumoasă expresie care arată că există o halucinație undeva în creierul nostru sau <i><b>pink slip</b></i>, o metaforă folosită pentru atunci când cineva este concendiat, iar <i><b>fired to received a pinks slip</b></i>, n-am vrea să se întâmple asta.\n\nUmmm.. cu verde, verde îmi place foarte mult expresia <i><b>have a green thumb</b></i> de data aceasta nu am folosit <i><b>I am, ci am folosit to have, have a green thumb</b></i>, avea talent pentru grădinărit, <i><b>I think I have a green thumb. I like flowers and I loved plant and take care of them</b></i>.\n\n<i><b>Red</b></i>, pentru exprimarea stărilor mai puternice. <i><b>I see red, I become very angry!</b></i> Văd rosu înaintea ochilor, <i><b>I see red sau I am in the red. I am in red, I am in depth</b></i>, în datorii, am datorii. <i><b>Red herring</b></i>, o expresie folosită pentru ceva care ne distrage atenția, <i><b>something unimportant that distract attention from the real issue. A red herring. I have something important to write but there is the red herring that disturbs me</b></i>. Ceva care ne distrage. <i><b>Red tape</b></i>, birocrație, mai ales în România. <i><b>I had to go to much red tape to open this company</b></i>.</string>
-    <string name="summary_close">Are you sure you want to exit?</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to our Terms of Service and Privacy Policy to continue.</string>
-    <string name="summary_preference_permissions_internet">Used to send error reports.</string>
-    <string name="summary_preference_permissions_ad_id">Used to allow ads to be shown in Android 13+ devices.</string>
-    <string name="summary_preference_permissions_post_notifications">Used to show notifications on Android 13+ devices.</string>
-    <string name="summary_preference_permissions_check_license">Used to verify that the app is being used in accordance with the terms of the license agreement, and to enforce licensing terms and protect intellectual property.</string>
-    <string name="summary_preference_permissions_foreground_service">Used to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
-    <string name="summary_preference_permissions_access_notification_policy">Used to access and modify the notification policy of the device, controlling how and when notifications are shown to the user and providing custom notification management features.</string>
-    <string name="summary_preference_settings_firebase">This let us collect information about app performance and crash logs.</string>
-    <string name="summary_preference_settings_license" translatable="false">General Public License-3.0</string>
-    <string name="summary_preference_settings_support_me">Click here if you want to support me without paying money. Just some time for viewing an ad.</string>
-    <string name="summary_preference_settings_language">Set application language.</string>
-    <string name="summary_notification_last_time_used"> Let\'s learn something! We are happy you are back!</string>
-    <string name="summary_notification_update">A new version of the app is available. Click to update!</string>
-    <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
-    <string name="changes" translatable="false">\n
-        • Added language support for Hungarian.\n\n
-        • Reworked language system, making it more accurate and user-friendly.\n\n
-        • Reworked and improved animations.\n\n
-        • Fixed various bugs and improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.\n\n
-        • Made various under-the-hood improvements for a better overall app experience.
-    </string>
 </resources>
