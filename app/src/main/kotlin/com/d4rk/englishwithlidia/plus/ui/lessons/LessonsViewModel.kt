@@ -3,7 +3,6 @@ package com.d4rk.englishwithlidia.plus.ui.lessons
 import android.app.Application
 import android.content.Context
 import android.net.Uri
-import androidx.annotation.OptIn
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -11,24 +10,15 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
-import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import com.d4rk.englishwithlidia.plus.data.model.ui.lessons.UiLessonsAsset
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class LessonsViewModel @OptIn(UnstableApi::class)
-@Inject constructor(
-    application: Application,
-    lessonDetails: UiLessonsAsset?,
-) : AndroidViewModel(application) {
+class LessonsViewModel(application: Application, lessonDetails: UiLessonsAsset?) : AndroidViewModel(application) {
 
     private val _isPlaying = MutableStateFlow(false)
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()

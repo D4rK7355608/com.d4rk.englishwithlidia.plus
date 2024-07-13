@@ -12,7 +12,7 @@ import com.d4rk.englishwithlidia.plus.R
  * This object provides functions to open a URL in the default browser, open an activity, and open the app's notification settings.
  * All operations are performed in the context of an Android application.
  */
-object Utils {
+object IntentUtils {
 
     /**
      * Opens a specified URL in the default browser.

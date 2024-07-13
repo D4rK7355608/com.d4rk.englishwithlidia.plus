@@ -34,11 +34,11 @@ import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.ui.dialogs.LanguageDialog
 import com.d4rk.englishwithlidia.plus.ui.settings.display.theme.ThemeSettingsActivity
-import com.d4rk.englishwithlidia.plus.utils.PreferenceCategoryItem
-import com.d4rk.englishwithlidia.plus.utils.PreferenceItem
-import com.d4rk.englishwithlidia.plus.utils.SwitchPreferenceItem
-import com.d4rk.englishwithlidia.plus.utils.SwitchPreferenceItemWithDivider
-import com.d4rk.englishwithlidia.plus.utils.Utils
+import com.d4rk.englishwithlidia.plus.utils.IntentUtils
+import com.d4rk.englishwithlidia.plus.utils.compose.components.PreferenceCategoryItem
+import com.d4rk.englishwithlidia.plus.utils.compose.components.PreferenceItem
+import com.d4rk.englishwithlidia.plus.utils.compose.components.SwitchPreferenceItem
+import com.d4rk.englishwithlidia.plus.utils.compose.components.SwitchPreferenceItemWithDivider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -98,7 +98,7 @@ fun DisplaySettingsComposable(activity: DisplaySettingsActivity) {
                         }
                     },
                     onClick = {
-                        Utils.openActivity(
+                        IntentUtils.openActivity(
                             context, ThemeSettingsActivity::class.java
                         )
                     })

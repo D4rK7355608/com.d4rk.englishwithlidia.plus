@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import com.d4rk.englishwithlidia.plus.R
-import com.d4rk.englishwithlidia.plus.utils.PreferenceCategoryItem
-import com.d4rk.englishwithlidia.plus.utils.PreferenceItem
+import com.d4rk.englishwithlidia.plus.utils.compose.components.PreferenceCategoryItem
+import com.d4rk.englishwithlidia.plus.utils.compose.components.PreferenceItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

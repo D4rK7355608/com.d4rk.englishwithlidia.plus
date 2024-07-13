@@ -1,7 +1,5 @@
 package com.d4rk.englishwithlidia.plus.ui.startup
 
-import android.Manifest
-import android.os.Build
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -15,30 +13,31 @@ import com.google.android.ump.ConsentForm
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
+import kotlinx.coroutines.flow.MutableStateFlow
 
 class StartupActivity : AppCompatActivity() {
-    private lateinit var consentInformation: ConsentInformation
-    private lateinit var consentForm: ConsentForm
-    override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var consentInformation : ConsentInformation
+    private lateinit var consentForm : ConsentForm
+    val consentFormShown = MutableStateFlow(false)
+    override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             AppTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize() , color = MaterialTheme.colorScheme.background
                 ) {
-                    StartupComposable()
+                    StartupComposable(this@StartupActivity)
                 }
             }
         }
         val params = ConsentRequestParameters.Builder().setTagForUnderAgeOfConsent(false).build()
         consentInformation = UserMessagingPlatform.getConsentInformation(this)
-        consentInformation.requestConsentInfoUpdate(this, params, {
+        consentInformation.requestConsentInfoUpdate(this , params , {
             if (consentInformation.isConsentFormAvailable) {
                 loadForm()
             }
-        }, {})
-        requestPermissions()
+        } , {})
     }
 
     /**
@@ -53,29 +52,14 @@ class StartupActivity : AppCompatActivity() {
      * @see com.google.ads.consent.ConsentInformation
      */
     private fun loadForm() {
-        UserMessagingPlatform.loadConsentForm(this, { consentForm ->
+        UserMessagingPlatform.loadConsentForm(this , { consentForm ->
             this.consentForm = consentForm
             if (consentInformation.consentStatus == ConsentInformation.ConsentStatus.REQUIRED) {
+                consentFormShown.value = true
                 consentForm.show(this) {
                     loadForm()
                 }
             }
-        }, {})
-    }
-
-    /**
-     * Handles the application's permission requirements.
-     *
-     * This function is responsible for checking and requesting the necessary permissions for the application. It takes into account the Android version to manage specific permission scenarios.
-     * For Android versions Tiramisu or later, it requests the POST_NOTIFICATIONS permission.
-     *
-     * @see android.Manifest.permission.POST_NOTIFICATIONS
-     * @see android.os.Build.VERSION.SDK_INT
-     * @see android.os.Build.VERSION_CODES.TIRAMISU
-     */
-    private fun requestPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
-        }
+        } , {})
     }
 }

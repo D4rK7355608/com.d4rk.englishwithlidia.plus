@@ -35,8 +35,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.utils.SwitchCardComposable
-import com.d4rk.englishwithlidia.plus.utils.Utils
+import com.d4rk.englishwithlidia.plus.utils.IntentUtils
+import com.d4rk.englishwithlidia.plus.utils.compose.components.SwitchCardComposable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -106,7 +106,7 @@ fun UsageAndDiagnosticsComposable(activity : UsageAndDiagnosticsActivity) {
                         ClickableText(text = annotatedString , onClick = { offset ->
                             annotatedString.getStringAnnotations("URL" , offset , offset)
                                     .firstOrNull()?.let { annotation ->
-                                        Utils.openUrl(context , annotation.item)
+                                        IntentUtils.openUrl(context , annotation.item)
                                     }
                         })
                     }

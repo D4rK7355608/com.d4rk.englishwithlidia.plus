@@ -1,7 +1,6 @@
 package com.d4rk.englishwithlidia.plus.ui.home
 
 import android.content.Intent
-import com.d4rk.englishwithlidia.plus.utils.drawable.homeBanner
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -45,8 +44,9 @@ import com.d4rk.englishwithlidia.plus.ads.BannerAdsComposable
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.ui.home.repository.LessonRepository
 import com.d4rk.englishwithlidia.plus.ui.lessons.LessonsActivity
-import com.d4rk.englishwithlidia.plus.utils.Utils
-import com.d4rk.englishwithlidia.plus.utils.bounceClick
+import com.d4rk.englishwithlidia.plus.utils.IntentUtils
+import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
+import com.d4rk.englishwithlidia.plus.utils.drawable.homeBanner
 
 @Composable
 fun HomeComposable() {
@@ -78,7 +78,7 @@ fun HomeComposable() {
                     .padding(start = 24.dp, end = 24.dp),
             ) {
                 OutlinedButton(onClick = {
-                    Utils.openUrl(context, "https://sites.google.com/view/englishwithlidia")
+                    IntentUtils.openUrl(context, "https://sites.google.com/view/englishwithlidia")
                 }, modifier = Modifier
                     .weight(1f)
                     .bounceClick()) {
@@ -95,7 +95,7 @@ fun HomeComposable() {
 
                 OutlinedButton(
                     onClick = {
-                        Utils.openUrl(context, "https://www.facebook.com/lidia.melinte")
+                        IntentUtils.openUrl(context, "https://www.facebook.com/lidia.melinte")
                     },
                     modifier = Modifier
                         .weight(1f)

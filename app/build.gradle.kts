@@ -5,7 +5,6 @@ plugins {
     alias(libs.plugins.googlePlayServices)
     alias(libs.plugins.googleOssServices)
     alias(libs.plugins.googleFirebase)
-    alias(libs.plugins.googleDaggerHilt)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.devToolsKsp)
 }
@@ -144,9 +143,6 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
-    ksp(libs.hilt.android.compiler)
-    implementation(libs.hilt.android)
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     // Kotlin
     implementation(libs.kotlinx.coroutines.android)

@@ -1,6 +1,8 @@
 package com.d4rk.englishwithlidia.plus.ui.lessons
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -46,7 +48,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.data.model.ui.lessons.UiLessonsAsset
-import com.d4rk.englishwithlidia.plus.utils.bounceClick
+import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -92,7 +94,7 @@ fun LessonsComposable(viewModel: LessonsViewModel) {
 fun LessonContent(
     modifier: Modifier = Modifier,
     lessonDetails: UiLessonsAsset,
-    viewModel: LessonsViewModel
+    viewModel: LessonsViewModel,
 ) {
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_plant))
     val context = LocalContext.current
@@ -149,8 +151,13 @@ fun AudioCardView(
     onSeekChange: (Float) -> Unit,
     sliderPosition: Float,
     playbackDuration: Float,
-    isPlaying: Boolean
+    isPlaying: Boolean,
 ) {
+    val cornerRadius = animateFloatAsState(
+        targetValue = if (isPlaying) 16f else 28f,
+        animationSpec = tween(durationMillis = 200), label = ""
+    ).value
+
     OutlinedCard(
         modifier = Modifier
             .fillMaxWidth()
@@ -172,7 +179,8 @@ fun AudioCardView(
                     onClick = onPlayClick,
                     modifier = Modifier
                         .weight(1f)
-                        .bounceClick()
+                        .bounceClick(),
+                    shape = RoundedCornerShape(cornerRadius.dp)
                 ) {
                     Icon(
                         imageVector = if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
@@ -183,13 +191,15 @@ fun AudioCardView(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Slider(
-                    value = playbackDuration,
-                    onValueChange = {
-
+                    value = sliderPosition,
+                    onValueChange = { newValue ->
+                        onSeekChange(newValue)
                     },
                     colors = SliderDefaults.colors(),
                     valueRange = 0f..playbackDuration,
-                    modifier = Modifier.fillMaxWidth().weight(4f)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(4f)
                 )
             }
         }

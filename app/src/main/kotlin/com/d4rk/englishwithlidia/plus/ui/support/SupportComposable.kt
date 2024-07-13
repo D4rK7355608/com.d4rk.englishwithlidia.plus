@@ -30,10 +30,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.snapshots.SnapshotStateMap
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
@@ -42,23 +39,18 @@ import androidx.compose.ui.unit.dp
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
 import com.android.billingclient.api.BillingResult
-import com.android.billingclient.api.SkuDetails
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.ads.LargeBannerAdsComposable
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.utils.Utils
-import com.d4rk.englishwithlidia.plus.utils.bounceClick
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
+import com.d4rk.englishwithlidia.plus.utils.IntentUtils
+import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SupportComposable(activity: SupportActivity) {
+fun SupportComposable(viewModel: SupportViewModel, activity: SupportActivity) {
     val context = LocalContext.current
     val dataStore = DataStore.getInstance(context)
-    val coroutineScope = rememberCoroutineScope()
-    val skuDetailsMap = remember { mutableStateMapOf<String, SkuDetails>() }
-    val billingClient = rememberBillingClient(context, coroutineScope, activity, skuDetailsMap)
+    val billingClient = rememberBillingClient(context, viewModel)
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection), topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.support_us)) }, navigationIcon = {
@@ -69,8 +61,7 @@ fun SupportComposable(activity: SupportActivity) {
                     Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null
                 )
             }
-        }, scrollBehavior = scrollBehavior
-        )
+        }, scrollBehavior = scrollBehavior)
     }) { paddingValues ->
         Box(
             modifier = Modifier
@@ -109,7 +100,9 @@ fun SupportComposable(activity: SupportActivity) {
                                             .bounceClick(),
                                         onClick = {
                                             activity.initiatePurchase(
-                                                "low_donation", skuDetailsMap, billingClient
+                                                "low_donation",
+                                                viewModel.skuDetails,
+                                                billingClient,
                                             )
                                         },
                                     ) {
@@ -119,7 +112,7 @@ fun SupportComposable(activity: SupportActivity) {
                                             modifier = Modifier.size(ButtonDefaults.IconSize)
                                         )
                                         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-                                        Text(skuDetailsMap["low_donation"]?.price ?: "")
+                                        Text(viewModel.skuDetails["low_donation"]?.price ?: "")
                                     }
                                 }
                                 item {
@@ -129,7 +122,9 @@ fun SupportComposable(activity: SupportActivity) {
                                             .bounceClick(),
                                         onClick = {
                                             activity.initiatePurchase(
-                                                "normal_donation", skuDetailsMap, billingClient
+                                                "normal_donation",
+                                                viewModel.skuDetails,
+                                                billingClient,
                                             )
                                         },
                                     ) {
@@ -139,7 +134,7 @@ fun SupportComposable(activity: SupportActivity) {
                                             modifier = Modifier.size(ButtonDefaults.IconSize)
                                         )
                                         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-                                        Text(skuDetailsMap["normal_donation"]?.price ?: "")
+                                        Text(viewModel.skuDetails["normal_donation"]?.price ?: "")
                                     }
                                 }
                             }
@@ -156,7 +151,9 @@ fun SupportComposable(activity: SupportActivity) {
                                             .bounceClick(),
                                         onClick = {
                                             activity.initiatePurchase(
-                                                "high_donation", skuDetailsMap, billingClient
+                                                "high_donation",
+                                                viewModel.skuDetails,
+                                                billingClient,
                                             )
                                         },
                                     ) {
@@ -166,7 +163,7 @@ fun SupportComposable(activity: SupportActivity) {
                                             modifier = Modifier.size(ButtonDefaults.IconSize)
                                         )
                                         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-                                        Text(skuDetailsMap["high_donation"]?.price ?: "")
+                                        Text(viewModel.skuDetails["high_donation"]?.price ?: "")
                                     }
                                 }
                                 item {
@@ -177,7 +174,9 @@ fun SupportComposable(activity: SupportActivity) {
                                             .bounceClick(),
                                         onClick = {
                                             activity.initiatePurchase(
-                                                "extreme_donation", skuDetailsMap, billingClient
+                                                "extreme_donation",
+                                                viewModel.skuDetails,
+                                                billingClient,
                                             )
                                         },
                                     ) {
@@ -187,7 +186,7 @@ fun SupportComposable(activity: SupportActivity) {
                                             modifier = Modifier.size(ButtonDefaults.IconSize)
                                         )
                                         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-                                        Text(skuDetailsMap["extreme_donation"]?.price ?: "")
+                                        Text(viewModel.skuDetails["extreme_donation"]?.price ?: "")
                                     }
                                 }
                             }
@@ -204,9 +203,8 @@ fun SupportComposable(activity: SupportActivity) {
                 item {
                     FilledTonalButton(
                         onClick = {
-                            Utils.openUrl(
-                                context,
-                                "https://direct-link.net/548212/agOqI7123501341"
+                            IntentUtils.openUrl(
+                                context, "https://direct-link.net/548212/agOqI7123501341"
                             )
                         },
                         modifier = Modifier
@@ -225,8 +223,7 @@ fun SupportComposable(activity: SupportActivity) {
                 }
                 item {
                     LargeBannerAdsComposable(
-                        modifier = Modifier.padding(bottom = 12.dp),
-                        dataStore = dataStore
+                        modifier = Modifier.padding(bottom = 12.dp), dataStore = dataStore
                     )
                 }
             }
@@ -237,20 +234,20 @@ fun SupportComposable(activity: SupportActivity) {
 @Composable
 fun rememberBillingClient(
     context: Context,
-    coroutineScope: CoroutineScope,
-    activity: SupportActivity,
-    skuDetailsMap: SnapshotStateMap<String, SkuDetails>
+    viewModel: SupportViewModel
 ): BillingClient {
     val billingClient = remember {
-        BillingClient.newBuilder(context).setListener { _, _ -> }.enablePendingPurchases().build()
+        BillingClient.newBuilder(context)
+            .setListener { _, _ -> }
+            .enablePendingPurchases()
+            .build()
     }
+
     DisposableEffect(billingClient) {
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(billingResult: BillingResult) {
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    coroutineScope.launch {
-                        activity.querySkuDetails(billingClient, skuDetailsMap)
-                    }
+                    viewModel.querySkuDetails(billingClient)
                 }
             }
 

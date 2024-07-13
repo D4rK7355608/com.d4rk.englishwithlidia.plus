@@ -8,7 +8,6 @@ billing = "7.0.0"
 datastoreCore = "1.1.1"
 glide = "4.16.0"
 graphicsShapes = "1.0.0-beta01"
-hilt = "2.44"
 lifecycle = "2.8.3"
 lottieCompose = "4.0.0"
 material = "1.12.0"
@@ -67,8 +66,6 @@ androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx"
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
 androidx-ui = { module = "androidx.compose.ui:ui" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
@@ -97,7 +94,6 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 jetbrainsKotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 googlePlayServices = { id = "com.google.gms.google-services", version.ref = "google-services" }
 googleOssServices = { id = "com.google.android.gms.oss-licenses-plugin", version.ref = "google-oss-services" }
-googleDaggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 googleFirebase = { id = "com.google.firebase.crashlytics", version.ref = "google-firebase-crashlytics" }
 devToolsKsp = { id = "com.google.devtools.ksp", version.ref = "google-devtools-ksp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

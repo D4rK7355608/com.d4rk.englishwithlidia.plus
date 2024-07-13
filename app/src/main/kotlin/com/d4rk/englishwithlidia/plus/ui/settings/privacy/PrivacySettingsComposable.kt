@@ -22,9 +22,9 @@ import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.ui.settings.privacy.ads.AdsSettingsActivity
 import com.d4rk.englishwithlidia.plus.ui.settings.privacy.permissions.PermissionsSettingsActivity
 import com.d4rk.englishwithlidia.plus.ui.settings.privacy.usage.UsageAndDiagnosticsActivity
-import com.d4rk.englishwithlidia.plus.utils.PreferenceCategoryItem
-import com.d4rk.englishwithlidia.plus.utils.PreferenceItem
-import com.d4rk.englishwithlidia.plus.utils.Utils
+import com.d4rk.englishwithlidia.plus.utils.IntentUtils
+import com.d4rk.englishwithlidia.plus.utils.compose.components.PreferenceCategoryItem
+import com.d4rk.englishwithlidia.plus.utils.compose.components.PreferenceItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,7 +55,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.privacy_policy),
                     summary = stringResource(id = R.string.summary_preference_settings_privacy_policy),
                     onClick = {
-                        Utils.openUrl(
+                        IntentUtils.openUrl(
                             context,
                             "https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy"
                         )
@@ -63,7 +63,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.terms_of_service),
                     summary = stringResource(id = R.string.summary_preference_settings_terms_of_service),
                     onClick = {
-                        Utils.openUrl(
+                        IntentUtils.openUrl(
                             context,
                             "https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service"
                         )
@@ -71,7 +71,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.code_of_conduct),
                     summary = stringResource(id = R.string.summary_preference_settings_code_of_conduct),
                     onClick = {
-                        Utils.openUrl(
+                        IntentUtils.openUrl(
                             context,
                             "https://sites.google.com/view/d4rk7355608/more/code-of-conduct"
                         )
@@ -79,21 +79,21 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.permissions),
                     summary = stringResource(id = R.string.summary_preference_settings_permissions),
                     onClick = {
-                        Utils.openActivity(
+                        IntentUtils.openActivity(
                             context, PermissionsSettingsActivity::class.java
                         )
                     })
                 PreferenceItem(title = stringResource(R.string.ads),
                     summary = stringResource(id = R.string.summary_preference_settings_ads),
                     onClick = {
-                        Utils.openActivity(
+                        IntentUtils.openActivity(
                             context, AdsSettingsActivity::class.java
                         )
                     })
                 PreferenceItem(title = stringResource(R.string.usage_and_diagnostics),
                     summary = stringResource(id = R.string.summary_preference_settings_usage_and_diagnostics),
                     onClick = {
-                        Utils.openActivity(
+                        IntentUtils.openActivity(
                             context, UsageAndDiagnosticsActivity::class.java
                         )
                     })
@@ -103,7 +103,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.legal_notices),
                     summary = stringResource(id = R.string.summary_preference_settings_legal_notices),
                     onClick = {
-                        Utils.openUrl(
+                        IntentUtils.openUrl(
                             context,
                             "https://sites.google.com/view/d4rk7355608/more/apps/legal-notices"
                         )
@@ -111,7 +111,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.license),
                     summary = stringResource(R.string.summary_preference_settings_license),
                     onClick = {
-                        Utils.openUrl(context, "https://www.gnu.org/licenses/gpl-3.0")
+                        IntentUtils.openUrl(context, "https://www.gnu.org/licenses/gpl-3.0")
                     })
             }
         }

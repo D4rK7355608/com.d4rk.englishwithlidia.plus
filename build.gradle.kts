@@ -7,6 +7,5 @@ plugins {
     alias(libs.plugins.googlePlayServices) apply false
     alias(libs.plugins.googleFirebase) apply false
     alias(libs.plugins.googleOssServices) apply false
-    alias(libs.plugins.googleDaggerHilt) apply false
     alias(libs.plugins.devToolsKsp) apply false
 }
