@@ -1,13 +1,15 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
-
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
-    id("com.google.android.gms.oss-licenses-plugin")
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.jetbrainsKotlinParcelize)
+    alias(libs.plugins.googlePlayServices)
+    alias(libs.plugins.googleOssServices)
+    alias(libs.plugins.googleFirebase)
+    alias(libs.plugins.googleDaggerHilt)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.devToolsKsp)
 }
+
 android {
     compileSdk = 34
     namespace = "com.d4rk.englishwithlidia.plus"
@@ -17,7 +19,6 @@ android {
         targetSdk = 34
         versionCode = 54
         versionName = "5.0.0"
-        archivesName = "${applicationId}-v${versionName}"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         resourceConfigurations += listOf(
             "en",
@@ -41,52 +42,57 @@ android {
             useSupportLibrary = true
         }
     }
+
     buildTypes {
         release {
             multiDexEnabled = true
             isMinifyEnabled = true
             isShrinkResources = true
             isDebuggable = false
-            versionNameSuffix = null
+            versionNameSuffix = "-release"
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
+
         debug {
             multiDexEnabled = true
             isDebuggable = true
-            versionNameSuffix = null
+            versionNameSuffix = "-debug"
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = "17"
     }
+
     buildFeatures {
         viewBinding = true
         buildConfig = true
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.13"
-    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
     bundle {
         storeArchive {
             enable = true
         }
     }
 }
+
 dependencies {
     // Firebase
     implementation(platform(libs.firebase.bom))
@@ -130,16 +136,24 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.multidex)
     implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.media3.session)
 
     // KSP
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.hilt.android)
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     // Kotlin
     implementation(libs.kotlinx.coroutines.android)
 
-    implementation("com.airbnb.android:lottie-compose:4.0.0")
+    // Other
+    implementation(libs.lottie.compose)
+    implementation(libs.glide)
 
     // Test
     testImplementation(libs.junit)

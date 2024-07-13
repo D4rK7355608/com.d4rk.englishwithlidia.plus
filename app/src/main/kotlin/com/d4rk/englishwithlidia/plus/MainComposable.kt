@@ -15,6 +15,7 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
@@ -22,6 +23,7 @@ import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -32,7 +34,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.d4rk.englishwithlidia.plus.data.navigation.NavigationItem
+import com.d4rk.englishwithlidia.plus.data.model.ui.navigation.NavigationItem
 import com.d4rk.englishwithlidia.plus.ui.help.HelpActivity
 import com.d4rk.englishwithlidia.plus.ui.home.HomeComposable
 import com.d4rk.englishwithlidia.plus.ui.settings.SettingsActivity
@@ -120,29 +122,39 @@ fun MainComposable() {
     }, content = {
         Scaffold(
             topBar = {
-                TopAppBar(title = {
-                    Text(text = stringResource(R.string.app_name))
-                }, navigationIcon = {
-                    IconButton(onClick = {
-                        scope.launch {
-                            drawerState.apply {
-                                if (isClosed) open() else close()
+                TopAppBar(
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
+                        actionIconContentColor = MaterialTheme.colorScheme.onSecondary
+                    ),
+                    title = {
+                        Text(text = stringResource(R.string.app_name))
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = {
+                            scope.launch {
+                                drawerState.apply {
+                                    if (isClosed) open() else close()
+                                }
                             }
+                        }) {
+                            Icon(
+                                imageVector = Icons.Default.Menu, contentDescription = "Menu"
+                            )
                         }
-                    }) {
-                        Icon(
-                            imageVector = Icons.Default.Menu, contentDescription = "Menu"
-                        )
-                    }
-                }, actions = {
-                    IconButton(onClick = {
-                        Utils.openActivity(context, SupportActivity::class.java)
-                    }) {
-                        Icon(
-                            Icons.Outlined.VolunteerActivism, contentDescription = "Support"
-                        )
-                    }
-                })
+                    },
+                    actions = {
+                        IconButton(onClick = {
+                            Utils.openActivity(context, SupportActivity::class.java)
+                        }) {
+                            Icon(
+                                Icons.Outlined.VolunteerActivism, contentDescription = "Support"
+                            )
+                        }
+                    },
+                )
             },
         ) { innerPadding ->
             Box(modifier = Modifier.padding(innerPadding)) {

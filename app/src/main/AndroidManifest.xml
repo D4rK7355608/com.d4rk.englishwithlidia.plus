@@ -50,6 +50,10 @@
         </activity>
 
         <activity
+            android:name=".ui.lessons.LessonsActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
             android:name=".ui.support.SupportActivity"
             android:parentActivityName=".MainActivity" />
 
