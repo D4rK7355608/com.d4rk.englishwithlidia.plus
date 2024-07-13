@@ -15,6 +15,8 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import com.d4rk.englishwithlidia.plus.data.model.ui.lessons.UiLessonsAsset
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -41,41 +43,41 @@ class LessonsViewModel @OptIn(UnstableApi::class)
 
     private var player: Player? = null
 
-    fun preparePlayer(context: Context, audioPath: String) {
+    init {
+        viewModelScope.launch {
+            player = ExoPlayer.Builder(getApplication()).build()
+        }
+    }
+
+    fun preparePlayer(context: Context, audioResId: Int) {
         viewModelScope.launch {
             player?.release()
 
-            val resourceId = context.resources.getIdentifier(
-                audioPath, "raw", context.packageName
-            )
+            val audioUri = Uri.parse("android.resource://${context.packageName}/$audioResId")
+            player = ExoPlayer.Builder(getApplication()).build().apply {
+                setMediaItem(MediaItem.fromUri(audioUri))
+                prepare()
+                playWhenReady = false
 
-            if (resourceId != 0) {
-                val audioUri = Uri.parse("android.resource://${context.packageName}/$resourceId")
-                player = ExoPlayer.Builder(getApplication()).build().apply {
-                    setMediaItem(MediaItem.fromUri(audioUri))
-                    prepare()
-                    playWhenReady = false
+                addListener(object : Player.Listener {
+                    override fun onIsPlayingChanged(isPlaying: Boolean) {
+                        _isPlaying.value = isPlaying
+                    }
 
-                    addListener(object : Player.Listener {
-                        override fun onIsPlayingChanged(isPlaying: Boolean) {
-                            _isPlaying.value = isPlaying
+                    override fun onPlaybackStateChanged(playbackState: Int) {
+                        if (playbackState == Player.STATE_READY) {
+                            _playbackDuration.value = duration
                         }
+                    }
 
-                        override fun onPlaybackStateChanged(playbackState: Int) {
-                            if (playbackState == Player.STATE_READY) {
-                                _playbackDuration.value = duration
-                            }
-                        }
-
-                        override fun onPositionDiscontinuity(
-                            oldPosition: Player.PositionInfo,
-                            newPosition: Player.PositionInfo,
-                            reason: Int
-                        ) {
-                            _playbackPosition.value = currentPosition
-                        }
-                    })
-                }
+                    override fun onPositionDiscontinuity(
+                        oldPosition: Player.PositionInfo,
+                        newPosition: Player.PositionInfo,
+                        reason: Int
+                    ) {
+                        _playbackPosition.value = currentPosition
+                    }
+                })
             }
             startPositionUpdateJob()
         }
@@ -99,6 +101,10 @@ class LessonsViewModel @OptIn(UnstableApi::class)
         viewModelScope.launch {
             while (true) {
                 _playbackPosition.value = player?.currentPosition ?: 0L
+                delay(100)
+                if (player?.isPlaying == false) {
+                    break
+                }
             }
         }
     }

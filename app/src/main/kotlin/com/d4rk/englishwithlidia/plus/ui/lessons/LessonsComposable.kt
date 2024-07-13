@@ -31,6 +31,7 @@ import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -94,10 +95,14 @@ fun LessonContent(
     viewModel: LessonsViewModel
 ) {
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_plant))
-
+    val context = LocalContext.current
     val sliderPosition by viewModel.playbackPosition.collectAsState()
     val playbackDuration by viewModel.playbackDuration.collectAsState()
     val isPlaying by viewModel.isPlaying.collectAsState()
+
+    LaunchedEffect(key1 = lessonDetails) {
+        viewModel.preparePlayer(context, lessonDetails.lessonDetails.audioResId)
+    }
 
     Column(
         modifier = modifier
