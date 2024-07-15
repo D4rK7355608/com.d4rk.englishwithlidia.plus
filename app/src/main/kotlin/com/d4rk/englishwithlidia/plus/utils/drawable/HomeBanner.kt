@@ -14,14 +14,15 @@ import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun homeBanner(): ImageVector {
-    val colorSecondaryContainer = MaterialTheme.colorScheme.secondaryContainer
-    val colorPrimaryContainer = MaterialTheme.colorScheme.primaryContainer
-    val colorOnSecondary = MaterialTheme.colorScheme.onSecondary
-    val colorOnPrimary = MaterialTheme.colorScheme.onPrimary
-    val colorTertiary = MaterialTheme.colorScheme.tertiary
-    val colorPrimary = MaterialTheme.colorScheme.primary
-    return remember {
+fun homeBanner(
+    colorPrimary: Color = MaterialTheme.colorScheme.primary,
+    colorTertiary: Color = MaterialTheme.colorScheme.tertiary,
+    colorSecondaryContainer: Color = MaterialTheme.colorScheme.secondaryContainer,
+    colorPrimaryContainer: Color = MaterialTheme.colorScheme.primaryContainer,
+    colorOnSecondary: Color = MaterialTheme.colorScheme.onSecondary,
+    colorOnPrimary: Color = MaterialTheme.colorScheme.onPrimary
+): ImageVector {
+    return remember(colorPrimary, colorTertiary, colorSecondaryContainer, colorPrimaryContainer, colorOnSecondary, colorOnPrimary) {
         ImageVector.Builder(
             name = "Home Banner",
             defaultWidth = 640.dp,
