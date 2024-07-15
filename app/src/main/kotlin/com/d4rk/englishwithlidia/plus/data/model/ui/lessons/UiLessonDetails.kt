@@ -2,12 +2,13 @@ package com.d4rk.englishwithlidia.plus.data.model.ui.lessons
 
 import android.os.Parcelable
 import androidx.annotation.RawRes
+import androidx.annotation.StringRes
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class UiLessonDetails(
     val title: String,
-    @RawRes val audioResId: Int,
+    val audioUrl: String,
     val lessonIntro: String,
     val lessonSummary: String
 ) : Parcelable

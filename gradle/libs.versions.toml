@@ -97,3 +97,4 @@ googleOssServices = { id = "com.google.android.gms.oss-licenses-plugin", version
 googleFirebase = { id = "com.google.firebase.crashlytics", version.ref = "google-firebase-crashlytics" }
 devToolsKsp = { id = "com.google.devtools.ksp", version.ref = "google-devtools-ksp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

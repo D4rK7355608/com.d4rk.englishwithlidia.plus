@@ -3,7 +3,6 @@ package com.d4rk.englishwithlidia.plus.ui.lessons
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -41,14 +40,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.data.model.ui.lessons.UiLessonsAsset
 import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
+import com.d4rk.englishwithlidia.plus.utils.compose.components.annotatedStringHtmlParser
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -97,13 +98,12 @@ fun LessonContent(
     viewModel: LessonsViewModel,
 ) {
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_plant))
-    val context = LocalContext.current
     val sliderPosition by viewModel.playbackPosition.collectAsState()
     val playbackDuration by viewModel.playbackDuration.collectAsState()
     val isPlaying by viewModel.isPlaying.collectAsState()
 
     LaunchedEffect(key1 = lessonDetails) {
-        viewModel.preparePlayer(context, lessonDetails.lessonDetails.audioResId)
+        viewModel.preparePlayer(lessonDetails.lessonDetails.audioUrl)
     }
 
     Column(
@@ -122,7 +122,7 @@ fun LessonContent(
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
         Text(
-            text = lessonDetails.lessonDetails.lessonIntro,
+            text = lessonDetails.lessonDetails.lessonIntro.annotatedStringHtmlParser(),
             style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier.padding(bottom = 8.dp)
         )
@@ -130,8 +130,7 @@ fun LessonContent(
         ImageCardView(imageResource = lessonDetails.banner)
 
         Text(
-            text = lessonDetails.lessonDetails.lessonSummary,
-            style = MaterialTheme.typography.bodyMedium,
+            text = lessonDetails.lessonDetails.lessonSummary.annotatedStringHtmlParser(),
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
@@ -207,14 +206,17 @@ fun AudioCardView(
 }
 
 @Composable
-fun ImageCardView(modifier: Modifier = Modifier, imageResource: Int) {
+fun ImageCardView(modifier: Modifier = Modifier, imageResource: String) {
     Card(
         modifier = modifier
             .fillMaxSize()
             .padding(8.dp),
     ) {
-        Image(
-            painter = painterResource(id = imageResource),
+        AsyncImage(
+            model = ImageRequest.Builder(LocalContext.current)
+                .data(imageResource)
+                .crossfade(true)
+                .build(),
             contentDescription = "Lesson Illustration",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop

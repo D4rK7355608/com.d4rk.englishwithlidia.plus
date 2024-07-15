@@ -7,6 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class UiLessonsAsset(
     val id: Int,
     val title: String,
-    val banner: Int,
+    val banner: String,
     val lessonDetails: UiLessonDetails
 ) : Parcelable

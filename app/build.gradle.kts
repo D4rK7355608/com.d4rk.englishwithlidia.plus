@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.jetbrainsKotlinParcelize)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.googlePlayServices)
     alias(libs.plugins.googleOssServices)
     alias(libs.plugins.googleFirebase)
@@ -147,8 +148,14 @@ dependencies {
     // Kotlin
     implementation(libs.kotlinx.coroutines.android)
 
+    implementation("io.ktor:ktor-client-core:2.3.4")
+    implementation("io.ktor:ktor-client-cio:2.3.4")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.4")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4")
+
     // Other
     implementation(libs.lottie.compose)
+    implementation("io.coil-kt:coil-compose:2.6.0")
     implementation(libs.glide)
 
     // Test

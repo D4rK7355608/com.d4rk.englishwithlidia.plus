@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -35,6 +36,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
@@ -52,9 +55,10 @@ import com.d4rk.englishwithlidia.plus.utils.drawable.homeBanner
 fun HomeComposable() {
     val context = LocalContext.current
     val dataStore = DataStore.getInstance(context)
-    val repository = LessonRepository(context)
+    val repository = LessonRepository()
     val viewModel: HomeViewModel = viewModel(factory = HomeViewModelFactory(repository))
     val lessons by viewModel.lessons.collectAsState()
+    val isLoading by viewModel.isLoading.collectAsState()
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -112,13 +116,27 @@ fun HomeComposable() {
             }
             Spacer(modifier = Modifier.height(16.dp))
         }
-        items(lessons) { lesson ->
-            LessonCard(title = lesson.title, imageResource = lesson.banner, onClick = {
-                val intent = Intent(context, LessonsActivity::class.java).apply {
-                    putExtra("lessonDetails", lesson)
+        if (isLoading) {
+            item {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                        .padding(16.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
                 }
-                context.startActivity(intent)
-            })
+            }
+        } else {
+            items(lessons) { lesson ->
+                LessonCard(title = lesson.title, imageResource = lesson.banner, onClick = {
+                    val intent = Intent(context, LessonsActivity::class.java).apply {
+                        putExtra("lessonDetails", lesson)
+                    }
+                    context.startActivity(intent)
+                })
+            }
         }
         item {
             BannerAdsComposable(modifier = Modifier.fillMaxWidth(), dataStore = dataStore)
@@ -142,7 +160,8 @@ fun HomeComposable() {
 }
 
 @Composable
-fun LessonCard(title: String, imageResource: Int, onClick: () -> Unit) {
+fun LessonCard(title: String, imageResource: String, onClick: () -> Unit) {
+    val context = LocalContext.current
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -155,11 +174,14 @@ fun LessonCard(title: String, imageResource: Int, onClick: () -> Unit) {
                 .clickable(onClick = onClick)
                 .aspectRatio(2.06f / 1f),
         ) {
-            Image(
-                painter = painterResource(id = imageResource),
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .data(imageResource)
+                    .crossfade(true)
+                    .build(),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.Crop,
             )
         }
         Spacer(modifier = Modifier.height(8.dp))

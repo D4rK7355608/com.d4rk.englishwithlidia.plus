@@ -1,7 +1,6 @@
 package com.d4rk.englishwithlidia.plus.ui.lessons
 
 import android.app.Application
-import android.content.Context
 import android.net.Uri
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,11 +38,12 @@ class LessonsViewModel(application: Application, lessonDetails: UiLessonsAsset?)
         }
     }
 
-    fun preparePlayer(context: Context, audioResId: Int) {
+    fun preparePlayer(audioUrl: String) {
         viewModelScope.launch {
             player?.release()
 
-            val audioUri = Uri.parse("android.resource://${context.packageName}/$audioResId")
+            val audioUri = Uri.parse(audioUrl)
+
             player = ExoPlayer.Builder(getApplication()).build().apply {
                 setMediaItem(MediaItem.fromUri(audioUri))
                 prepare()
