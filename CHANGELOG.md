@@ -1,3 +1,11 @@
+# Version 5.0.0:
+- Major : Migrated to same ver
+- Reworked the entire project strucutre in jetpack compose for better performance and compatibility
+- Reduced the app size
+- Now the app is more interactive and resposive
+- A new and improved media3 player
+- Added a new API and now the app syncronizezs with it, showing new lessons without updating the app.
+
 # Version 4.0_r1:
 - Added language support for Hungarian.
 - Reworked language system, making it more accurate and user-friendly.

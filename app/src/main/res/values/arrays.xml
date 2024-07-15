@@ -1,29 +1,4 @@
 <resources>
-    <string-array name="currency">
-        <item>AUD $</item>   <!-- Australian Dollar -->
-        <item>BRL R$</item>  <!-- Brazilian Real -->
-        <item>CAD $</item>   <!-- Canadian Dollar -->
-        <item>CHF</item> <!-- Swiss Franc -->
-        <item>CNY ¥</item>   <!-- Chinese Yuan -->
-        <item>EUR €</item>   <!-- Euro -->
-        <item>GBP £</item>   <!-- British Pound Sterling -->
-        <item>HKD $</item>   <!-- Hong Kong Dollar -->
-        <item>INR ₹</item>   <!-- Indian Rupee -->
-        <item>JPY ¥</item>   <!-- Japanese Yen -->
-        <item>KRW ₩</item>   <!-- South Korean Won -->
-        <item>MXN $</item>   <!-- Mexican Peso -->
-        <item>NOK kr</item>  <!-- Norwegian Krone -->
-        <item>NZD $</item>   <!-- New Zealand Dollar -->
-        <item>RON</item>     <!-- Romanian Leu -->
-        <item>RUB ₽</item>   <!-- Russian Ruble -->
-        <item>SAR ﷼</item>   <!-- Saudi Riyal -->
-        <item>SEK kr</item>  <!-- Swedish Krona -->
-        <item>SGD $</item>   <!-- Singapore Dollar -->
-        <item>TRY ₺</item>   <!-- Turkish Lira -->
-        <item>USD $</item>   <!-- United States Dollar -->
-        <item>ZAR R</item>   <!-- South African Rand -->
-    </string-array>
-
     <string-array name="preference_language_entries">
         <item>@string/bulgarian</item>
         <item>@string/english</item>
