@@ -7,7 +7,6 @@ composeBom = "2024.06.00"
 coreKtx = "1.13.1"
 billing = "7.0.0"
 datastoreCore = "1.1.1"
-glide = "4.16.0"
 graphicsShapes = "1.0.0-beta01"
 ktorClientContentNegotiation = "2.3.12"
 ktorClientCio = "2.3.4"
@@ -71,7 +70,6 @@ androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx"
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
 androidx-ui = { module = "androidx.compose.ui:ui" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
-glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
