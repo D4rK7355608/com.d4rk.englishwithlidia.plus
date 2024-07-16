@@ -48,8 +48,8 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.data.model.ui.lessons.UiLessonsAsset
+import com.d4rk.englishwithlidia.plus.ui.settings.display.theme.style.annotatedStringHtmlParser
 import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
-import com.d4rk.englishwithlidia.plus.utils.compose.components.annotatedStringHtmlParser
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

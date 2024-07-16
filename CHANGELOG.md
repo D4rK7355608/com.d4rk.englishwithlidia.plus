@@ -1,10 +1,10 @@
 # Version 5.0.0:
-- Major : Migrated to same ver
-- Reworked the entire project strucutre in jetpack compose for better performance and compatibility
-- Reduced the app size
-- Now the app is more interactive and resposive
-- A new and improved media3 player
-- Added a new API and now the app syncronizezs with it, showing new lessons without updating the app.
+- **Major**: This release brings significant improvements to the app's core functionality, user experience, and architecture.
+- **Major**: The entire project has been rewritten using Jetpack Compose, resulting in enhanced performance, improved compatibility, and a more modern UI.
+- **Major**: The Media3 player has been upgraded to provide a more reliable and feature-rich media playback experience.
+- **Major**: The app now integrates with a new API, enabling real-time content synchronization. This eliminates the need for app updates to access new lessons, offering a more dynamic and up-to-date experience.
+- **Minor**: The app size has been optimized, making it faster to download and consume less storage space on the user's device.
+- **Minor**: The app now offers a smoother and more engaging user experience with improved interactivity and responsiveness.
 
 # Version 4.0_r1:
 - Added language support for Hungarian.

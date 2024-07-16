@@ -1,6 +1,7 @@
+@file:OptIn(kotlinx.serialization.ExperimentalSerializationApi::class)
+
 package com.d4rk.englishwithlidia.plus.data.model.api
 
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonNames
 
@@ -10,7 +11,7 @@ data class ApiResponse(
 )
 
 @Serializable
-data class NetworkLesson @OptIn(ExperimentalSerializationApi::class) constructor(
+data class NetworkLesson(
     val id: Int,
     val title: String,
     val banner: String,
