@@ -21,17 +21,22 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.pulltorefresh.PullToRefreshContainer
+import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -53,6 +58,7 @@ import com.d4rk.englishwithlidia.plus.utils.IntentUtils
 import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
 import com.d4rk.englishwithlidia.plus.utils.drawable.homeBanner
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeComposable() {
     val context = LocalContext.current
@@ -61,103 +67,118 @@ fun HomeComposable() {
     val viewModel: HomeViewModel = viewModel(factory = HomeViewModelFactory(repository))
     val lessons by viewModel.lessons.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-    ) {
-        item {
-            Image(
-                imageVector = homeBanner(),
-                contentDescription = null,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight(),
-                contentScale = ContentScale.FillWidth
-            )
-            Spacer(modifier = Modifier.height(16.dp))
+    val state = rememberPullToRefreshState()
+
+    if (state.isRefreshing) {
+        LaunchedEffect(true) {
+            viewModel.getLessons()
+            state.endRefresh()
         }
-        item {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight()
-                    .padding(start = 24.dp, end = 24.dp),
-            ) {
-                OutlinedButton(onClick = {
-                    IntentUtils.openUrl(context, "https://sites.google.com/view/englishwithlidia")
-                }, modifier = Modifier
-                    .weight(1f)
-                    .bounceClick()) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.ic_web),
-                        contentDescription = stringResource(id = R.string.tooltip_website),
-                        modifier = Modifier.size(ButtonDefaults.IconSize)
-                    )
-                    Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-                    Text(stringResource(id = R.string.website))
-                }
+    }
 
-                Spacer(modifier = Modifier.width(24.dp))
-
-                OutlinedButton(
-                    onClick = {
-                        IntentUtils.openUrl(context, "https://www.facebook.com/lidia.melinte")
-                    },
+    Box(Modifier.nestedScroll(state.nestedScrollConnection)) {
+        LazyColumn(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            item {
+                Image(
+                    imageVector = homeBanner(),
+                    contentDescription = null,
                     modifier = Modifier
-                        .weight(1f)
-                        .bounceClick(),
+                        .fillMaxWidth()
+                        .wrapContentHeight(),
+                    contentScale = ContentScale.FillWidth
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                        .padding(start = 24.dp, end = 24.dp),
                 ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.ic_find_us),
-                        contentDescription = stringResource(id = R.string.tooltip_facebook),
-                        modifier = Modifier.size(ButtonDefaults.IconSize)
-                    )
-                    Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-                    Text(stringResource(id = R.string.find_us))
+                    OutlinedButton(
+                        onClick = {
+                            IntentUtils.openUrl(
+                                context, "https://sites.google.com/view/englishwithlidia"
+                            )
+                        }, modifier = Modifier
+                            .weight(1f)
+                            .bounceClick()
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.ic_web),
+                            contentDescription = stringResource(id = R.string.tooltip_website),
+                            modifier = Modifier.size(ButtonDefaults.IconSize)
+                        )
+                        Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                        Text(stringResource(id = R.string.website))
+                    }
+
+                    Spacer(modifier = Modifier.width(24.dp))
+
+                    OutlinedButton(
+                        onClick = {
+                            IntentUtils.openUrl(context, "https://www.facebook.com/lidia.melinte")
+                        },
+                        modifier = Modifier
+                            .weight(1f)
+                            .bounceClick(),
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.ic_find_us),
+                            contentDescription = stringResource(id = R.string.tooltip_facebook),
+                            modifier = Modifier.size(ButtonDefaults.IconSize)
+                        )
+                        Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                        Text(stringResource(id = R.string.find_us))
+                    }
+                }
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+            if (isLoading) {
+                item {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .wrapContentHeight()
+                            .padding(16.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        CircularProgressIndicator()
+                    }
+                }
+            } else {
+                items(lessons) { lesson ->
+                    LessonCard(title = lesson.title, imageResource = lesson.banner, onClick = {
+                        val intent = Intent(context, LessonsActivity::class.java).apply {
+                            putExtra("lessonDetails", lesson)
+                        }
+                        context.startActivity(intent)
+                    })
                 }
             }
-            Spacer(modifier = Modifier.height(16.dp))
-        }
-        if (isLoading) {
+            item {
+                BannerAdsComposable(modifier = Modifier.fillMaxWidth(), dataStore = dataStore)
+            }
             item {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
                         .wrapContentHeight()
-                        .padding(16.dp),
+                        .padding(start = 16.dp, end = 16.dp, bottom = 8.dp),
                     contentAlignment = Alignment.Center
                 ) {
-                    CircularProgressIndicator()
+                    LottieAnimation(
+                        composition = rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_learn)).value,
+                        iterations = LottieConstants.IterateForever,
+                        modifier = Modifier.size(260.dp)
+                    )
                 }
             }
-        } else {
-            items(lessons) { lesson ->
-                LessonCard(title = lesson.title, imageResource = lesson.banner, onClick = {
-                    val intent = Intent(context, LessonsActivity::class.java).apply {
-                        putExtra("lessonDetails", lesson)
-                    }
-                    context.startActivity(intent)
-                })
-            }
         }
-        item {
-            BannerAdsComposable(modifier = Modifier.fillMaxWidth(), dataStore = dataStore)
-        }
-        item {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight()
-                    .padding(start = 16.dp, end = 16.dp, bottom = 8.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                LottieAnimation(
-                    composition = rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_learn)).value,
-                    iterations = LottieConstants.IterateForever,
-                    modifier = Modifier.size(260.dp)
-                )
-            }
-        }
+        PullToRefreshContainer(state = state, modifier = Modifier.align(Alignment.TopCenter))
     }
 }
 
@@ -178,10 +199,7 @@ fun LessonCard(title: String, imageResource: String, onClick: () -> Unit) {
                 .aspectRatio(2.06f / 1f),
         ) {
             AsyncImage(
-                model = ImageRequest.Builder(context)
-                    .data(imageResource)
-                    .crossfade(true)
-                    .build(),
+                model = ImageRequest.Builder(context).data(imageResource).crossfade(true).build(),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop,

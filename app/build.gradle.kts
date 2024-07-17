@@ -16,7 +16,7 @@ android {
         applicationId = "com.d4rk.englishwithlidia.plus"
         minSdk = 26
         targetSdk = 34
-        versionCode = 55
+        versionCode = 57
         versionName = "5.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         resourceConfigurations += listOf(

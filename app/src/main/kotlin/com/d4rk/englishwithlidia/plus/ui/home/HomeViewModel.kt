@@ -17,6 +17,10 @@ class HomeViewModel(private val repository: LessonRepository) : ViewModel() {
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
     init {
+        getLessons()
+    }
+
+    fun getLessons() {
         viewModelScope.launch {
             _isLoading.value = true
             _lessons.value = repository.getLessonData()
