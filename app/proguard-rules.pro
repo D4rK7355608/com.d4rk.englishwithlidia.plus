@@ -31,4 +31,6 @@
   public *;
 }
 
--keep class ch.qos.logback.** { *; }
+-keep class ch.qos.logback.** {
+public *;
+}

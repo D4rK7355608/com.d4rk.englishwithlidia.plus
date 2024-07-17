@@ -7,7 +7,6 @@ plugins {
     alias(libs.plugins.googleOssServices)
     alias(libs.plugins.googleFirebase)
     alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.devToolsKsp)
 }
 
 android {
@@ -138,11 +137,6 @@ dependencies {
     implementation(libs.androidx.media3.ui)
     implementation(libs.androidx.media3.session)
 
-    // KSP
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.runtime)
-
     // Kotlin
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.ktor.client.core)
@@ -153,6 +147,7 @@ dependencies {
     // Other
     implementation(libs.lottie.compose)
     implementation(libs.coil.compose)
+    implementation(libs.slf4j.simple)
 
     // Test
     testImplementation(libs.junit)
