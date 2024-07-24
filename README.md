@@ -1,21 +1,11 @@
-<p align="center">
-<img src="/app/src/main/play/listings/en-US/graphics/ic_launcher-playstore.png" width="300">
-</p>
+![English with Lidia Plus](/app/src/main/play/listings/en-US/graphics/feature-graphic/play_store_feature_graphic.png "English with Lidia Plus")
 
-![Works with Android](https://img.shields.io/badge/Made%20for-Android-lime?style=for-the-badge&logo=android)
-![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.englishwithlidia.plus/total?color=green&style=for-the-badge&logo=github)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/D4rK7355608/com.d4rk.englishwithlidia.plus/android.yml?style=for-the-badge)
-![GitHub Issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.englishwithlidia.plus?style=for-the-badge&logo=github)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.englishwithlidia.plus?style=for-the-badge&logo=github)
-![GitHub License](https://img.shields.io/github/license/D4rK7355608/com.d4rk.englishwithlidia.plus?style=for-the-badge&logo=github)
+<a href="https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="70"></a>
 
-## 📚 English with Lidia Plus 📚
+English with Lidia Plus
+==================
 
-╔╦╦╦═╦╗╔═╦═╦══╦═╗ \
-║║║║╩╣╚╣═╣║║║║║╩╣ \
-╚══╩═╩═╩═╩═╩╩╩╩═╝
-
-## Learning English can be relaxing with our friendly and supportive teacher. 📚
+**Learning English can be relaxing with our friendly and supportive teacher. 📚**
 
 English with Lidia Plus is the app for you!
 
@@ -23,59 +13,44 @@ English with Lidia Plus is a comprehensive app designed for learners of all leve
 
 Developed by Lidia, a professional English teacher, this app provides a wealth of resources and interactive features to enhance your English skills.
 
-Key features include:
+Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
 
-- Access to Lidia's blog, offering insightful articles on various aspects of the English language and culture, enriched with new vocabulary and expressions.
+# Features
+
+- Play audio instead of reading.
+- Simple and easy to use.
+- Exclusive content and resources.
+
+# Benefits
+
+- Fun and interesting lessons.
 - Engaging podcasts hosted by Lidia, designed to improve your listening and pronunciation abilities, while expanding your knowledge of English culture and idioms.
-- Exclusive content and resources, including clear explanations and examples, to strengthen your grasp of English grammar, vocabulary, and more.
-- A visually appealing and user-friendly interface, incorporating interactive quizzes, games, and feedback to make learning enjoyable.
 
-English with Lidia Plus transcends the limitations of a typical app, offering a holistic learning journey that empowers you to achieve your language goals while enjoying the process.
+# Screenshots
 
-For more information, visit the official [website/blog](https://sites.google.com/view/englishwithlidia/home) to learn more.
+<table>
+  <tr>
+    <td><img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png" width="300"></td>
+    <td><img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/2-screenshot_lesson1.png" width="300"></td>
+    <td><img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/3-screenshot_lesson2.png" width="300"></td>
+  </tr>
+</table>
 
-## ⚠ Opening Issues!
-Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues).
+# How it works
 
-- Create an audio/text/general bug. 🐞
+English with Lidia Plus offers a seamless learning experience. Simply dive into the world of English. Progress through engaging lessons, listen to captivating podcasts, and practice your skills.
 
-## 🛠️ Features!
-⭐️ Play audio instead of reading. \
-⭐️ Adaptive themes + Material-You. \
-⭐️ Simple and easy to use. \
-⭐️ Fast and lightweight. \
-⭐️ Free Open source & secure.
+# Get started today
 
-## Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.englishwithlidia.plus/master/CHANGELOG.md)!
+Unlock your English potential with English with Lidia Plus. Download the app now and start your language learning journey today. Whether you're a beginner or looking to refine your advanced skills, our app provides the tools and support you need to succeed.\
 
-## 🖼️ App preview:
+# Feedback
 
-<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png"  width="400">
+We are constantly updating and improving English with Lidia Plus app to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-## 🛑 Disclaimer!
-- This Application is made only for Education Purpose.
-- English with Lidia Plus is a blog type app witch can help you learn English with relaxing and easy to understand lessons for everyone.
-- We acknowledge the ownership of some of the music in our audios and credit Lidia Melinte as the main voice.
-- Only use the GitHub Issues section if you discover issues with the code itself. Do not mistake the Issues page as a help desk. For support, information and requests, please contact d4rk7355608@gmail.com.
+Thank you for choosing English with Lidia! We hope you enjoy using our app as much as we enjoyed creating it for you!
 
-## 💬 Feedback!
-We are constantly updating and improving English with Lidia Plus to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
-
-Thank you for choosing English with Lidia Plus. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
-
-## 👨🏻‍💻 &nbsp;More About Me:
-<a href="mailto:d4rk7355608@gmail.com"><img src="https://img.shields.io/badge/d4rk7355608@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://developers.google.com/profile/u/D4rK7355608"><img src="https://img.shields.io/badge/Android%20Developers-white?style=for-the-badge&logo=android"/></a>
-<a href="https://forum.xda-developers.com/m/d4rk7355608.10095012/"><img src="https://img.shields.io/badge/XDA%20Developers-grey?style=for-the-badge&logo=xdadevelopers"/></a>
-<a href="https://www.deviantart.com/d4rk7355608"><img src="https://img.shields.io/badge/DeviantArt-default?style=for-the-badge&logo=deviantart&logoColor=white"/></a>
-<a href="https://gamejolt.com/@D4rK_S-A-D"><img src="https://img.shields.io/badge/GameJolt-grey?style=for-the-badge&logo=gamejolt&logoColor=white"/></a>
-<a href="https://patreon.com/D4rK7355608"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DD4rK7355608%26type%3Dpatrons&style=for-the-badge"/></a>
-<a href="https://www.paypal.me/d4rkmichaeltutorials"><img src="https://img.shields.io/badge/Paypal-white?style=for-the-badge&logo=paypal"/></a>
-<a href="https://twitter.com/D4rK7355608/"><img src="https://img.shields.io/twitter/follow/D4rK7355608?color=blue&label=Twitter&logo=Twitter&style=for-the-badge"/></a>
-<a href="https://www.youtube.com/c/D4rK7355608/"><img src="https://img.shields.io/youtube/channel/subscribers/UCLDi-rmSRry0pNL-oVvGJAw?color=darkred&label=D4rK&logo=youtube&logoColor=darkred&style=for-the-badge"/></a>
-<a href="https://github.com/D4rK7355608/"><img src="https://img.shields.io/github/followers/D4rK7355608?color=white&logo=GitHub&style=for-the-badge"/></a>
-
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90">](https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus)
+# License
 
 __Privacy Policy__ [here](https://sites.google.com/view/englishwithlidia/more/privacy-policy).
 __Terms of Service__ [here](https://sites.google.com/view/englishwithlidia/more/terms-of-service).

@@ -1,32 +1,27 @@
-The Cart Calculator app is a convenient and simple tool that helps you to manage your shopping cart easily and efficiently. Whether you are grocery shopping or just buying household items, this app helps you to keep track of everything in one place.
+English with Lidia Plus is the app for you!
 
-With the Cart Calculator app, you can add items to the cart, set the quantity, and calculate the total cost of your purchase. You can also update the quantity of each item and see the updated total cost in real-time. The app is user-friendly and easy to navigate, making it a perfect choice for people of all ages.
+English with Lidia Plus is a comprehensive app designed for learners of all levels seeking a fun and engaging approach to mastering the English language.
 
-The Cart Calculator app features a simple and intuitive interface that allows you to add and manage items quickly and easily. It also provides a detailed list of your purchases, including the name, price, and quantity of each item. You can customize the list according to your preferences, and the app will calculate the total cost for you automatically.
-
-In addition to managing your shopping cart, the Cart Calculator app also allows you to track your expenses and monitor your spending. This feature helps you to stick to your budget and avoid overspending.
-
-Overall, the Cart Calculator app is an essential tool for anyone who wants to manage their shopping cart efficiently and stay on top of their expenses. Whether you are a busy mom or a student on a budget, this app is perfect for you. Download it now and start managing your shopping cart like a pro!
+Developed by Lidia, a professional English teacher, this app provides a wealth of resources and interactive features to enhance your English skills.
 
 Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
 
 Features
-• Calculate the total amount of your cart
-• Add or remove items from cart
-• Create multiple carts
+• Play audio instead of reading.
+• Simple and easy to use.
+• Exclusive content and resources.
 
 Benefits
-• Efficient shopping
-• Budget management
-• Expense tracking
+• Fun and interesting lessons.
+• Engaging podcasts hosted by Lidia, designed to improve your listening and pronunciation abilities, while expanding your knowledge of English culture and idioms.
 
 How it works
-Cart Calculator streamlines your shopping experience by allowing you to effortlessly manage your shopping cart. It provides a real-time calculation of your total purchase cost as you add or update item quantities. This user-friendly app is designed for shoppers of all ages, ensuring that managing your cart is a breeze.
+English with Lidia Plus offers a seamless learning experience. Simply dive into the world of English. Progress through engaging lessons, listen to captivating podcasts, and practice your skills.
 
 Get started today
-Embark on a smarter shopping journey with Cart Calculator. Download it from the Google Play Store now and take the first step towards efficient shopping management. It’s free, open-source, and incredibly easy to use—perfect for enhancing your shopping efficiency. Enjoy a seamless shopping experience today!
+Unlock your English potential with English with Lidia Plus. Download the app now and start your language learning journey today. Whether you're a beginner or looking to refine your advanced skills, our app provides the tools and support you need to succeed.\
 
 Feedback
-We are constantly updating and improving Cart Calculator to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
+We are constantly updating and improving English with Lidia Plus app to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-Thank you for choosing Cart Calculator! We hope you enjoy using our app as much as we enjoyed creating it for you!
+Thank you for choosing English with Lidia! We hope you enjoy using our app as much as we enjoyed creating it for you!
