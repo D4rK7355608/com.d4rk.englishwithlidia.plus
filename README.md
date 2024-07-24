@@ -9,11 +9,14 @@ English with Lidia Plus
 
 English with Lidia Plus is the app for you!
 
-English with Lidia Plus is a comprehensive app designed for learners of all levels seeking a fun and engaging approach to mastering the English language.
+English with Lidia Plus is a comprehensive app designed for learners of all levels seeking a fun and
+engaging approach to mastering the English language.
 
-Developed by Lidia, a professional English teacher, this app provides a wealth of resources and interactive features to enhance your English skills.
+Developed by Lidia, a professional English teacher, this app provides a wealth of resources and
+interactive features to enhance your English skills.
 
-Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
+Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's
+free and open-source software!
 
 # Features
 
@@ -24,7 +27,8 @@ Our app is designed to be simple and easy to use, while also being fast and ligh
 # Benefits
 
 - Fun and interesting lessons.
-- Engaging podcasts hosted by Lidia, designed to improve your listening and pronunciation abilities, while expanding your knowledge of English culture and idioms.
+- Engaging podcasts hosted by Lidia, designed to improve your listening and pronunciation abilities,
+  while expanding your knowledge of English culture and idioms.
 
 # Screenshots
 
@@ -38,17 +42,25 @@ Our app is designed to be simple and easy to use, while also being fast and ligh
 
 # How it works
 
-English with Lidia Plus offers a seamless learning experience. Simply dive into the world of English. Progress through engaging lessons, listen to captivating podcasts, and practice your skills.
+English with Lidia Plus offers a seamless learning experience. Simply dive into the world of
+English. Progress through engaging lessons, listen to captivating podcasts, and practice your
+skills.
 
 # Get started today
 
-Unlock your English potential with English with Lidia Plus. Download the app now and start your language learning journey today. Whether you're a beginner or looking to refine your advanced skills, our app provides the tools and support you need to succeed.\
+Unlock your English potential with English with Lidia Plus. Download the app now and start your
+language learning journey today. Whether you're a beginner or looking to refine your advanced
+skills, our app provides the tools and support you need to succeed.
 
 # Feedback
 
-We are constantly updating and improving English with Lidia Plus app to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
+We are constantly updating and improving English with Lidia Plus app to give you the best possible
+experience. If you have any suggested features or improvements, please leave a review. In case
+something is not working correctly please let me know. When posting a low rating please describe
+what is wrong to give the possibility to fix that issue.
 
-Thank you for choosing English with Lidia! We hope you enjoy using our app as much as we enjoyed creating it for you!
+Thank you for choosing English with Lidia! We hope you enjoy using our app as much as we enjoyed
+creating it for you!
 
 # License
 

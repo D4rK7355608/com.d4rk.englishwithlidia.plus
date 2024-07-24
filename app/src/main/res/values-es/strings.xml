@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_short_description">¡Aprende inglés y relájate al mismo tiempo! 📚</string>
+    <string name="notification_update_title">¡Hay una nueva actualización disponible!</string>
+    <string name="summary_notification_update">Hay una nueva versión de la aplicación disponible. ¡Haz clic para actualizarla!</string>
+    <string name="notification_last_time_used_title">¡Ha pasado un tiempo!</string>
+    <string name="summary_notification_last_time_used">¡Aprendamos algo! Nos alegra que hayas vuelto!</string>
+
+    <string name="welcome">Bienvenido</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Explora los <i><u>Términos de servicio</u></i> y la <i><u>Política de privacidad</u></i></string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Lee y acepta nuestros Términos de servicio y Política de privacidad para continuar.</string>
+    <string name="agree">De acuerdo</string>
+
+    <string name="find_us">Encuéntranos en</string>
+    <string name="website">Sitio web</string>
+    <string name="close">¿Cerrar?</string>
+    <string name="summary_close">¿Estás seguro de que quieres salir?</string>
+    <string name="snack_network_error">Se produjo un error de red al comprobar las actualizaciones</string>
+    <string name="snack_general_error">Se produjo un error al comprobar las actualizaciones</string>
+
+    <string name="settings">Ajustes</string>
+
+    <string name="display">Pantalla</string>
+    <string name="summary_preference_settings_display">Personaliza el aspecto y la sensación de tu aplicación</string>
+
+    <string name="appearance">Apariencia</string>
+    <string name="dark_theme">Tema oscuro</string>
+    <string name="will_turn_on_automatically_by_system">Se activará automáticamente por el sistema</string>
+    <string name="will_never_turn_on_automatically">Nunca se activará automáticamente</string>
+    <string name="amoled_mode">Modo AMOLED</string>
+    <string name="follow_system">Seguir el modo del sistema</string>
+    <string name="light_mode">Modo claro</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="summary_dark_theme">El tema oscuro utiliza un fondo oscuro para ayudar a mantener la batería con vida más tiempo</string>
+
+    <string name="dynamic_colors">Colores dinámicos</string>
+    <string name="summary_preference_settings_dynamic_colors">Aplica colores de los fondos de pantalla al tema de la aplicación</string>
+
+    <string name="language">Idioma</string>
+    <string name="summary_preference_settings_language">Cambia el idioma que se utiliza en la aplicación</string>
+    <string name="dialog_language_subtitle">Selecciona tu idioma preferido</string>
+    <string name="dialog_info_language">Personaliza tu experiencia con tu idioma preferido. Cualquier cambio de idioma que realices tendrá efecto inmediato, asegurando una experiencia fluida en el idioma que elijas</string>
+
+    <string name="notifications">Notificaciones</string>
+    <string name="summary_preference_settings_notifications">Administra las notificaciones de la aplicación</string>
+
+    <string name="app_usage_notifications">Notificaciones de uso de la aplicación</string>
+    <string name="update_notifications">Notificaciones de actualización</string>
+
+    <string name="advanced">Avanzado</string>
+    <string name="summary_preference_settings_advanced">Explora opciones de configuración más avanzadas</string>
+    <string name="error_reporting">Informes de errores</string>
+    <string name="bug_report">Informe de error</string>
+    <string name="summary_preference_settings_bug_report">Envía informes de errores y solicitudes de funciones a la página de problemas del repositorio de GitHub de la aplicación</string>
+
+    <string name="security_and_privacy">Seguridad y privacidad</string>
+    <string name="summary_preference_settings_privacy_and_security">Administra tu configuración de privacidad</string>
+    <string name="privacy">Privacidad</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="summary_preference_settings_privacy_policy">Ver la política que rige cómo manejamos tus datos</string>
+    <string name="terms_of_service">Términos de servicio</string>
+    <string name="summary_preference_settings_terms_of_service">Revisa los términos que aceptas cuando utilizas nuestro servicio</string>
+    <string name="code_of_conduct">Código de conducta</string>
+    <string name="summary_preference_settings_code_of_conduct">Comprende las reglas y pautas para el comportamiento dentro de nuestro servicio</string>
+
+    <string name="permissions">Permisos</string>
+    <string name="summary_preference_settings_permissions">Administra los permisos otorgados a nuestro servicio</string>
+    <string name="normal">Normal</string>
+    <string name="ad_id">ID de anuncio [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Permite que la aplicación recupere y utilice el identificador de publicidad asociado con el dispositivo del usuario, proporcionando anuncios personalizados, midiendo la eficacia de los anuncios y mostrando anuncios en dispositivos Android 13 o posteriores.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Permite que la aplicación establezca una conexión a Internet para enviar informes de errores o comprobar las actualizaciones.</string>
+    <string name="post_notifications">Publicar notificaciones [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Permite que la aplicación muestre notificaciones en los dispositivos con Android 13 o posteriores.</string>
+    <string name="runtime">Tiempo de ejecución</string>
+    <string name="access_network_state">Acceder al estado de la red [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Permite que la aplicación compruebe la conectividad de red y recupere información sobre Wi-Fi, incluido el estado habilitado y los nombres de los dispositivos Wi-Fi conectados.</string>
+    <string name="access_notification_policy">Acceder a la política de notificaciones [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Permite que la aplicación acceda y modifique la política de notificaciones del dispositivo, controlando cómo y cuándo se muestran las notificaciones al usuario y proporcionando funciones de gestión de notificaciones personalizadas.</string>
+    <string name="billing">Facturación [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Permite que la aplicación utilice la biblioteca de facturación de Google Play para gestionar las compras dentro de la aplicación y las donaciones</string>
+    <string name="check_license">Verificar licencia [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Permite que la aplicación verifique su cumplimiento con el acuerdo de licencia y haga cumplir los términos de la licencia para proteger la propiedad intelectual.</string>
+    <string name="foreground_service">Servicio en primer plano [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Permite que la aplicación cree y utilice servicios que se ejecutan en primer plano, dándoles prioridad sobre otros procesos en segundo plano y mejorando el rendimiento y la confiabilidad.</string>
+
+    <string name="ads">Anuncios</string>
+    <string name="summary_preference_settings_ads">Controla cómo usamos tu información para mostrarte anuncios relevantes</string>
+    <string name="display_ads">Mostrar anuncios</string>
+    <string name="personalized_ads">Anuncios personalizados</string>
+    <string name="summary_ads_personalized_ads">Elige cómo personalizamos los anuncios para ti en función de tus intereses</string>
+    <string name="summary_ads">Ver anuncios que sean relevantes para ti. Administra la información utilizada para mostrar anuncios personalizados basados en la actividad de tu aplicación. Siempre puedes desactivar la personalización aquí.\n</string>
+
+    <string name="usage_and_diagnostics">Uso y diagnóstica</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Comparte datos para ayudar a mejorar Cart Calculator</string>
+    <string name="summary_usage_and_diagnostics">Ayuda a mejorar tu experiencia enviando automáticamente datos de diagnóstico, dispositivo y uso de la aplicación. Esto ayudará a mejorar el rendimiento de la aplicación, la estabilidad y otras mejoras. Algunos datos agregados también ayudarán a nuestras aplicaciones.\n\nEsta es información general sobre tu dispositivo y cómo utilizas nuestras aplicaciones (como el nivel de la batería, la actividad del sistema y la aplicación y los errores). Los datos se utilizarán para mejorar nuestras aplicaciones\n\nDesactivar esta función no afecta la capacidad de tu dispositivo para enviar la información necesaria para servicios esenciales como las actualizaciones de aplicaciones y la seguridad.\n</string>
+
+    <string name="legal">Legal</string>
+    <string name="legal_notices">Avisos legales</string>
+    <string name="summary_preference_settings_legal_notices">Ver información legal sobre nuestro servicio</string>
+    <string name="license">Licencia</string>
+
+    <string name="about">Acerca de</string>
+    <string name="summary_preference_settings_about">Aprende más sobre English with Lidia</string>
+
+    <string name="app_info">Información de la aplicación</string>
+    <string name="app_build_version">Versión de compilación de la aplicación</string>
+    <string name="summary_preference_settings_oss">Detalles de la licencia para software de código abierto</string>
+    <string name="device_info">Información del dispositivo</string>
+    <string name="app_build">Compilación de la aplicación: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Fabricante:</string>
+    <string name="device_model">Modelo de dispositivo:</string>
+    <string name="android_version">Versión de Android:</string>
+    <string name="api_level">Nivel de API:</string>
+
+    <string name="help_and_feedback">Ayuda y comentarios</string>
+    <string name="help">Ayuda</string>
+    <string name="faq">Preguntas frecuentes</string>
+    <string name="view_in_google_play_store">Ver en Google Play Store</string>
+    <string name="version_info">Información de la versión</string>
+    <string name="version">Versión %1$s</string>
+    <string name="beta_program">Programa beta</string>
+    <string name="question_1">¿Qué es English with Lidia Plus?</string>
+    <string name="summary_preference_faq_1">English with Lidia Plus es una aplicación que te ayuda a aprender inglés leyendo o escuchando publicaciones de blog escritas por Lidia, una profesora de inglés.</string>
+    <string name="question_2">¿Cómo puedo usar la aplicación?</string>
+    <string name="summary_preference_faq_2">Puedes usar la aplicación sin conexión a Internet. Puedes elegir leer las publicaciones del blog o reproducir audio en su lugar. También puedes ajustar el tema y la configuración según tus preferencias.</string>
+    <string name="question_3">¿Cuáles son los beneficios de usar la aplicación?</string>
+    <string name="summary_preference_faq_3">La aplicación puede ayudarte a aprender inglés con lecciones relajantes y fáciles de entender para todos. También puedes mejorar tus habilidades de escucha reproduciendo audio. La aplicación tiene temas adaptables y diseño Material-You para una mejor experiencia de usuario.</string>
+    <string name="question_4">¿Cómo puedo informar sobre errores o dar comentarios?</string>
+    <string name="summary_preference_faq_4">Puedes informar sobre errores en <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. También puedes comunicarte con d4rk7355608@gmail.com para obtener asistencia, información y solicitudes. Si estás satisfecho con la aplicación, por favor, califícala con 5 estrellas en Google Play.</string>
+    <string name="question_5">¿Cómo puedo obtener más información sobre la aplicación o el desarrollador?</string>
+    <string name="summary_preference_faq_5">Puedes visitar el sitio web/blog oficial <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">de la aplicación</a>. También puedes seguir a D4rK en varias plataformas como Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter y GitHub.</string>
+    <string name="question_6">¿Cómo maneja la aplicación mi privacidad y seguridad de los datos?</string>
+    <string name="summary_preference_faq_6">La aplicación no comparte ningún dato con terceros. La aplicación puede recopilar algunos tipos de datos, como información de la aplicación y rendimiento. Los datos se cifran durante la transmisión pero no se pueden eliminar. Puedes obtener más información sobre cómo los desarrolladores declaran la compartición en Google Play.</string>
+    <string name="question_7">¿Quién posee la música y la voz en las lecciones de audio?</string>
+    <string name="summary_preference_faq_7">Algunas músicas de las lecciones de audio pertenecen a sus respectivos propietarios y la voz principal es de Lidia Melinte.</string>
+    <string name="question_8">¿Con qué frecuencia se añaden nuevas lecciones a la aplicación?</string>
+    <string name="summary_preference_faq_8">La aplicación se actualiza periódicamente con nuevas lecciones y funciones. Puedes consultar la página de Google Play para obtener las últimas actualizaciones o seguir a D4rK en las redes sociales para obtener anuncios.</string>
+    <string name="question_9">¿Quién es Lidia Melinte y cuál es su papel en la aplicación?</string>
+    <string name="summary_preference_faq_9">Lidia Melinte, una profesora de inglés, crea las lecciones y narra los audios en la aplicación.</string>
+    <string name="feedback">Comentarios</string>
+
+    <string name="updates">Actualizaciones</string>
+
+    <string name="share">Compartir</string>
+
+    <string name="support_us">Apóyanos</string>
+    <string name="paid_support">Soporte de pago</string>
+    <string name="summary_donations">No importa cuánto donas, nos ayudarás a mantener nuestra aplicación en funcionamiento y a mejorar sus funciones. ¡Agradecemos tu generosidad y amabilidad!</string>
+    <string name="non_paid_support">Soporte sin pago</string>
+    <string name="web_ad">Anuncio web</string>
+
+    <string name="snack_app_updated">La aplicación se ha actualizado correctamente</string>
+    <string name="snack_update_failed">El proceso de actualización ha encontrado un problema</string>
+    <string name="try_again">Inténtalo de nuevo</string>
+    <string name="summary_share_message">¡Echa un vistazo a esta increíble aplicación que estoy usando! Tiene algunas características realmente geniales que podrías encontrar interesantes. Puedes descargarla desde Play Store en: %1$s</string>
+    <string name="learn_more">Más información</string>
+
+
+    <string name="tooltip_website">Visita nuestro sitio web oficial.</string>
+    <string name="tooltip_facebook">Perfil oficial de Lidia en Facebook.</string>
+</resources>

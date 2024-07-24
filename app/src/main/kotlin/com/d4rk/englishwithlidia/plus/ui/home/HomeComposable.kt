@@ -150,6 +150,10 @@ fun HomeComposable() {
                     }
                 }
             } else {
+                item {
+                    BannerAdsComposable(modifier = Modifier.fillMaxWidth(), dataStore = dataStore)
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
                 items(lessons) { lesson ->
                     LessonCard(title = lesson.title, imageResource = lesson.banner, onClick = {
                         val intent = Intent(context, LessonsActivity::class.java).apply {

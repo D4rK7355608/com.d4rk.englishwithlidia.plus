@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -45,8 +49,11 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.d4rk.englishwithlidia.plus.R
+import com.d4rk.englishwithlidia.plus.ads.BannerAdsComposable
+import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.ui.lessons.UiLessonsAsset
 import com.d4rk.englishwithlidia.plus.ui.settings.display.theme.style.annotatedStringHtmlParser
 import com.d4rk.englishwithlidia.plus.utils.compose.bounceClick
@@ -97,10 +104,11 @@ fun LessonContent(
     lessonDetails: UiLessonsAsset,
     viewModel: LessonsViewModel,
 ) {
-    val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_plant))
     val sliderPosition by viewModel.playbackPosition.collectAsState()
     val playbackDuration by viewModel.playbackDuration.collectAsState()
     val isPlaying by viewModel.isPlaying.collectAsState()
+    val context = LocalContext.current
+    val dataStore = DataStore.getInstance(context)
 
     LaunchedEffect(key1 = lessonDetails) {
         viewModel.preparePlayer(lessonDetails.lessonDetails.audioUrl)
@@ -129,18 +137,31 @@ fun LessonContent(
 
         ImageCardView(imageResource = lessonDetails.banner)
 
+        Spacer(modifier = Modifier.height(8.dp))
+        BannerAdsComposable(modifier = Modifier.fillMaxWidth(), dataStore = dataStore)
+        Spacer(modifier = Modifier.height(8.dp))
+
         Text(
             text = lessonDetails.lessonDetails.lessonSummary.annotatedStringHtmlParser(),
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
-        LottieAnimation(
-            composition = composition,
-            iterations = Int.MAX_VALUE,
+        Box(
             modifier = Modifier
-                .fillMaxSize()
-                .weight(1f)
-        )
+                .fillMaxWidth()
+                .wrapContentHeight()
+                .padding(start = 16.dp, end = 16.dp, bottom = 8.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            LottieAnimation(
+                composition = rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_plant)).value,
+                iterations = LottieConstants.IterateForever,
+                modifier = Modifier.size(260.dp)
+            )
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+        BannerAdsComposable(modifier = Modifier.fillMaxWidth(), dataStore = dataStore)
     }
 }
 
