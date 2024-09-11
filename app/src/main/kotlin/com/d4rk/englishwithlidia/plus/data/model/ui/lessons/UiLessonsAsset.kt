@@ -9,4 +9,12 @@ data class UiLessonsAsset(
     val title: String,
     val banner: String,
     val lessonDetails: UiLessonDetails
-) : Parcelable
+) : Parcelable {
+    @Parcelize
+    data class UiLessonDetails(
+        val title: String,
+        val audioUrl: String,
+        val lessonIntro: String,
+        val lessonSummary: String
+    ) : Parcelable
+}

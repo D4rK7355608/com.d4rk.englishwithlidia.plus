@@ -9,4 +9,6 @@ data class UiLessonDetails(
     val audioUrl: String,
     val lessonIntro: String,
     val lessonSummary: String
-) : Parcelable
+) : Parcelable {
+
+}
