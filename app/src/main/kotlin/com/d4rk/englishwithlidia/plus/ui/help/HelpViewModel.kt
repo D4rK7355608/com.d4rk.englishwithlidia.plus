@@ -6,6 +6,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.d4rk.englishwithlidia.plus.utils.IntentUtils
 import com.google.android.play.core.review.ReviewInfo
 import com.google.android.play.core.review.ReviewManagerFactory
 import kotlinx.coroutines.Dispatchers
@@ -20,12 +21,21 @@ class HelpViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             val reviewManager = ReviewManagerFactory.create(getApplication())
             val request = reviewManager.requestReviewFlow()
+            val packageName = getApplication<Application>().packageName
             request.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     _reviewInfo.value = task.result
                 } else {
-                    task.exception?.printStackTrace()
+                    task.exception?.let {
+                        task.exception?.printStackTrace()
+                        IntentUtils.sendEmailToDeveloper(getApplication())
+                    }
                 }
+            }.addOnFailureListener {
+                IntentUtils.openUrl(
+                    getApplication(),
+                    "https://play.google.com/store/apps/details?id=$packageName&showAllReviews=true"
+                )
             }
         }
     }
