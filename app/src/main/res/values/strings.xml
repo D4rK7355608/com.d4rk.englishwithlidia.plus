@@ -10,12 +10,20 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to our Terms of Service and Privacy Policy to continue.</string>
     <string name="agree">Agree</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
     <string name="find_us">Find us on</string>
     <string name="website">Website</string>
     <string name="close">Close?</string>
     <string name="summary_close">Are you sure you want to exit?</string>
     <string name="snack_network_error">Network error occurred while checking for updates</string>
     <string name="snack_general_error">An error occurred while checking for updates</string>
+    <string name="get_the_app_to_watch">Get the app and see the full lesson: %1$s</string>
+    <string name="activity_not_found">Activity not found.</string>
+    <string name="security_error">A security error occurred. Please try again later.</string>
+    <string name="io_error">An input/output error occurred. Please check your network connection or storage and try again.</string>
+    <string name="illegal_argument_error">Invalid input or argument provided. Please check the information and try again.</string>
+    <string name="unknown_error">An unknown error occurred.</string>
 
     <string name="settings">Settings</string>
 
@@ -34,6 +42,10 @@
 
     <string name="dynamic_colors">Dynamic colors</string>
     <string name="summary_preference_settings_dynamic_colors">Apply colors from wallpapers to the app theme</string>
+
+    <string name="app_behavior">App behavior</string>
+    <string name="bounce_buttons">Bounce click</string>
+    <string name="summary_preference_settings_bounce_buttons">Applies a subtle bounce animation to all clickable elements when clicked</string>
 
     <string name="language">Language</string>
     <string name="summary_preference_settings_language">Changes the language used in the app</string>
@@ -106,11 +118,14 @@
     <string name="app_build_version">Application build version</string>
     <string name="summary_preference_settings_oss">License details for open source software</string>
     <string name="device_info">Device Info</string>
-    <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="app_build">App Build: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Debug</string>
+    <string name="release">Release</string>
     <string name="manufacturer">Manufacturer:</string>
     <string name="device_model">Device Model:</string>
     <string name="android_version">Android Version:</string>
     <string name="api_level">API Level:</string>
+    <string name="snack_device_info_copied">Device info copied to clipboard</string>
 
     <string name="help_and_feedback">Help &amp; feedback</string>
     <string name="help">Help</string>

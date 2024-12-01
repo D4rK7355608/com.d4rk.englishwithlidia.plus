@@ -30,7 +30,3 @@
 -keep class com.google.firebase.** {
   public *;
 }
-
--keep class ch.qos.logback.** {
-public *;
-}

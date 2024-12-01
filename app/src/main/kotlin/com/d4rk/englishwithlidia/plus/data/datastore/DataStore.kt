@@ -7,6 +7,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.d4rk.englishwithlidia.plus.constants.datastore.DataStoreNamesConstants
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -37,7 +38,6 @@ class DataStore(context: Context) {
             preferences[lastUsedKey] = timestamp
         }
     }
-
 
     // Startup
     private val startupKey = booleanPreferencesKey("value")
@@ -86,6 +86,18 @@ class DataStore(context: Context) {
         }
     }
 
+    private val bouncyButtonsKey =
+            booleanPreferencesKey(name = DataStoreNamesConstants.DATA_STORE_BOUNCY_BUTTONS)
+    val bouncyButtons : Flow<Boolean> = dataStore.data.map { preferences ->
+        preferences[bouncyButtonsKey] != false
+    }
+
+    suspend fun saveBouncyButtons(isChecked : Boolean) {
+        dataStore.edit { preferences ->
+            preferences[bouncyButtonsKey] = isChecked
+        }
+    }
+
     private val languageKey = stringPreferencesKey("language")
 
     fun getLanguage(): Flow<String> = dataStore.data.map { preferences ->
@@ -95,20 +107,6 @@ class DataStore(context: Context) {
     suspend fun saveLanguage(language: String) {
         dataStore.edit { preferences ->
             preferences[languageKey] = language
-        }
-    }
-
-    private val currencyKey = stringPreferencesKey("preferred_currency")
-
-    fun getCurrency(): Flow<String> {
-        return dataStore.data.map { preferences ->
-            preferences[currencyKey] ?: ""
-        }
-    }
-
-    suspend fun saveCurrency(currency: String) {
-        dataStore.edit { preferences ->
-            preferences[currencyKey] = currency
         }
     }
 

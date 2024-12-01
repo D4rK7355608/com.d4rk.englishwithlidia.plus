@@ -1,40 +1,40 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.jetbrainsKotlinParcelize)
-    alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.googlePlayServices)
-    alias(libs.plugins.googleOssServices)
-    alias(libs.plugins.googleFirebase)
-    alias(libs.plugins.compose.compiler)
+    alias(notation = libs.plugins.androidApplication)
+    alias(notation = libs.plugins.jetbrainsKotlinAndroid)
+    alias(notation = libs.plugins.jetbrainsKotlinParcelize)
+    alias(notation = libs.plugins.kotlin.serialization)
+    alias(notation = libs.plugins.googlePlayServices)
+    alias(notation = libs.plugins.about.libraries)
+    alias(notation = libs.plugins.googleFirebase)
+    alias(notation = libs.plugins.compose.compiler)
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 35
     namespace = "com.d4rk.englishwithlidia.plus"
     defaultConfig {
         applicationId = "com.d4rk.englishwithlidia.plus"
-        minSdk = 26
-        targetSdk = 34
+        minSdk = 23
+        targetSdk = 35
         versionCode = 62
         versionName = "5.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         resourceConfigurations += listOf(
-            "en",
-            "de",
-            "es",
-            "fr",
-            "hi",
-            "hu",
-            "in",
-            "it",
-            "ja",
-            "ro",
-            "ru",
-            "tr",
-            "sv",
-            "bg",
-            "pl",
+            "en" ,
+            "de" ,
+            "es" ,
+            "fr" ,
+            "hi" ,
+            "hu" ,
+            "in" ,
+            "it" ,
+            "ja" ,
+            "ro" ,
+            "ru" ,
+            "tr" ,
+            "sv" ,
+            "bg" ,
+            "pl" ,
             "uk"
         )
         vectorDrawables {
@@ -49,7 +49,7 @@ android {
             isShrinkResources = true
             isDebuggable = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt") , "proguard-rules.pro"
             )
         }
 
@@ -57,7 +57,7 @@ android {
             multiDexEnabled = true
             isDebuggable = true
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt") , "proguard-rules.pro"
             )
         }
     }
@@ -90,69 +90,73 @@ android {
 }
 
 dependencies {
-    // Firebase
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.crashlytics.ktx)
-    implementation(libs.firebase.analytics.ktx)
-    implementation(libs.firebase.perf)
 
-    // Google
-    implementation(libs.play.services.ads)
-    implementation(libs.billing)
-    implementation(libs.material)
-    implementation(libs.play.services.oss.licenses)
-    implementation(libs.review.ktx)
-    implementation(libs.app.update.ktx)
-    implementation(libs.volley)
+    //AndroidX
+    implementation(dependencyNotation = libs.androidx.core.ktx)
+    implementation(dependencyNotation = libs.androidx.appcompat)
+    implementation(dependencyNotation = libs.androidx.core.splashscreen)
+    implementation(dependencyNotation = libs.androidx.multidex)
+    implementation(dependencyNotation = libs.androidx.work.runtime.ktx)
+    implementation(dependencyNotation = libs.androidx.media3.exoplayer)
+    implementation(dependencyNotation = libs.androidx.media3.ui)
+    implementation(dependencyNotation = libs.androidx.media3.session)
 
     // Compose
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.animation.core)
-    implementation(libs.androidx.foundation)
-    implementation(libs.androidx.material.icons.extended)
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.runtime)
-    implementation(libs.androidx.runtime.livedata)
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.graphics.shapes)
-    implementation(libs.androidx.constraintlayout.compose)
-    implementation(libs.ui.tooling)
-    implementation(libs.androidx.datastore.core)
-    implementation(libs.androidx.navigation.compose)
+    implementation(dependencyNotation = platform(libs.androidx.compose.bom))
+    implementation(dependencyNotation = libs.androidx.ui)
+    implementation(dependencyNotation = libs.androidx.activity.compose)
+    implementation(dependencyNotation = libs.androidx.ui.graphics)
+    implementation(dependencyNotation = libs.androidx.compose.runtime)
+    implementation(dependencyNotation = libs.androidx.runtime.livedata)
+    implementation(dependencyNotation = libs.androidx.ui.tooling.preview)
+    implementation(dependencyNotation = libs.androidx.material3)
+    implementation(dependencyNotation = libs.androidx.material.icons.extended)
+    implementation(dependencyNotation = libs.datastore.preferences)
+    implementation(dependencyNotation = libs.androidx.datastore.preferences)
+    implementation(dependencyNotation = libs.androidx.foundation)
+    implementation(dependencyNotation = libs.androidx.navigation.compose)
 
-    // AndroidX
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.core.splashscreen)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.lifecycle.process)
-    implementation(libs.androidx.lifecycle.common.java8)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.multidex)
-    implementation(libs.androidx.work.runtime.ktx)
-    implementation(libs.androidx.media3.exoplayer)
-    implementation(libs.androidx.media3.ui)
-    implementation(libs.androidx.media3.session)
+    // Firebase
+    implementation(dependencyNotation = platform(libs.firebase.bom))
+    implementation(dependencyNotation = libs.firebase.analytics.ktx)
+    implementation(dependencyNotation = libs.firebase.crashlytics.ktx)
+    implementation(dependencyNotation = libs.firebase.perf)
+
+    // Google
+    implementation(dependencyNotation = libs.play.services.ads)
+    implementation(dependencyNotation = libs.billing)
+    implementation(dependencyNotation = libs.material)
+    implementation(dependencyNotation = libs.app.update.ktx)
+    implementation(dependencyNotation = libs.review.ktx)
+
+    // Images
+    implementation(dependencyNotation = libs.coil.compose)
+    implementation(dependencyNotation = libs.coil.network.okhttp)
 
     // Kotlin
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.cio)
-    implementation(libs.ktor.client.content.negotiation)
-    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(dependencyNotation = libs.kotlinx.coroutines.android)
+    implementation(dependencyNotation = libs.kotlinx.serialization.json)
 
-    // Other
-    implementation(libs.lottie.compose)
-    implementation(libs.coil.compose)
-    implementation(libs.slf4j.simple)
+    // Ktor
+    implementation(dependencyNotation = platform(libs.ktor.bom))
+    implementation(dependencyNotation = libs.ktor.client.android)
+    implementation(dependencyNotation = libs.ktor.client.serialization)
+    implementation(dependencyNotation = libs.ktor.client.logging)
+    implementation(dependencyNotation = libs.ktor.client.content.negotiation)
+    implementation(dependencyNotation = libs.ktor.serialization.kotlinx.json)
 
-    // Test
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    // Lifecycle
+    implementation(dependencyNotation = libs.androidx.lifecycle.runtime.ktx)
+    implementation(dependencyNotation = libs.androidx.lifecycle.livedata.ktx)
+    implementation(dependencyNotation = libs.androidx.lifecycle.process)
+    implementation(dependencyNotation = libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(dependencyNotation = libs.androidx.lifecycle.viewmodel.compose)
+    implementation(dependencyNotation = libs.androidx.lifecycle.runtime.compose)
+
+    // About
+    implementation(dependencyNotation = libs.aboutlibraries)
+    implementation(dependencyNotation = libs.core)
+
+    // Wavy Slider
+    implementation(dependencyNotation = libs.wavy.slider)
 }

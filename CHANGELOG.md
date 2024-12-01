@@ -1,3 +1,12 @@
+# Version 5.1.0:
+- Fixed lessons not loading, added a new api for that that is more dynamic
+- Fixed the entire project building, now it should work with no probems and see the lessons
+- Updated the project's dependencies
+- Added a new about libraries screen with eula and changelog info
+- Removed unused stuff from the project, now the app should be more clear
+- backported the app to support android 6 or higher instead of android 8 and higher
+- 
+
 # Version 5.0.0:
 - **Major**: This release brings significant improvements to the app's core functionality, user experience, and architecture.
 - **Major**: The entire project has been rewritten using Jetpack Compose, resulting in enhanced performance, improved compatibility, and a more modern UI.
