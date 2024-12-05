@@ -52,7 +52,19 @@
 
         <activity
             android:name=".ui.screens.lessons.LessonActivity"
-            android:parentActivityName=".ui.screens.main.MainActivity" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="lesson"
+                    android:pathPrefix="/"
+                    android:scheme="com.d4rk.englishwithlidia.plus" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.screens.support.SupportActivity"

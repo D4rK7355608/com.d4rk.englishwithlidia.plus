@@ -40,6 +40,7 @@ import com.d4rk.englishwithlidia.plus.ui.components.animations.animateVisibility
 import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.components.buttons.OutlinedUrlButtons
 import com.d4rk.englishwithlidia.plus.ui.components.drawable.homeBanner
+import com.d4rk.englishwithlidia.plus.ui.components.navigation.openLessonDetailActivity
 import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonActivity
 
 @Composable
@@ -114,20 +115,19 @@ fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier =
 
         LessonConstants.TYPE_AD_VIEW_BANNER -> {
             AdBanner(modifier = Modifier.fillMaxWidth() , dataStore = dataStore)
+            Spacer(modifier = Modifier.height(16.dp))
         }
 
         LessonConstants.TYPE_AD_VIEW_BANNER_LARGE -> {
             LargeBannerAdsComposable(dataStore = dataStore)
+            Spacer(modifier = Modifier.height(16.dp))
         }
 
         LessonConstants.TYPE_FULL_IMAGE_BANNER -> {
             LessonCard(title = lesson.lessonTitle ,
                        imageResource = lesson.lessonThumbnailImageUrl ,
                        onClick = {
-                           val intent = Intent(context , LessonActivity::class.java).apply {
-                               putExtra("lessonDetails" , lesson.lessonId)
-                           }
-                           context.startActivity(intent)
+                           openLessonDetailActivity(context = context , lesson = lesson)
                        } ,
                        modifier = modifier)
             Spacer(modifier = Modifier.width(8.dp))

@@ -13,7 +13,7 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import kotlinx.serialization.json.Json
 
-abstract class LessonRepositoryImplementation(
+abstract class HomeRepositoryImplementation(
     val application : Application ,
     val dataStore : DataStore ,
 ) {
@@ -37,6 +37,7 @@ abstract class LessonRepositoryImplementation(
             val lessons = jsonString.takeUnless { it.isBlank() }
                     ?.let { jsonParser.decodeFromString<ApiHomeResponse>(it) }
                     ?.takeIf { it.data.isNotEmpty() }?.data?.mapNotNull { networkLesson ->
+                        println("English with Lidia Plus -> Fetched lesson: $networkLesson")
                         runCatching {
                             UiHomeLesson(
                                 lessonId = networkLesson.lessonId ,

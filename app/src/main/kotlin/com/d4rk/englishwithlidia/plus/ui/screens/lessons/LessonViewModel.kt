@@ -8,24 +8,36 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiLessonScreen
-import com.d4rk.englishwithlidia.plus.ui.screens.home.repository.LessonRepository
+import com.d4rk.englishwithlidia.plus.ui.screens.lessons.repository.LessonRepository
 import com.d4rk.englishwithlidia.plus.ui.viewmodel.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class LessonViewModel(application : Application) : BaseViewModel(application) {
     private val repository = LessonRepository(DataStore(application) , application)
 
     private val _uiState = MutableStateFlow(UiLessonScreen())
-    val uiState : StateFlow<UiLessonScreen> = _uiState
+    val uiState : StateFlow<UiLessonScreen> = _uiState.asStateFlow()
+
 
     private var player : Player? = null
 
     init {
         viewModelScope.launch {
             player = ExoPlayer.Builder(getApplication()).build()
+        }
+    }
+
+    fun getLesson(lessonId : String) {
+        viewModelScope.launch(coroutineExceptionHandler) {
+            showLoading()
+            repository.getLessonRepository(lessonId) { fetchedLesson ->
+                _uiState.value = fetchedLesson
+            }
+            hideLoading()
         }
     }
 

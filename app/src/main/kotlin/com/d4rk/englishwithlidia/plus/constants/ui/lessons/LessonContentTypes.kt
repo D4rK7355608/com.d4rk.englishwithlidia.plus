@@ -6,6 +6,7 @@ object LessonContentTypes {
     const val IMAGE = "image"
     const val CONTENT_PLAYER = "content_player"
     const val AD_BANNER = "ad_banner"
+    const val TYPE_DIVIDER = "content_divider"
     const val AD_BANNER_FULL = "ad_banner_full"
     const val AD_LARGE_BANNER = "ad_large_banner"
     const val FULL_IMAGE_BANNER = "full_image_banner"

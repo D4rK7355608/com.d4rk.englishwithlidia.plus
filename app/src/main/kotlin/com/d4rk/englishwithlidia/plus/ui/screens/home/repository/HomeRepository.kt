@@ -6,9 +6,9 @@ import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiHomeScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class LessonRepository(
+class HomeRepository(
     dataStore : DataStore , application : Application ,
-) : LessonRepositoryImplementation(application , dataStore) {
+) : HomeRepositoryImplementation(application , dataStore) {
 
     suspend fun getHomeLessonsRepository(onSuccess : (UiHomeScreen) -> Unit) {
         withContext(Dispatchers.IO) {

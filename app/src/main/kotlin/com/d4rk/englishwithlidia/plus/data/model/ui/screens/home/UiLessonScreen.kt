@@ -5,7 +5,7 @@ data class UiLessonScreen(
     val playbackPosition : Long = 0L ,
     val playbackDuration : Long = 0L ,
     val lessonTitle : String = "" ,
-    val lessonContent : List<UiLessonContent> = emptyList()
+    val lessonContent : ArrayList<UiLessonContent> = ArrayList()
 )
 
 data class UiLessonContent(

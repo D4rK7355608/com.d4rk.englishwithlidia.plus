@@ -97,7 +97,9 @@ fun LessonContentLayout(
                                   sliderPosition = sliderPosition.toFloat() / 1000f ,
                                   playbackDuration = playbackDuration.toFloat() / 1000f ,
                                   isPlaying = isPlaying)
+                }
 
+                LessonContentTypes.TYPE_DIVIDER -> {
                     HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
                 }
 
