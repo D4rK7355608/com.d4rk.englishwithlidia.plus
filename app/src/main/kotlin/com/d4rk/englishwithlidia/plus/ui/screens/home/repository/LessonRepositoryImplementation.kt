@@ -5,8 +5,9 @@ import com.d4rk.englishwithlidia.plus.BuildConfig
 import com.d4rk.englishwithlidia.plus.constants.api.ApiConstants
 import com.d4rk.englishwithlidia.plus.data.core.AppCoreManager
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.data.model.api.ApiResponse
-import com.d4rk.englishwithlidia.plus.data.model.ui.screens.UiLessonsAsset
+import com.d4rk.englishwithlidia.plus.data.model.api.ApiHomeResponse
+import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiHomeLesson
+import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiHomeScreen
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
@@ -28,33 +29,31 @@ abstract class LessonRepositoryImplementation(
         isLenient = true
     }
 
-    suspend fun getHomeLessonsImplementation() : List<UiLessonsAsset> {
+    suspend fun getHomeLessonsImplementation() : UiHomeScreen {
         return runCatching {
             val response = client.get(baseUrl)
             val jsonString = response.bodyAsText()
 
-            jsonString.takeUnless { it.isBlank() }
-                    ?.let { jsonParser.decodeFromString<ApiResponse>(it) }
+            val lessons = jsonString.takeUnless { it.isBlank() }
+                    ?.let { jsonParser.decodeFromString<ApiHomeResponse>(it) }
                     ?.takeIf { it.data.isNotEmpty() }?.data?.mapNotNull { networkLesson ->
                         runCatching {
-                            UiLessonsAsset(
-                                id = networkLesson.id ,
-                                title = networkLesson.title ,
-                                banner = networkLesson.banner ,
-                                lessonDetails = UiLessonsAsset.UiLessonDetails(
-                                    title = networkLesson.lessonDetails.titleExtension ,
-                                    audioUrl = networkLesson.lessonDetails.podcast ,
-                                    lessonIntro = networkLesson.lessonDetails.intro ,
-                                    lessonSummary = networkLesson.lessonDetails.summary
-                                )
+                            UiHomeLesson(
+                                lessonId = networkLesson.lessonId ,
+                                lessonTitle = networkLesson.lessonTitle ,
+                                lessonType = networkLesson.lessonType ,
+                                lessonThumbnailImageUrl = networkLesson.lessonThumbnailImageUrl ,
+                                lessonDeepLinkPath = networkLesson.lessonDeepLinkPath
                             )
                         }.getOrNull()
                     }?.also { lessons ->
                         println("English with Lidia Plus -> Fetched ${lessons.size} lessons")
                     } ?: emptyList()
+
+            UiHomeScreen(lessons = ArrayList(lessons))
         }.getOrElse { exception ->
             println("English with Lidia Plus -> Error: ${exception.message}")
-            emptyList()
+            return@getOrElse UiHomeScreen()
         }
     }
 }

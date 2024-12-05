@@ -57,9 +57,7 @@ fun MainScreenContent(
         ) {
             HomeScreen(
                 context = context ,
-                view = view ,
                 viewModel = viewModel ,
-                snackbarHostState = snackbarHostState
             )
         }
     }

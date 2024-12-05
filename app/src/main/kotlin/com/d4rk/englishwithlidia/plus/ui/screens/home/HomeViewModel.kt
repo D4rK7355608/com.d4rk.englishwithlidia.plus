@@ -3,7 +3,7 @@ package com.d4rk.englishwithlidia.plus.ui.screens.home
 import android.app.Application
 import androidx.lifecycle.viewModelScope
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.data.model.ui.screens.UiLessonsAsset
+import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiHomeScreen
 import com.d4rk.englishwithlidia.plus.ui.screens.home.repository.LessonRepository
 import com.d4rk.englishwithlidia.plus.ui.viewmodel.BaseViewModel
 import kotlinx.coroutines.delay
@@ -14,8 +14,8 @@ import kotlinx.coroutines.launch
 class HomeViewModel(application : Application) : BaseViewModel(application) {
     private val repository = LessonRepository(DataStore(application) , application)
 
-    private val _lessons = MutableStateFlow<List<UiLessonsAsset>>(emptyList())
-    val lessons : StateFlow<List<UiLessonsAsset>> = _lessons
+    private val _uiState = MutableStateFlow(UiHomeScreen())
+    val uiState: StateFlow<UiHomeScreen> = _uiState
 
     init {
         getHomeLessons()
@@ -25,7 +25,7 @@ class HomeViewModel(application : Application) : BaseViewModel(application) {
         viewModelScope.launch(coroutineExceptionHandler) {
             showLoading()
             repository.getHomeLessonsRepository { fetchedLessons ->
-                _lessons.value = fetchedLessons
+                _uiState.value = fetchedLessons
             }
             hideLoading()
             initializeVisibilityStates()
@@ -35,10 +35,11 @@ class HomeViewModel(application : Application) : BaseViewModel(application) {
     private fun initializeVisibilityStates() {
         viewModelScope.launch(coroutineExceptionHandler) {
             delay(timeMillis = 50L)
-            _visibilityStates.value = List(_lessons.value.size) { false }
-            _lessons.value.indices.forEach { index ->
+            val lessonCount = _uiState.value.lessons.size
+            _visibilityStates.value = List(lessonCount) { false }
+            _uiState.value.lessons.indices.forEach { index ->
                 delay(timeMillis = index * 8L)
-                _visibilityStates.value = List(_visibilityStates.value.size) { lessonIndex ->
+                _visibilityStates.value = List(lessonCount) { lessonIndex ->
                     lessonIndex == index || _visibilityStates.value[lessonIndex]
                 }
             }
