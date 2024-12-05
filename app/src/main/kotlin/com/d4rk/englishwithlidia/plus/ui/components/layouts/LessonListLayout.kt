@@ -40,7 +40,7 @@ import com.d4rk.englishwithlidia.plus.ui.components.animations.animateVisibility
 import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.components.buttons.OutlinedUrlButtons
 import com.d4rk.englishwithlidia.plus.ui.components.drawable.homeBanner
-import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonsActivity
+import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonActivity
 
 @Composable
 fun LessonListLayout(
@@ -124,7 +124,7 @@ fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier =
             LessonCard(title = lesson.lessonTitle ,
                        imageResource = lesson.lessonThumbnailImageUrl ,
                        onClick = {
-                           val intent = Intent(context , LessonsActivity::class.java).apply {
+                           val intent = Intent(context , LessonActivity::class.java).apply {
                                putExtra("lessonDetails" , lesson.lessonId)
                            }
                            context.startActivity(intent)

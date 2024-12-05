@@ -1,8 +1,5 @@
 package com.d4rk.englishwithlidia.plus.ui.components.layouts
 
-import android.content.Context
-import android.os.Build.VERSION.SDK_INT
-import android.widget.Toast
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ScrollState
@@ -15,52 +12,36 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.outlined.CopyAll
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.fromHtml
-import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
-import coil3.ImageLoader
 import coil3.compose.AsyncImage
 import com.d4rk.englishwithlidia.plus.constants.ui.lessons.LessonContentTypes
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiLessonContent
 import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.ui.components.ads.AdBanner
 import com.d4rk.englishwithlidia.plus.ui.components.ads.LargeBannerAdsComposable
 import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
-import com.d4rk.englishwithlidia.plus.ui.screens.home.HomeViewModel
-import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonsViewModel
+import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonViewModel
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.Colors
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.TextStyles
 import ir.mahozad.multiplatform.wavyslider.WaveDirection
@@ -72,7 +53,7 @@ fun LessonContentLayout(
     scrollState : ScrollState ,
     dataStore : DataStore ,
     lesson : UiLessonScreen ,
-    viewModel : LessonsViewModel ,
+    viewModel : LessonViewModel ,
 ) {
     Column(
         modifier = Modifier
@@ -100,12 +81,13 @@ fun LessonContentLayout(
                 }
 
                 LessonContentTypes.CONTENT_PLAYER -> {
-                    val sliderPosition by viewModel.playbackPosition.collectAsState()
-                    val playbackDuration by viewModel.playbackDuration.collectAsState()
-                    val isPlaying by viewModel.isPlaying.collectAsState()
+                    val sliderPosition = lesson.playbackPosition
+                    val playbackDuration = lesson.playbackDuration
 
-                    LaunchedEffect(key1 = lesson.lessonContent.contentAudioUrl) {
-                        viewModel.preparePlayer(lessonDetails.UiLessonContent.audioUrl)
+                    val isPlaying = lesson.isPlaying
+
+                    LaunchedEffect(key1 = contentItem.contentAudioUrl) {
+                        viewModel.preparePlayer(contentItem.contentAudioUrl)
                     }
 
                     AudioCardView(onPlayClick = { viewModel.playPause() } ,

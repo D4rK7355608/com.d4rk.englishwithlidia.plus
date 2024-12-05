@@ -1,6 +1,6 @@
 # Version 5.1.0:
 - Fixed lessons not loading, added a new api for that that is more dynamic
-- Fixed the entire project building, now it should work with no probems and see the lessons
+- Fixed the entire project building, now it should work with no problems and see the lessons
 - Updated the project's dependencies
 - Added a new about libraries screen with eula and changelog info
 - Removed unused stuff from the project, now the app should be more clear

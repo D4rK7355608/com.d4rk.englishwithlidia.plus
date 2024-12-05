@@ -3,24 +3,29 @@ package com.d4rk.englishwithlidia.plus.ui.screens.lessons
 import androidx.compose.animation.core.Transition
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.updateTransition
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.d4rk.englishwithlidia.plus.R
+import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.ui.error.UiErrorModel
 import com.d4rk.englishwithlidia.plus.ui.components.dialogs.ErrorAlertDialog
-import com.d4rk.englishwithlidia.plus.ui.components.layouts.LessonListLayout
+import com.d4rk.englishwithlidia.plus.ui.components.layouts.LessonContentLayout
 import com.d4rk.englishwithlidia.plus.ui.components.layouts.LoadingScreen
 import com.d4rk.englishwithlidia.plus.ui.components.navigation.TopAppBarScaffoldWithBackButton
 
 @Composable
-fun LessonsComposable(viewModel : LessonsViewModel , activity : LessonsActivity) {
+fun LessonScreen(activity : LessonActivity) {
+    val viewModel : LessonViewModel = viewModel()
     val context = LocalContext.current
+    val dataStore = DataStore.getInstance(context)
     val uiErrorModel : UiErrorModel by viewModel.uiErrorModel.collectAsState()
     val uiState by viewModel.uiState.collectAsState()
-    val visibilityStates by viewModel.visibilityStates.collectAsState()
+    val scrollState = rememberScrollState()
     val isLoading by viewModel.isLoading.collectAsState()
 
     val transition : Transition<Boolean> =
@@ -40,8 +45,12 @@ fun LessonsComposable(viewModel : LessonsViewModel , activity : LessonsActivity)
             LoadingScreen(progressAlpha)
         }
         else {
-            LessonListLayout(
-                lessons = uiState.lessons , context = context , visibilityStates = visibilityStates
+            LessonContentLayout(
+                paddingValues = paddingValues ,
+                scrollState = scrollState ,
+                dataStore = dataStore ,
+                lesson = uiState ,
+                viewModel = viewModel
             )
         }
     }
