@@ -150,7 +150,7 @@ fun LessonCard(
                     .bounceClick()
                     .clip(RoundedCornerShape(12.dp))
                     .clickable(onClick = onClick)
-                    .aspectRatio(2.06f / 1f) ,
+                    .aspectRatio(ratio = 2.06f / 1f) ,
         ) {
             AsyncImage(
                 model = imageResource ,

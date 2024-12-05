@@ -1,5 +1,7 @@
 package com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style
 
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(color = 0xFF904A41)
@@ -73,3 +75,14 @@ val surfaceContainerLowDark = Color(color = 0xFF231918)
 val surfaceContainerDark = Color(color = 0xFF271D1C)
 val surfaceContainerHighDark = Color(color = 0xFF322826)
 val surfaceContainerHighestDark = Color(color = 0xFF3D3231)
+
+object Colors {
+    @Composable
+    fun primaryText() = MaterialTheme.colorScheme.onBackground
+
+    @Composable
+    fun secondaryText() = MaterialTheme.colorScheme.onSurface
+
+    @Composable
+    fun highlightedText() = MaterialTheme.colorScheme.primary
+}
