@@ -1,11 +1,11 @@
 # Version 5.1.0:
-- Fixed lessons not loading, added a new api for that that is more dynamic
-- Fixed the entire project building, now it should work with no problems and see the lessons
-- Updated the project's dependencies
-- Added a new about libraries screen with eula and changelog info
-- Removed unused stuff from the project, now the app should be more clear
-- backported the app to support android 6 or higher instead of android 8 and higher
-- 
+- **Major**: Fixed lessons not loading by integrating a more dynamic and robust API for lesson retrieval. Lessons now load seamlessly without issues.
+- **Major**: Resolved all build issues, ensuring the entire project builds correctly and functions as expected. The app is now fully operational and lessons are accessible.
+- **Major**: Introduced a new **About Libraries** screen, featuring detailed EULA and changelog information to enhance transparency and user trust.
+- **Minor**: Updated all project dependencies to their latest versions, ensuring improved compatibility and stability.
+- **Minor**: Removed unused components and legacy code, simplifying the project structure and making the app more streamlined and efficient.
+- **Minor**: Backported the app to support devices running Android 6.0 (Marshmallow) or higher, expanding compatibility for a wider audience.
+- **Minor**: Added support for additional languages in localized strings, providing a more inclusive experience for users worldwide.
 
 # Version 5.0.0:
 - **Major**: This release brings significant improvements to the app's core functionality, user experience, and architecture.
