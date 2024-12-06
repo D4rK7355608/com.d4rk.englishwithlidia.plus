@@ -50,7 +50,7 @@ fun VersionInfoAlertDialogContent() {
         Spacer(modifier = Modifier.width(16.dp))
         Column {
             Text(
-                text = context.getString(R.string.app_name) ,
+                text = context.getString(R.string.app_full_name) ,
                 style = MaterialTheme.typography.titleLarge
             )
             Text(

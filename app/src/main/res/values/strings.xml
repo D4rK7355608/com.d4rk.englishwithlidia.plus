@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_short_description">Learn english and relax in the same time! 📚</string>
+    <string name="app_name_blog">English with Lidia Blog</string>
+    <string name="app_short_description">Learn English and relax in the same time! 📚</string>
     <string name="notification_update_title">A new update available!</string>
     <string name="summary_notification_update">A new version of the app is available. Click to update!</string>
     <string name="notification_last_time_used_title">It\'s been a while!</string>
     <string name="summary_notification_last_time_used">Let\'s learn something! We are happy you are back!</string>
 
     <string name="welcome">Welcome</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Browse the <i><u>Terms of Service</u></i> and <i><u>Privacy Policy</u></i></string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to our Terms of Service and Privacy Policy to continue.</string>
     <string name="agree">Agree</string>
 
@@ -16,9 +17,6 @@
     <string name="website">Website</string>
     <string name="close">Close?</string>
     <string name="summary_close">Are you sure you want to exit?</string>
-    <string name="snack_network_error">Network error occurred while checking for updates</string>
-    <string name="snack_general_error">An error occurred while checking for updates</string>
-    <string name="get_the_app_to_watch">Get the app and see the full lesson: %1$s</string>
     <string name="activity_not_found">Activity not found.</string>
     <string name="security_error">A security error occurred. Please try again later.</string>
     <string name="io_error">An input/output error occurred. Please check your network connection or storage and try again.</string>
@@ -169,8 +167,4 @@
     <string name="try_again">Try again</string>
     <string name="summary_share_message">Check out this amazing app that I\'m using! It has some really cool features that you might find interesting. You can download it from the Play Store at: %1$s</string>
     <string name="learn_more">Learn more</string>
-
-
-    <string name="tooltip_website">Visit our official website.</string>
-    <string name="tooltip_facebook">Lidia\'s official Facebook profile.</string>
 </resources>

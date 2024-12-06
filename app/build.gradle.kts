@@ -21,22 +21,26 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         resourceConfigurations += listOf(
             "en" ,
-            "de" ,
-            "es" ,
-            "fr" ,
-            "hi" ,
-            "hu" ,
-            "in" ,
-            "it" ,
-            "ja" ,
-            "ro" ,
-            "ru" ,
-            "tr" ,
-            "sv" ,
-            "bg" ,
-            "pl" ,
-            "uk"
+            "bg-rBG" ,
+            "de-rDE" ,
+            "es-rGQ" ,
+            "fr-rFR" ,
+            "hi-rIN" ,
+            "hu-rHU" ,
+            "in-rID" ,
+            "it-rIT" ,
+            "ja-rJP" ,
+            "pl-rPL" ,
+            "pt-rBR" ,
+            "ro-rRO" ,
+            "ru-rRU" ,
+            "sv-rSE" ,
+            "th-rTH" ,
+            "tr-rTR" ,
+            "uk-rUA" ,
+            "zh-rTW" ,
         )
+
         vectorDrawables {
             useSupportLibrary = true
         }

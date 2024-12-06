@@ -1,6 +1,9 @@
 package com.d4rk.englishwithlidia.plus.ui.screens.main
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.drawable.Icon
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -12,6 +15,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.graphics.drawable.IconCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.data.core.AppCoreManager
@@ -39,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         enableEdgeToEdge()
+        createShortCuts()
         initializeActivityComponents()
         setContent {
             AppTheme {
@@ -111,6 +118,26 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    @SuppressLint("RestrictedApi")
+    private fun createShortCuts() {
+        val shortcut = ShortcutInfoCompat.Builder(this , "website")
+                .setShortLabel(getString(R.string.website))
+                .setLongLabel(getString(R.string.app_name_blog)).setIcon(
+                    IconCompat.createFromIcon(
+                        Icon.createWithResource(
+                            this ,
+                            R.mipmap.ic_shortcut_website
+                        )
+                    )
+                ).setIntent(
+                    Intent(
+                        Intent.ACTION_VIEW ,
+                        Uri.parse("https://sites.google.com/view/englishwithlidia")
+                    )
+                ).build()
+        ShortcutManagerCompat.pushDynamicShortcut(this@MainActivity , shortcut)
     }
 
     private fun initializeActivityComponents() {

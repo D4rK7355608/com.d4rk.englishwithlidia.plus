@@ -1,7 +1,6 @@
 package com.d4rk.englishwithlidia.plus.ui.components.layouts
 
 import android.content.Context
-import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -41,7 +40,6 @@ import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.components.buttons.OutlinedUrlButtons
 import com.d4rk.englishwithlidia.plus.ui.components.drawable.homeBanner
 import com.d4rk.englishwithlidia.plus.ui.components.navigation.openLessonDetailActivity
-import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonActivity
 
 @Composable
 fun LessonListLayout(
@@ -106,7 +104,7 @@ fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier =
                     modifier = Modifier
                             .weight(1f)
                             .bounceClick() ,
-                    text = R.string.website ,
+                    text = R.string.find_us ,
                     url = "https://www.facebook.com/lidia.melinte"
                 )
             }

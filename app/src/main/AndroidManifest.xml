@@ -51,7 +51,7 @@
         </activity>
 
         <activity
-            android:name=".ui.screens.lessons.LessonActivity"
+            android:name=".ui.screens.lesson.LessonActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

@@ -1,6 +1,7 @@
 package com.d4rk.englishwithlidia.plus.ui.components.buttons
 
 import android.content.Context
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ButtonDefaults
@@ -18,7 +19,7 @@ import com.d4rk.englishwithlidia.plus.utils.IntentUtils
 fun OutlinedUrlButtons(
     url : String ,
     vectorIcon : ImageVector? = null ,
-    painterIcon : Painter? = null,
+    painterIcon : Painter? = null ,
     text : Int ,
     context : Context ,
     modifier : Modifier
@@ -45,6 +46,6 @@ fun OutlinedUrlButtons(
         }
 
         Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-        Text(stringResource(id = text))
+        Text(text = stringResource(id = text) , modifier = Modifier.basicMarquee())
     }
 }

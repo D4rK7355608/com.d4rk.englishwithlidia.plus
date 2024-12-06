@@ -41,7 +41,7 @@ import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.ui.components.ads.AdBanner
 import com.d4rk.englishwithlidia.plus.ui.components.ads.LargeBannerAdsComposable
 import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
-import com.d4rk.englishwithlidia.plus.ui.screens.lessons.LessonViewModel
+import com.d4rk.englishwithlidia.plus.ui.screens.lesson.LessonViewModel
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.Colors
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.TextStyles
 import ir.mahozad.multiplatform.wavyslider.WaveDirection
@@ -193,7 +193,6 @@ fun AudioCardView(
                 FloatingActionButton(
                     onClick = onPlayClick ,
                     modifier = Modifier
-                            .weight(1f)
                             .bounceClick() ,
                     shape = RoundedCornerShape(cornerRadius.dp)
                 ) {
