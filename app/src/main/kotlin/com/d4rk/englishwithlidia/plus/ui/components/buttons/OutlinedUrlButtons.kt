@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import com.d4rk.englishwithlidia.plus.utils.IntentUtils
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 
 @Composable
 fun OutlinedUrlButtons(
@@ -25,8 +25,8 @@ fun OutlinedUrlButtons(
     modifier : Modifier
 ) {
     OutlinedButton(onClick = {
-        IntentUtils.openUrl(
-            context , url = url
+        IntentsHelper.openUrl(
+            context = context , url = url
         )
     } , modifier = modifier) {
 

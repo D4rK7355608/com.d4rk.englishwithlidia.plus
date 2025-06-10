@@ -30,7 +30,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.d4rk.englishwithlidia.plus.R
-import com.d4rk.englishwithlidia.plus.constants.ui.lessons.LessonConstants
+import com.d4rk.englishwithlidia.plus.utils.constants.ui.lessons.LessonConstants
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiHomeLesson
 import com.d4rk.englishwithlidia.plus.ui.components.ads.AdBanner

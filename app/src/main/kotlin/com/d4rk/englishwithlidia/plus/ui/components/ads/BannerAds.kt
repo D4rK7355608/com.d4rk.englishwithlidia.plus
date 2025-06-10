@@ -6,7 +6,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import com.d4rk.englishwithlidia.plus.constants.ads.AdsConstants
+import com.d4rk.englishwithlidia.plus.utils.constants.ads.AdsConstants
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize

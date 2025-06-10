@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.ui.screens.help
+package com.d4rk.androidtutorials.ui.screens.help
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -9,10 +9,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.AppTheme
+import com.d4rk.androidtutorials.ui.screens.settings.display.theme.style.AppTheme
 
 class HelpActivity : AppCompatActivity() {
     private val viewModel : HelpViewModel by viewModels()
+
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

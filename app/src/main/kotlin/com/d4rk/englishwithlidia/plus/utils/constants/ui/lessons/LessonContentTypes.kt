@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.constants.ui.lessons
+package com.d4rk.englishwithlidia.plus.utils.constants.ui.lessons
 
 object LessonContentTypes {
     const val TEXT = "content_text"

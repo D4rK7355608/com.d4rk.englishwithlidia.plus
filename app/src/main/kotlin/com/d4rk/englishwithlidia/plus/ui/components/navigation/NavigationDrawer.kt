@@ -26,14 +26,14 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.d4rk.android.libs.apptoolkit.data.model.ui.navigation.NavigationDrawerItem
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.englishwithlidia.plus.R
-import com.d4rk.englishwithlidia.plus.data.model.ui.navigation.NavigationDrawerItem
 import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.components.animations.hapticDrawerSwipe
 import com.d4rk.englishwithlidia.plus.ui.screens.help.HelpActivity
 import com.d4rk.englishwithlidia.plus.ui.screens.main.MainScreenContent
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.SettingsActivity
-import com.d4rk.englishwithlidia.plus.utils.IntentUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -79,9 +79,9 @@ fun NavigationDrawer(
                                                                        view.playSoundEffect(
                                                                            SoundEffectConstants.CLICK
                                                                        )
-                                                                       IntentUtils.openActivity(
-                                                                           context ,
-                                                                           SettingsActivity::class.java
+                                                                       IntentsHelper.openActivity(
+                                                                           context = context ,
+                                                                           activityClass = SettingsActivity::class.java
                                                                        )
                                                                    }
 
@@ -89,9 +89,9 @@ fun NavigationDrawer(
                                                                        view.playSoundEffect(
                                                                            SoundEffectConstants.CLICK
                                                                        )
-                                                                       IntentUtils.openActivity(
-                                                                           context ,
-                                                                           HelpActivity::class.java
+                                                                       IntentsHelper.openActivity(
+                                                                           context = context ,
+                                                                           activityClass = HelpActivity::class.java
                                                                        )
                                                                    }
 
@@ -99,8 +99,8 @@ fun NavigationDrawer(
                                                                        view.playSoundEffect(
                                                                            SoundEffectConstants.CLICK
                                                                        )
-                                                                       IntentUtils.openUrl(
-                                                                           context ,
+                                                                       IntentsHelper.openUrl(
+                                                                           context = context ,
                                                                            url = "https://github.com/D4rK7355608/${context.packageName}/blob/master/CHANGELOG.md"
                                                                        )
                                                                    }
@@ -109,7 +109,11 @@ fun NavigationDrawer(
                                                                        view.playSoundEffect(
                                                                            SoundEffectConstants.CLICK
                                                                        )
-                                                                       IntentUtils.shareApp(context)
+                                                                       IntentsHelper.shareApp(
+                                                                           context = context,
+                                                                           shareMessageFormat = R.string.summary_share_message
+
+                                                                       )
                                                                    }
                                                                }
                                                                coroutineScope.launch { drawerState.close() }

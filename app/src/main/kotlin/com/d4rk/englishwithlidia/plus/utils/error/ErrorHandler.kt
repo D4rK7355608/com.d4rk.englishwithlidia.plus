@@ -3,7 +3,7 @@ package com.d4rk.englishwithlidia.plus.utils.error
 import android.app.Activity
 import android.content.Context
 import com.d4rk.englishwithlidia.plus.R
-import com.d4rk.englishwithlidia.plus.constants.error.ErrorType
+import com.d4rk.englishwithlidia.plus.utils.constants.error.ErrorType
 import com.google.android.material.snackbar.Snackbar
 
 object ErrorHandler {

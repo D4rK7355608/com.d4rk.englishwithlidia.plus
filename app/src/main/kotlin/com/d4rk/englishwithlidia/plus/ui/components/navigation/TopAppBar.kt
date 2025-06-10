@@ -25,10 +25,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.screens.support.SupportActivity
-import com.d4rk.englishwithlidia.plus.utils.IntentUtils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -63,8 +63,8 @@ fun TopAppBarMain(
             view.playSoundEffect(
                 SoundEffectConstants.CLICK
             )
-            IntentUtils.openActivity(
-                context , SupportActivity::class.java
+            IntentsHelper.openActivity(
+                context = context , activityClass = SupportActivity::class.java
             )
         }) {
             Icon(

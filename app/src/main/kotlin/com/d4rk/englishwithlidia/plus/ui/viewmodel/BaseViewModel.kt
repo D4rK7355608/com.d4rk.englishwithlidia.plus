@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.d4rk.englishwithlidia.plus.R
-import com.d4rk.englishwithlidia.plus.constants.error.ErrorType
+import com.d4rk.englishwithlidia.plus.utils.constants.error.ErrorType
 import com.d4rk.englishwithlidia.plus.data.model.ui.error.UiErrorModel
 import com.d4rk.englishwithlidia.plus.utils.error.ErrorHandler
 import kotlinx.coroutines.CoroutineExceptionHandler

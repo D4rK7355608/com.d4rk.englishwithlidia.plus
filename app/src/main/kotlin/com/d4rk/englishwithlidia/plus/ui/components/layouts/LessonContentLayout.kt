@@ -35,7 +35,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.d4rk.englishwithlidia.plus.constants.ui.lessons.LessonContentTypes
+import com.d4rk.englishwithlidia.plus.utils.constants.ui.lessons.LessonContentTypes
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.ui.components.ads.AdBanner

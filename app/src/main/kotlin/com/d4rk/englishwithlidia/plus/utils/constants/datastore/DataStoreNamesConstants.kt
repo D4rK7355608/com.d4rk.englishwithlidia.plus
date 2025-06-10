@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.constants.datastore
+package com.d4rk.englishwithlidia.plus.utils.constants.datastore
 
 object DataStoreNamesConstants {
     const val DATA_STORE_SETTINGS = "settings"

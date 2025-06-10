@@ -2,9 +2,9 @@ package com.d4rk.englishwithlidia.plus.data.core.ads
 
 import android.app.Activity
 import android.content.Context
-import com.d4rk.englishwithlidia.plus.constants.ads.AdsConstants
+import com.d4rk.android.libs.apptoolkit.utils.interfaces.OnShowAdCompleteListener
+import com.d4rk.englishwithlidia.plus.utils.constants.ads.AdsConstants
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.utils.interfaces.OnShowAdCompleteListener
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -48,11 +48,11 @@ open class AdsCoreManager(protected val context: Context) {
             isLoadingAd = true
             val request: AdRequest = AdRequest.Builder().build()
             @Suppress("DEPRECATION")
-            AppOpenAd.load(context,
-                AdsConstants.APP_OPEN_UNIT_ID,
-                request,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
-                object : AppOpenAd.AppOpenAdLoadCallback() {
+            AppOpenAd.load(context ,
+                           AdsConstants.APP_OPEN_UNIT_ID ,
+                           request ,
+                           AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT ,
+                           object : AppOpenAd.AppOpenAdLoadCallback() {
                     override fun onAdLoaded(ad: AppOpenAd) {
                         appOpenAd = ad
                         isLoadingAd = false

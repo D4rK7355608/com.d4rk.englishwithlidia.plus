@@ -25,8 +25,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.d4rk.android.libs.apptoolkit.data.model.ui.animations.button.ButtonState
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.data.model.ui.animations.button.ButtonState
 
 @Composable
 fun Modifier.bounceClick(

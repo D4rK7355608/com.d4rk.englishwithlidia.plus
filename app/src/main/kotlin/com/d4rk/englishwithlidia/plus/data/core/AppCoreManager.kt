@@ -11,7 +11,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDexApplication
-import com.d4rk.englishwithlidia.plus.data.client.KtorClient
+import com.d4rk.android.libs.apptoolkit.data.client.KtorClient
 import com.d4rk.englishwithlidia.plus.data.core.ads.AdsCoreManager
 import com.d4rk.englishwithlidia.plus.data.core.datastore.DataStoreCoreManager
 import io.ktor.client.HttpClient

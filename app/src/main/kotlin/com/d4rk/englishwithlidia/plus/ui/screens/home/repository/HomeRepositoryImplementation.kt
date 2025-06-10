@@ -2,7 +2,7 @@ package com.d4rk.englishwithlidia.plus.ui.screens.home.repository
 
 import android.app.Application
 import com.d4rk.englishwithlidia.plus.BuildConfig
-import com.d4rk.englishwithlidia.plus.constants.api.ApiConstants
+import com.d4rk.englishwithlidia.plus.utils.constants.api.ApiConstants
 import com.d4rk.englishwithlidia.plus.data.core.AppCoreManager
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.api.ApiHomeResponse
