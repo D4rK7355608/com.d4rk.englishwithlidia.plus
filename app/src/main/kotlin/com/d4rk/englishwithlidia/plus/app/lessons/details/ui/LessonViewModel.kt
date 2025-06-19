@@ -6,58 +6,57 @@ import androidx.lifecycle.viewModelScope
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
-import com.d4rk.englishwithlidia.plus.app.lessons.details.repository.LessonRepository
+import com.d4rk.android.libs.apptoolkit.core.di.DispatcherProvider
+import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.usecases.GetLessonUseCase
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
-import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.ui.viewmodel.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-class LessonViewModel(application : Application) : BaseViewModel(application) {
-    private val repository = LessonRepository(DataStore(application) , application)
+class LessonViewModel(
+    application: Application,
+    private val getLessonUseCase: GetLessonUseCase,
+    private val dispatcherProvider: DispatcherProvider,
+) : BaseViewModel(application) {
 
     private val _uiState = MutableStateFlow(UiLessonScreen())
-    val uiState : StateFlow<UiLessonScreen> = _uiState.asStateFlow()
+    val uiState: StateFlow<UiLessonScreen> = _uiState.asStateFlow()
 
-
-    private var player : Player? = null
+    private var player: Player? = null
 
     init {
-        viewModelScope.launch {
-            player = ExoPlayer.Builder(getApplication()).build()
-        }
+        viewModelScope.launch { player = ExoPlayer.Builder(getApplication()).build() }
     }
 
-    fun getLesson(lessonId : String) {
-        viewModelScope.launch(coroutineExceptionHandler) {
+    fun getLesson(lessonId: String) {
+        viewModelScope.launch(coroutineExceptionHandler + dispatcherProvider.io) {
             showLoading()
-            repository.getLessonRepository(lessonId) { fetchedLesson ->
-                _uiState.value = fetchedLesson
+            val lesson = getLessonUseCase(lessonId)
+            withContext(dispatcherProvider.main) {
+                _uiState.value = lesson
+                hideLoading()
             }
-            hideLoading()
         }
     }
 
-    fun preparePlayer(audioUrl : String) {
+    fun preparePlayer(audioUrl: String) {
         viewModelScope.launch {
             player?.release()
-
             val audioUri = Uri.parse(audioUrl)
-
             player = ExoPlayer.Builder(getApplication()).build().apply {
                 setMediaItem(MediaItem.fromUri(audioUri))
                 prepare()
                 playWhenReady = false
-
                 addListener(object : Player.Listener {
-                    override fun onIsPlayingChanged(isPlaying : Boolean) {
+                    override fun onIsPlayingChanged(isPlaying: Boolean) {
                         updateUiState { copy(isPlaying = isPlaying) }
                     }
 
-                    override fun onPlaybackStateChanged(playbackState : Int) {
+                    override fun onPlaybackStateChanged(playbackState: Int) {
                         if (playbackState == Player.STATE_READY) {
                             val duration = this@apply.duration
                             updateUiState { copy(playbackDuration = duration) }
@@ -65,16 +64,15 @@ class LessonViewModel(application : Application) : BaseViewModel(application) {
                     }
 
                     override fun onPositionDiscontinuity(
-                        oldPosition : Player.PositionInfo ,
-                        newPosition : Player.PositionInfo ,
-                        reason : Int
+                        oldPosition: Player.PositionInfo,
+                        newPosition: Player.PositionInfo,
+                        reason: Int,
                     ) {
                         val currentPosition = this@apply.currentPosition
                         updateUiState { copy(playbackPosition = currentPosition) }
                     }
                 })
             }
-
             startPositionUpdateJob()
         }
     }
@@ -83,14 +81,13 @@ class LessonViewModel(application : Application) : BaseViewModel(application) {
         player?.let { player ->
             if (player.isPlaying) {
                 player.pause()
-            }
-            else {
+            } else {
                 player.playWhenReady = true
             }
         }
     }
 
-    fun seekTo(position : Long) {
+    fun seekTo(position: Long) {
         player?.seekTo(position)
     }
 
@@ -107,7 +104,7 @@ class LessonViewModel(application : Application) : BaseViewModel(application) {
         }
     }
 
-    private fun updateUiState(update : UiLessonScreen.() -> UiLessonScreen) {
+    private fun updateUiState(update: UiLessonScreen.() -> UiLessonScreen) {
         _uiState.value = _uiState.value.update()
     }
 
