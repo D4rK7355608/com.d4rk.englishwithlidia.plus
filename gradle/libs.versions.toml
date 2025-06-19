@@ -1,25 +1,12 @@
 [versions]
-agp = "8.8.0"
-appUpdateKtx = "2.1.0"
-billing = "7.1.1"
-aboutlibraries = "11.3.0"
+agp = "8.10.1"
+aboutlibraries = "12.2.3"
 wavySlider = "2.0.0"
-firebaseBom = "33.7.0"
-kotlin = "2.0.21"
+kotlin = "2.1.21"
 google-services = "4.4.2"
-google-firebase-crashlytics = "3.0.2"
-playServicesAds = "23.6.0"
-reviewKtx = "2.0.2"
+google-firebase-crashlytics = "3.0.4"
 
 [libraries]
-billing = { module = "com.android.billingclient:billing", version.ref = "billing" }
-app-update-ktx = { module = "com.google.android.play:app-update-ktx", version.ref = "appUpdateKtx" }
-firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
-firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
-firebase-perf = { module = "com.google.firebase:firebase-perf" }
-play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
-review-ktx = { module = "com.google.android.play:review-ktx", version.ref = "reviewKtx" }
 wavy-slider = { module = "ir.mahozad.multiplatform:wavy-slider", version.ref = "wavySlider" }
 
 [plugins]

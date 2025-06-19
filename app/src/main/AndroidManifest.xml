@@ -19,7 +19,7 @@
     </queries>
 
     <application
-        android:name=".data.core.AppCoreManager"
+        android:name=".EnglishWithLidia"
         android:appCategory="productivity"
         android:banner="@drawable/tv_banner"
         android:description="@string/app_short_description"
@@ -36,10 +36,6 @@
         tools:targetApi="33">
 
         <activity
-            android:name=".ui.screens.startup.StartupActivity"
-            android:noHistory="true" />
-
-        <activity
             android:name=".ui.screens.main.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -54,7 +50,7 @@
         </activity>
 
         <activity
-            android:name=".ui.screens.lesson.LessonActivity"
+            android:name=".app.lessons.details.ui.LessonActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -68,65 +64,6 @@
                     android:scheme="com.d4rk.englishwithlidia.plus" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".ui.screens.support.SupportActivity"
-            android:parentActivityName=".ui.screens.main.MainActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.SettingsActivity"
-            android:exported="true"
-            android:label="@string/settings"
-            android:parentActivityName=".ui.screens.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".ui.screens.settings.display.DisplaySettingsActivity"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.display.theme.ThemeSettingsActivity"
-            android:parentActivityName=".ui.screens.settings.display.DisplaySettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.advanced.AdvancedSettingsActivity"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.privacy.PrivacySettingsActivity"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.privacy.permissions.PermissionsSettingsActivity"
-            android:exported="true"
-            android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity"
-            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".ui.screens.settings.privacy.usage.UsageAndDiagnosticsActivity"
-            android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.privacy.ads.AdsSettingsActivity"
-            android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.settings.about.AboutSettingsActivity"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity" />
-
-        <activity
-            android:name=".ui.screens.help.HelpActivity"
-            android:parentActivityName=".ui.screens.main.MainActivity" />
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
@@ -149,9 +86,5 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5294151573817700~8003610653" />
 
-        <property
-            android:name="android.adservices.AD_SERVICES_CONFIG"
-            android:resource="@xml/gma_ad_services_config"
-            tools:replace="android:resource" />
     </application>
 </manifest>

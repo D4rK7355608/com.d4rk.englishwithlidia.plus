@@ -1,3 +1,6 @@
+import java.util.Properties
+import kotlin.toString
+
 plugins {
     alias(notation = libs.plugins.androidApplication)
     alias(notation = libs.plugins.jetbrainsKotlinAndroid)
@@ -15,65 +18,80 @@ android {
     defaultConfig {
         applicationId = "com.d4rk.englishwithlidia.plus"
         minSdk = 23
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 63
         versionName = "5.2.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        @Suppress("UnstableApiUsage")
-        androidResources.localeFilters += listOf(
-            "en" ,
-            "bg-rBG" ,
-            "de-rDE" ,
-            "es-rGQ" ,
-            "fr-rFR" ,
-            "hi-rIN" ,
-            "hu-rHU" ,
-            "in-rID" ,
-            "it-rIT" ,
-            "ja-rJP" ,
-            "pl-rPL" ,
-            "pt-rBR" ,
-            "ro-rRO" ,
-            "ru-rRU" ,
-            "sv-rSE" ,
-            "th-rTH" ,
-            "tr-rTR" ,
-            "uk-rUA" ,
-            "zh-rTW" ,
+        @Suppress("UnstableApiUsage") androidResources.localeFilters += listOf(
+            "ar-rEG" , "bg-rBG" , "bn-rBD" , "de-rDE" , "en" , "es-rGQ" , "es-rMX" , "fil-rPH" , "fr-rFR" , "hi-rIN" , "hu-rHU" , "in-rID" , "it-rIT" , "ja-rJP" , "ko-rKR" , "pl-rPL" , "pt-rBR" , "ro-rRO" , "ru-rRU" , "sv-rSE" , "th-rTH" , "tr-rTR" , "uk-rUA" , "ur-rPK" , "vi-rVN" , "zh-rTW"
         )
-
         vectorDrawables {
             useSupportLibrary = true
+        }
+
+        val githubProps = Properties()
+        val githubFile = rootProject.file("github.properties")
+        val githubToken = if (githubFile.exists()) {
+            githubProps.load(githubFile.inputStream())
+            githubProps["GITHUB_TOKEN"].toString()
+        } else {
+            ""
+        }
+        buildConfigField("String", "GITHUB_TOKEN", "\"$githubToken\"")
+    }
+
+    signingConfigs {
+        create("release")
+
+        val signingProps = Properties()
+        val signingFile = rootProject.file("signing.properties")
+
+        if (signingFile.exists()) {
+            signingProps.load(signingFile.inputStream())
+
+            signingConfigs.getByName("release").apply {
+                storeFile = file(signingProps["STORE_FILE"].toString())
+                storePassword = signingProps["STORE_PASSWORD"].toString()
+                keyAlias = signingProps["KEY_ALIAS"].toString()
+                keyPassword = signingProps["KEY_PASSWORD"].toString()
+            }
+        }
+        else {
+            android.buildTypes.getByName("release").signingConfig = null
         }
     }
 
     buildTypes {
         release {
-            multiDexEnabled = true
-            isMinifyEnabled = true
-            isShrinkResources = true
+            val signingFile = rootProject.file("signing.properties")
+            signingConfig = if (signingFile.exists()) {
+                signingConfigs.getByName("release")
+            } else {
+                null
+            }
             isDebuggable = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt") , "proguard-rules.pro"
-            )
         }
-
         debug {
-            multiDexEnabled = true
             isDebuggable = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt") , "proguard-rules.pro"
-            )
+        }
+    }
+
+    buildTypes.forEach { buildType ->
+        with(receiver = buildType) {
+            multiDexEnabled = true
+            isMinifyEnabled = false
+            isShrinkResources = false
+            proguardFiles(getDefaultProguardFile(name = "proguard-android-optimize.txt") , "proguard-rules.pro")
         }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
 
     buildFeatures {
@@ -96,21 +114,9 @@ android {
 
 dependencies {
     // App Core
-    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:0.0.14") {
+    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.31") {
         isTransitive = true
     }
-
-    // Firebase
-    implementation(dependencyNotation = platform(libs.firebase.bom))
-    implementation(dependencyNotation = libs.firebase.analytics.ktx)
-    implementation(dependencyNotation = libs.firebase.crashlytics.ktx)
-    implementation(dependencyNotation = libs.firebase.perf)
-
-    // Google
-    implementation(dependencyNotation = libs.play.services.ads)
-    implementation(dependencyNotation = libs.billing)
-    implementation(dependencyNotation = libs.app.update.ktx)
-    implementation(dependencyNotation = libs.review.ktx)
 
     // Wavy Slider
     implementation(dependencyNotation = libs.wavy.slider)

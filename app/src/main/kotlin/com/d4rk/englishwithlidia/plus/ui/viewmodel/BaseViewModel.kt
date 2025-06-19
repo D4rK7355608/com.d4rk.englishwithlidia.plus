@@ -5,10 +5,9 @@ import android.content.ActivityNotFoundException
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.d4rk.android.libs.apptoolkit.core.domain.model.error.UiErrorModel
+import com.d4rk.android.libs.apptoolkit.core.utils.constants.error.ErrorType
 import com.d4rk.englishwithlidia.plus.R
-import com.d4rk.englishwithlidia.plus.utils.constants.error.ErrorType
-import com.d4rk.englishwithlidia.plus.data.model.ui.error.UiErrorModel
-import com.d4rk.englishwithlidia.plus.utils.error.ErrorHandler
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -53,7 +52,8 @@ open class BaseViewModel(application : Application) : AndroidViewModel(applicati
                     ErrorType.ACTIVITY_NOT_FOUND -> getApplication<Application>().getString(R.string.activity_not_found)
                     ErrorType.ILLEGAL_ARGUMENT -> getApplication<Application>().getString(R.string.illegal_argument_error)
                     ErrorType.UNKNOWN_ERROR -> getApplication<Application>().getString(R.string.unknown_error)
-                }
+                    else -> {}
+                }.toString()
             )
         }
     }
@@ -66,7 +66,7 @@ open class BaseViewModel(application : Application) : AndroidViewModel(applicati
 
     protected open fun handleError(errorType : ErrorType , ignoredException : Throwable) {
         viewModelScope.launch(coroutineExceptionHandler) {
-            ErrorHandler.handleError(getApplication() , errorType)
+           // ErrorHandler.handleError(getApplication() , errorType)
         }
     }
 
