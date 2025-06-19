@@ -1,24 +1,16 @@
 package com.d4rk.englishwithlidia.plus.app.lessons.details.repository
 
-import android.app.Application
 import com.d4rk.englishwithlidia.plus.BuildConfig
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonContent
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.core.domain.model.api.ApiLessonResponse
 import com.d4rk.englishwithlidia.plus.core.utils.constants.api.ApiConstants
-import com.d4rk.englishwithlidia.plus.data.core.AppCoreManager
-import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import kotlinx.serialization.json.Json
 
-abstract class LessonRepositoryImplementation(
-    val application : Application ,
-
-) {
-
-    private val client : HttpClient = AppCoreManager.ktorClient
+abstract class LessonRepositoryImplementation(private val client: HttpClient) {
 
     private val baseUrl = BuildConfig.DEBUG.let { isDebug ->
         val environment = if (isDebug) "debug" else "release"

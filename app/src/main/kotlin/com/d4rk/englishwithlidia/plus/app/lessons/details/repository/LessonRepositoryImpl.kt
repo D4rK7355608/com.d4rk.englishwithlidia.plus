@@ -5,8 +5,7 @@ import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.repository.Less
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
 
 class LessonRepositoryImpl(
-    application: Application,
-) : LessonRepository, LessonRepositoryImplementation(application) {
+) : LessonRepository, LessonRepositoryImplementation() {
 
     override suspend fun getLesson(lessonId: String): UiLessonScreen {
         return getLessonImplementation(lessonId = lessonId)
