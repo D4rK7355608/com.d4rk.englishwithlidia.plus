@@ -10,7 +10,7 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import kotlinx.serialization.json.Json
 
-abstract class LessonRepositoryImplementation(private val client: HttpClient) {
+open class LessonRepositoryImplementation(private val client: HttpClient) {
 
     private val baseUrl = BuildConfig.DEBUG.let { isDebug ->
         val environment = if (isDebug) "debug" else "release"
@@ -22,31 +22,31 @@ abstract class LessonRepositoryImplementation(private val client: HttpClient) {
         isLenient = true
     }
 
-    suspend fun getLessonImplementation(lessonId : String) : UiLessonScreen {
+    suspend operator fun invoke(lessonId: String): UiLessonScreen {
         return runCatching {
             val url = "$baseUrl/api_get_$lessonId.json"
-            val response = client.get(url)
-            val jsonString = response.bodyAsText()
+            val jsonString = client.get(url).bodyAsText()
 
             val lessons = jsonString.takeUnless { it.isBlank() }
-                    ?.let { jsonParser.decodeFromString<ApiLessonResponse>(it) }
-                    ?.takeIf { it.data.isNotEmpty() }?.data?.map { networkLesson ->
-                        UiLessonScreen(lessonTitle = networkLesson.lessonTitle ,
-                                       lessonContent = ArrayList(networkLesson.lessonContent.map { networkContent ->
-                                           UiLessonContent(
-                                               contentId = networkContent.contentId ,
-                                               contentType = networkContent.contentType ,
-                                               contentText = networkContent.contentText ,
-                                               contentAudioUrl = networkContent.contentAudioUrl ,
-                                               contentImageUrl = networkContent.contentImageUrl
-                                           )
-                                       }))
-                    }?.also { lessons ->
-                        println("Fetched ${lessons.size} lessons")
-                    } ?: emptyList()
+                ?.let { jsonParser.decodeFromString<ApiLessonResponse>(it) }
+                ?.takeIf { it.data.isNotEmpty() }?.data?.map { networkLesson ->
+                    UiLessonScreen(
+                        lessonTitle = networkLesson.lessonTitle,
+                        lessonContent = ArrayList(
+                            networkLesson.lessonContent.map { networkContent ->
+                                UiLessonContent(
+                                    contentId = networkContent.contentId,
+                                    contentType = networkContent.contentType,
+                                    contentText = networkContent.contentText,
+                                    contentAudioUrl = networkContent.contentAudioUrl,
+                                    contentImageUrl = networkContent.contentImageUrl,
+                                )
+                            },
+                        ),
+                    )
+                } ?: emptyList()
             lessons.firstOrNull() ?: UiLessonScreen()
-        }.getOrElse { exception ->
-            println("Error: ${exception.message}")
+        }.getOrElse {
             UiLessonScreen()
         }
     }
