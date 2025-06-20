@@ -120,4 +120,8 @@ dependencies {
 
     // Wavy Slider
     implementation(dependencyNotation = libs.wavy.slider)
+
+    // AndroidX Media3 ExoPlayer
+    implementation(dependencyNotation = libs.media3.exoplayer)
+    implementation(dependencyNotation = libs.media3.ui)
 }

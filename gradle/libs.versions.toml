@@ -5,9 +5,12 @@ wavySlider = "2.0.0"
 kotlin = "2.1.21"
 google-services = "4.4.2"
 google-firebase-crashlytics = "3.0.4"
+media3 = "1.3.1"
 
 [libraries]
 wavy-slider = { module = "ir.mahozad.multiplatform:wavy-slider", version.ref = "wavySlider" }
+media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
+media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
