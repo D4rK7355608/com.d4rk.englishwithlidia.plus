@@ -85,7 +85,10 @@ fun LessonContentLayout(
                     val isPlaying = lesson.isPlaying
 
                     LaunchedEffect(key1 = contentItem.contentAudioUrl) {
-                        viewModel.preparePlayer(contentItem.contentAudioUrl)
+                        viewModel.preparePlayer(
+                            contentItem.contentAudioUrl,
+                            lesson.lessonTitle
+                        )
                     }
 
                     AudioCardView(onPlayClick = { viewModel.playPause() } ,

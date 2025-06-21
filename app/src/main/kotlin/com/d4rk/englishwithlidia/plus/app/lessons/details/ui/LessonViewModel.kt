@@ -4,6 +4,7 @@ import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.viewModelScope
 import androidx.media3.common.MediaItem
+import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import com.d4rk.englishwithlidia.plus.notifications.managers.AudioPlaybackNotificationsManager
@@ -50,12 +51,20 @@ class LessonViewModel(
         }
     }
 
-    fun preparePlayer(audioUrl: String) {
+    fun preparePlayer(audioUrl: String, title: String) {
         viewModelScope.launch {
             player?.release()
             val audioUri = Uri.parse(audioUrl)
             player = ExoPlayer.Builder(getApplication()).build().apply {
-                setMediaItem(MediaItem.fromUri(audioUri))
+                val mediaItem = MediaItem.Builder()
+                    .setUri(audioUri)
+                    .setMediaMetadata(
+                        MediaMetadata.Builder()
+                            .setTitle(title)
+                            .build()
+                    )
+                    .build()
+                setMediaItem(mediaItem)
                 prepare()
                 playWhenReady = false
                 addListener(object : Player.Listener {
