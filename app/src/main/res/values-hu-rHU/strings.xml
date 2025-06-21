@@ -165,4 +165,5 @@
 
     <string name="close">Közeli?</string>
     <string name="summary_close">Biztos, hogy ki akar lépni?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

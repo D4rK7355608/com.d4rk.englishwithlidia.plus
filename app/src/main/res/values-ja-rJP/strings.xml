@@ -165,4 +165,5 @@
 
     <string name="close">近い？</string>
     <string name="summary_close">本当に終了してもよろしいですか?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

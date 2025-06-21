@@ -165,4 +165,5 @@
 
     <string name="close">Fermer?</string>
     <string name="summary_close">Etes-vous sûr de vouloir quitter ?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

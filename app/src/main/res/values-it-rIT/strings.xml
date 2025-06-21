@@ -165,4 +165,5 @@
 
     <string name="close">Vicino?</string>
     <string name="summary_close">Sei sicuro di voler uscire?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

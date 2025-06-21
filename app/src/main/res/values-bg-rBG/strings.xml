@@ -165,4 +165,5 @@
 
     <string name="close">затвори?</string>
     <string name="summary_close">Сигурни ли сте, че искате да излезете?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

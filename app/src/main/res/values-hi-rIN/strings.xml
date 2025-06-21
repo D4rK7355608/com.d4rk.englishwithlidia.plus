@@ -165,4 +165,5 @@
 
     <string name="close">बंद करना?</string>
     <string name="summary_close">क्या आप निश्चित हैं आपकी बाहर निकलने की इच्छा है?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

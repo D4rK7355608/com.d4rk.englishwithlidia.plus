@@ -165,4 +165,5 @@
 
     <string name="close">Nära?</string>
     <string name="summary_close">Är du säker på att du vill avsluta?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

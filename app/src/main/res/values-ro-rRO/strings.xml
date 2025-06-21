@@ -165,4 +165,5 @@
 
     <string name="close">Aproape?</string>
     <string name="summary_close">Ești sigur că vrei să ieși?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

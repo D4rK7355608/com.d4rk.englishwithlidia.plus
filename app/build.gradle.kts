@@ -112,6 +112,10 @@ dependencies {
     implementation(dependencyNotation = libs.app.update.ktx)
     implementation(dependencyNotation = libs.review.ktx)
 
+    // Media3 notification
+    implementation(dependencyNotation = libs.media3.ui)
+    implementation(dependencyNotation = libs.media3.session)
+
     // Wavy Slider
     implementation(dependencyNotation = libs.wavy.slider)
 }
