@@ -35,13 +35,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
 import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonViewModel
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
+import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonContentTypes
-import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.ui.components.ads.AdBanner
-import com.d4rk.englishwithlidia.plus.ui.components.ads.LargeBannerAdsComposable
-import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.Colors
 import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.TextStyles
 import ir.mahozad.multiplatform.wavyslider.WaveDirection
@@ -110,11 +108,11 @@ fun LessonContentLayout(
                 }
 
                 LessonContentTypes.AD_BANNER -> {
-                    AdBanner(dataStore = dataStore)
+                    //AdBanner(dataStore = dataStore)
                 }
 
                 LessonContentTypes.AD_LARGE_BANNER -> {
-                    LargeBannerAdsComposable(dataStore = dataStore)
+                   // LargeBannerAdsComposable(dataStore = dataStore)
                 }
 
                 else -> {
@@ -143,9 +141,9 @@ fun StyledText(
 
 @Composable
 fun StyledImage(
+    modifier : Modifier = Modifier ,
     imageUrl : String ,
     contentDescription : String? = null ,
-    modifier : Modifier = Modifier ,
 ) {
     Card(
         modifier = modifier.fillMaxWidth() ,

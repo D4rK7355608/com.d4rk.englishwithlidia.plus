@@ -19,30 +19,6 @@ class AppOnboardingProvider : OnboardingProvider {
 
     override fun getOnboardingPages(context: Context): List<OnboardingPage> {
         return listOf(
-            OnboardingPage.DefaultPage(
-                key = OnboardingKeys.WELCOME,
-                title = context.getString(R.string.onboarding_welcome_title),
-                description = context.getString(R.string.onboarding_welcome_description),
-                imageVector = Icons.Outlined.Star
-            ),
-            OnboardingPage.DefaultPage(
-                key = OnboardingKeys.PERSONALIZATION_OPTIONS,
-                title = context.getString(R.string.onboarding_personalization_title),
-                description = context.getString(R.string.onboarding_personalization_description),
-                imageVector = Icons.Outlined.AccountCircle
-            ),
-            OnboardingPage.CustomPage(
-                key = OnboardingKeys.THEME_OPTIONS,
-                content = {
-                    ThemeOnboardingPageTab()
-                }
-            ),
-            OnboardingPage.DefaultPage(
-                key = OnboardingKeys.FEATURE_HIGHLIGHT_1,
-                title = context.getString(R.string.onboarding_feature1_title),
-                description = context.getString(R.string.onboarding_feature1_description),
-                imageVector = Icons.Outlined.Build
-            ),
             OnboardingPage.CustomPage(
                 key = OnboardingKeys.CRASHLYTICS_OPTIONS,
                 content = {

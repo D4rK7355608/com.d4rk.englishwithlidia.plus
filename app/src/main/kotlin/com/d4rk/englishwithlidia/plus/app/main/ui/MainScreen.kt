@@ -104,7 +104,7 @@ fun MainScaffoldTabletContent() {
         LeftNavigationRail(drawerItems = uiState.navigationDrawerItems , currentRoute = currentRoute , isRailExpanded = isRailExpanded , paddingValues = paddingValues , onDrawerItemClick = { item : NavigationDrawerItem ->
             handleNavigationItemClick(context = context , item = item)
         } , content = {
-            AppsListScreen(paddingValues = paddingValues)
+            //AppsListScreen(paddingValues = paddingValues)
         })
     }
 }

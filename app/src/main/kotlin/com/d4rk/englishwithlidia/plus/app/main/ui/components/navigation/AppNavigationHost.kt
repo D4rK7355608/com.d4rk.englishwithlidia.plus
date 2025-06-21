@@ -7,8 +7,6 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
-import com.d4rk.android.apps.apptoolkit.app.apps.ui.AppsListScreen
-import com.d4rk.englishwithlidia.plus.app.main.utils.constants.NavigationRoutes
 import com.d4rk.android.libs.apptoolkit.R
 import com.d4rk.android.libs.apptoolkit.app.help.ui.HelpActivity
 import com.d4rk.android.libs.apptoolkit.app.main.ui.components.navigation.NavigationHost
@@ -16,6 +14,7 @@ import com.d4rk.android.libs.apptoolkit.app.settings.settings.ui.SettingsActivit
 import com.d4rk.android.libs.apptoolkit.core.domain.model.navigation.NavigationDrawerItem
 import com.d4rk.android.libs.apptoolkit.core.utils.constants.links.AppLinks
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.IntentsHelper
+import com.d4rk.englishwithlidia.plus.app.main.utils.constants.NavigationRoutes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -27,7 +26,7 @@ fun AppNavigationHost(
         navController = navController , startDestination = NavigationRoutes.ROUTE_LESSONS_LIST
     ) {
         composable(route = NavigationRoutes.ROUTE_LESSONS_LIST) {
-            AppsListScreen(paddingValues = paddingValues)
+           // AppsListScreen(paddingValues = paddingValues)
         }
     }
 }

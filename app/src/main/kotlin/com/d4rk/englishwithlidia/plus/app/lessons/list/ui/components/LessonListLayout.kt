@@ -29,14 +29,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.animateVisibility
+import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiHomeLesson
+import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonConstants
-import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
-import com.d4rk.englishwithlidia.plus.ui.components.ads.AdBanner
-import com.d4rk.englishwithlidia.plus.ui.components.ads.LargeBannerAdsComposable
-import com.d4rk.englishwithlidia.plus.ui.components.animations.animateVisibility
-import com.d4rk.englishwithlidia.plus.ui.components.animations.bounceClick
 import com.d4rk.englishwithlidia.plus.ui.components.navigation.openLessonDetailActivity
 
 @Composable
@@ -110,12 +108,12 @@ fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier =
         }
 
         LessonConstants.TYPE_AD_VIEW_BANNER -> {
-            AdBanner(modifier = Modifier.fillMaxWidth() , dataStore = dataStore)
+            //AdBanner(modifier = Modifier.fillMaxWidth() , dataStore = dataStore)
             Spacer(modifier = Modifier.height(16.dp))
         }
 
         LessonConstants.TYPE_AD_VIEW_BANNER_LARGE -> {
-            LargeBannerAdsComposable(dataStore = dataStore)
+            //LargeBannerAdsComposable(dataStore = dataStore)
             Spacer(modifier = Modifier.height(16.dp))
         }
 
