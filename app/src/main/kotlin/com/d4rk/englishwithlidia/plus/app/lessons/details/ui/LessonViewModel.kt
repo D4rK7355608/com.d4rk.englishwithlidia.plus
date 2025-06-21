@@ -13,6 +13,7 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.d4rk.englishwithlidia.plus.playback.AudioPlaybackService
 import com.google.common.util.concurrent.ListenableFuture
+import com.d4rk.englishwithlidia.plus.core.utils.extensions.await
 import com.d4rk.android.libs.apptoolkit.core.di.DispatcherProvider
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.usecases.GetLessonUseCase
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
@@ -43,12 +44,11 @@ class LessonViewModel(
             ContextCompat.startForegroundService(context, intent)
             val sessionToken = SessionToken(context, ComponentName(context, AudioPlaybackService::class.java))
             controllerFuture = MediaController.Builder(context, sessionToken).buildAsync()
-            controllerFuture?.addListener({
-                player = controllerFuture?.get()
-                player?.addListener(object : Player.Listener {
-                    override fun onIsPlayingChanged(isPlaying: Boolean) {
-                        updateUiState { copy(isPlaying = isPlaying) }
-                    }
+            player = controllerFuture?.await()
+            player?.addListener(object : Player.Listener {
+                override fun onIsPlayingChanged(isPlaying: Boolean) {
+                    updateUiState { copy(isPlaying = isPlaying) }
+                }
 
                     override fun onPlaybackStateChanged(playbackState: Int) {
                         if (playbackState == Player.STATE_READY) {
@@ -57,7 +57,6 @@ class LessonViewModel(
                         }
                     }
                 })
-            }, ContextCompat.getMainExecutor(context))
         }
     }
 
@@ -74,7 +73,7 @@ class LessonViewModel(
 
     fun preparePlayer(audioUrl: String, title: String) {
         viewModelScope.launch {
-            controllerFuture?.get()?.let { controller ->
+            controllerFuture?.await()?.let { controller ->
                 val mediaItem = MediaItem.Builder()
                     .setUri(Uri.parse(audioUrl))
                     .setMediaMetadata(
@@ -106,10 +105,12 @@ class LessonViewModel(
     }
 
     private fun startPositionUpdateJob() {
-        viewModelScope.launch {
+        viewModelScope.launch(dispatcherProvider.default) {
             while (true) {
                 val currentPosition = player?.currentPosition ?: 0L
-                updateUiState { copy(playbackPosition = currentPosition) }
+                withContext(dispatcherProvider.main) {
+                    updateUiState { copy(playbackPosition = currentPosition) }
+                }
                 delay(timeMillis = 100)
                 if (player?.isPlaying == false) {
                     break
