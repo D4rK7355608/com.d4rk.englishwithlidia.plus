@@ -23,6 +23,7 @@ import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonS
 import com.d4rk.englishwithlidia.plus.core.utils.extensions.await
 import com.d4rk.englishwithlidia.plus.playback.AudioPlaybackService
 import com.google.common.util.concurrent.ListenableFuture
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
@@ -36,6 +37,7 @@ class LessonViewModel(
 
     private var controllerFuture: ListenableFuture<MediaController>? = null
     private var player: Player? = null
+    private var positionJob: Job? = null
 
     init {
         launch {
@@ -48,6 +50,11 @@ class LessonViewModel(
             player?.addListener(object : Player.Listener {
                 override fun onIsPlayingChanged(isPlaying: Boolean) {
                     screenState.copyData { copy(isPlaying = isPlaying) }
+                    if (isPlaying) {
+                        startPositionUpdates()
+                    } else {
+                        positionJob?.cancel()
+                    }
                 }
 
                 override fun onPlaybackStateChanged(playbackState: Int) {
@@ -91,7 +98,6 @@ class LessonViewModel(
                 controller.prepare()
                 controller.playWhenReady = false
             }
-            startPositionUpdateJob()
         }
     }
 
@@ -115,8 +121,9 @@ class LessonViewModel(
         player?.seekTo(position)
     }
 
-    private fun startPositionUpdateJob() {
-        launch(context = dispatcherProvider.default) {
+    private fun startPositionUpdates() {
+        positionJob?.cancel()
+        positionJob = launch(context = dispatcherProvider.default) {
             while (true) {
                 val currentPosition = withContext(dispatcherProvider.main) {
                     player?.currentPosition ?: 0L
@@ -124,19 +131,15 @@ class LessonViewModel(
                 withContext(dispatcherProvider.main) {
                     screenState.copyData { copy(playbackPosition = currentPosition) }
                 }
-                delay(timeMillis = 100)
-                val isPlaying = withContext(dispatcherProvider.main) {
-                    player?.isPlaying == true
-                }
-                if (!isPlaying) {
-                    break
-                }
+                delay(timeMillis = 500)
+                if (player?.isPlaying != true) break
             }
         }
     }
 
     override fun onCleared() {
         super.onCleared()
+        positionJob?.cancel()
         controllerFuture?.let { MediaController.releaseFuture(it) }
     }
 }
