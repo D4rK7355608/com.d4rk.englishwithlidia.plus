@@ -6,8 +6,13 @@ import androidx.lifecycle.viewModelScope
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
-import androidx.media3.exoplayer.ExoPlayer
-import com.d4rk.englishwithlidia.plus.notifications.managers.AudioPlaybackNotificationsManager
+import android.content.ComponentName
+import android.content.Intent
+import androidx.core.content.ContextCompat
+import androidx.media3.session.MediaController
+import androidx.media3.session.SessionToken
+import com.d4rk.englishwithlidia.plus.playback.AudioPlaybackService
+import com.google.common.util.concurrent.ListenableFuture
 import com.d4rk.android.libs.apptoolkit.core.di.DispatcherProvider
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.usecases.GetLessonUseCase
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
@@ -28,15 +33,31 @@ class LessonViewModel(
     private val _uiState = MutableStateFlow(UiLessonScreen())
     val uiState: StateFlow<UiLessonScreen> = _uiState.asStateFlow()
 
+    private var controllerFuture: ListenableFuture<MediaController>? = null
     private var player: Player? = null
-    private val audioNotificationsManager =
-        AudioPlaybackNotificationsManager(application)
 
     init {
         viewModelScope.launch {
-            player = ExoPlayer.Builder(getApplication()).build().also {
-                audioNotificationsManager.show(it)
-            }
+            val context = getApplication<Application>()
+            val intent = Intent(context, AudioPlaybackService::class.java)
+            ContextCompat.startForegroundService(context, intent)
+            val sessionToken = SessionToken(context, ComponentName(context, AudioPlaybackService::class.java))
+            controllerFuture = MediaController.Builder(context, sessionToken).buildAsync()
+            controllerFuture?.addListener({
+                player = controllerFuture?.get()
+                player?.addListener(object : Player.Listener {
+                    override fun onIsPlayingChanged(isPlaying: Boolean) {
+                        updateUiState { copy(isPlaying = isPlaying) }
+                    }
+
+                    override fun onPlaybackStateChanged(playbackState: Int) {
+                        if (playbackState == Player.STATE_READY) {
+                            val duration = player?.duration ?: 0L
+                            updateUiState { copy(playbackDuration = duration) }
+                        }
+                    }
+                })
+            }, ContextCompat.getMainExecutor(context))
         }
     }
 
@@ -53,53 +74,29 @@ class LessonViewModel(
 
     fun preparePlayer(audioUrl: String, title: String) {
         viewModelScope.launch {
-            player?.release()
-            val audioUri = Uri.parse(audioUrl)
-            player = ExoPlayer.Builder(getApplication()).build().apply {
+            controllerFuture?.get()?.let { controller ->
                 val mediaItem = MediaItem.Builder()
-                    .setUri(audioUri)
+                    .setUri(Uri.parse(audioUrl))
                     .setMediaMetadata(
                         MediaMetadata.Builder()
                             .setTitle(title)
                             .build()
                     )
                     .build()
-                setMediaItem(mediaItem)
-                prepare()
-                playWhenReady = false
-                addListener(object : Player.Listener {
-                    override fun onIsPlayingChanged(isPlaying: Boolean) {
-                        updateUiState { copy(isPlaying = isPlaying) }
-                    }
-
-                    override fun onPlaybackStateChanged(playbackState: Int) {
-                        if (playbackState == Player.STATE_READY) {
-                            val duration = this@apply.duration
-                            updateUiState { copy(playbackDuration = duration) }
-                        }
-                    }
-
-                    override fun onPositionDiscontinuity(
-                        oldPosition: Player.PositionInfo,
-                        newPosition: Player.PositionInfo,
-                        reason: Int,
-                    ) {
-                        val currentPosition = this@apply.currentPosition
-                        updateUiState { copy(playbackPosition = currentPosition) }
-                    }
-                })
+                controller.setMediaItem(mediaItem)
+                controller.prepare()
+                controller.playWhenReady = false
             }
-            player?.let { audioNotificationsManager.show(it) }
             startPositionUpdateJob()
         }
     }
 
     fun playPause() {
-        player?.let { player ->
-            if (player.isPlaying) {
-                player.pause()
+        player?.let { controller ->
+            if (controller.isPlaying) {
+                controller.pause()
             } else {
-                player.playWhenReady = true
+                controller.playWhenReady = true
             }
         }
     }
@@ -127,7 +124,6 @@ class LessonViewModel(
 
     override fun onCleared() {
         super.onCleared()
-        audioNotificationsManager.hide()
-        player?.release()
+        controllerFuture?.let { MediaController.releaseFuture(it) }
     }
 }
