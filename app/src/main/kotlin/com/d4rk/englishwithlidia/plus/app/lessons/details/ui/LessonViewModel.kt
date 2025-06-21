@@ -107,12 +107,17 @@ class LessonViewModel(
     private fun startPositionUpdateJob() {
         viewModelScope.launch(dispatcherProvider.default) {
             while (true) {
-                val currentPosition = player?.currentPosition ?: 0L
+                val currentPosition = withContext(dispatcherProvider.main) {
+                    player?.currentPosition ?: 0L
+                }
                 withContext(dispatcherProvider.main) {
                     updateUiState { copy(playbackPosition = currentPosition) }
                 }
                 delay(timeMillis = 100)
-                if (player?.isPlaying == false) {
+                val isPlaying = withContext(dispatcherProvider.main) {
+                    player?.isPlaying == true
+                }
+                if (!isPlaying) {
                     break
                 }
             }
