@@ -49,5 +49,5 @@ implementation(dependencyNotation = libs.media3.session)
 
 The `LessonViewModel` class demonstrates basic playback using an `ExoPlayer` instance.
 
-For notification management, `AudioPlaybackNotificationsManager` currently uses `PlayerNotificationManager`, which can be replaced with the built-in `MediaSessionService` notification handling when migrating fully to the new architecture.
+The app uses `MediaSessionService` to create and manage the media notification automatically, so custom `PlayerNotificationManager` logic is no longer required.
 

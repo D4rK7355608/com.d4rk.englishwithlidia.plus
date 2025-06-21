@@ -5,13 +5,13 @@ import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
 
 class AudioPlaybackService : MediaSessionService() {
-    private var player: ExoPlayer? = null
-    private var mediaSession: MediaSession? = null
+    private lateinit var player: ExoPlayer
+    private lateinit var mediaSession: MediaSession
 
     override fun onCreate() {
         super.onCreate()
         player = ExoPlayer.Builder(this).build()
-        mediaSession = MediaSession.Builder(this, player!!).build()
+        mediaSession = MediaSession.Builder(this, player).build()
     }
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? {
@@ -19,8 +19,8 @@ class AudioPlaybackService : MediaSessionService() {
     }
 
     override fun onDestroy() {
-        mediaSession?.release()
-        player?.release()
+        mediaSession.release()
+        player.release()
         super.onDestroy()
     }
 }
