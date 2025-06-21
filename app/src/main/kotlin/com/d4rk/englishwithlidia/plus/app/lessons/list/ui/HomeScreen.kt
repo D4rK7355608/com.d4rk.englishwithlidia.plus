@@ -9,7 +9,6 @@ import com.d4rk.englishwithlidia.plus.app.lessons.list.ui.components.LessonListL
 
 @Composable
 fun HomeScreen(
-    context : Context ,
     viewModel : HomeViewModel ,
 ) {
 
@@ -24,7 +23,7 @@ fun HomeScreen(
     }
     else {
         LessonListLayout(
-            lessons = uiState.lessons , context = context , visibilityStates = visibilityStates
+            lessons = uiState.lessons ,visibilityStates = visibilityStates
         )
     }
 }

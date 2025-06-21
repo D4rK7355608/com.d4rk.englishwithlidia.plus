@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.IntentsHelper
 
@@ -21,9 +22,9 @@ fun OutlinedUrlButtons(
     vectorIcon : ImageVector? = null ,
     painterIcon : Painter? = null ,
     text : Int ,
-    context : Context ,
     modifier : Modifier
 ) {
+    val context = LocalContext.current
     OutlinedButton(onClick = {
         IntentsHelper.openUrl(
             context = context , url = url

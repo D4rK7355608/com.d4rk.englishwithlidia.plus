@@ -14,9 +14,12 @@ import com.d4rk.android.libs.apptoolkit.app.settings.settings.ui.SettingsActivit
 import com.d4rk.android.libs.apptoolkit.core.domain.model.navigation.NavigationDrawerItem
 import com.d4rk.android.libs.apptoolkit.core.utils.constants.links.AppLinks
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.IntentsHelper
+import com.d4rk.englishwithlidia.plus.app.lessons.list.ui.HomeScreen
+import com.d4rk.englishwithlidia.plus.app.lessons.list.ui.HomeViewModel
 import com.d4rk.englishwithlidia.plus.app.main.utils.constants.NavigationRoutes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun AppNavigationHost(
@@ -27,6 +30,10 @@ fun AppNavigationHost(
     ) {
         composable(route = NavigationRoutes.ROUTE_LESSONS_LIST) {
            // AppsListScreen(paddingValues = paddingValues)
+
+            val viewModel : HomeViewModel = koinViewModel()
+
+            HomeScreen(viewModel)
         }
     }
 }

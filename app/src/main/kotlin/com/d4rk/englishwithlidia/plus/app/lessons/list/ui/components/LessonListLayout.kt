@@ -1,6 +1,5 @@
 package com.d4rk.englishwithlidia.plus.app.lessons.list.ui.components
 
-import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -26,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
@@ -33,13 +33,11 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.animateVisi
 import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiHomeLesson
-import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonConstants
 import com.d4rk.englishwithlidia.plus.ui.components.navigation.openLessonDetailActivity
 
 @Composable
 fun LessonListLayout(
-    context : Context ,
     lessons : List<UiHomeLesson> ,
     visibilityStates : List<Boolean> ,
 ) {
@@ -50,7 +48,6 @@ fun LessonListLayout(
             val isVisible = visibilityStates.getOrElse(index) { false }
             LessonItem(
                 lesson = lesson ,
-                context = context ,
                 modifier = Modifier
                         .animateVisibility(visible = isVisible)
                         .animateItem()
@@ -60,8 +57,8 @@ fun LessonListLayout(
 }
 
 @Composable
-fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier = Modifier) {
-    val dataStore = DataStore.getInstance(context)
+fun LessonItem(lesson : UiHomeLesson,  modifier : Modifier = Modifier) {
+    val context = LocalContext.current
     when (lesson.lessonType) {
         LessonConstants.TYPE_BANNER_IMAGE_LOCAL -> {
             Image(
@@ -84,7 +81,6 @@ fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier =
             ) {
                 OutlinedUrlButtons(
                     vectorIcon = Icons.Outlined.Language ,
-                    context = context ,
                     modifier = Modifier
                             .weight(1f)
                             .bounceClick() ,
@@ -96,7 +92,6 @@ fun LessonItem(lesson : UiHomeLesson , context : Context , modifier : Modifier =
 
                 OutlinedUrlButtons(
                     painterIcon = painterResource(id = R.drawable.ic_find_us) ,
-                    context = context ,
                     modifier = Modifier
                             .weight(1f)
                             .bounceClick() ,

@@ -1,4 +1,4 @@
-package com.d4rk.android.apps.apptoolkit.app.main.ui
+package com.d4rk.englishwithlidia.plus.app.main.ui
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -21,8 +21,6 @@ import com.d4rk.android.libs.apptoolkit.core.utils.helpers.ConsentFormHelper
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.ConsentManagerHelper
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.IntentsHelper
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.ReviewHelper
-import com.d4rk.englishwithlidia.plus.app.main.ui.MainScreen
-import com.d4rk.englishwithlidia.plus.app.main.ui.MainViewModel
 import com.google.android.gms.ads.MobileAds
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.UserMessagingPlatform
