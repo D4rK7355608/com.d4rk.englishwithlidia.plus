@@ -84,7 +84,7 @@ class LessonViewModel(
         }
     }
 
-    fun preparePlayer(audioUrl: String, title: String) {
+    fun preparePlayer(audioUrl: String, title: String, thumbnailUrl: String? = null) {
         launch {
             controllerFuture?.await()?.let { controller ->
                 val mediaItem = MediaItem.Builder()
@@ -92,6 +92,11 @@ class LessonViewModel(
                     .setMediaMetadata(
                         MediaMetadata.Builder()
                             .setTitle(title)
+                            .apply {
+                                if (!thumbnailUrl.isNullOrBlank()) {
+                                    setArtworkUri(thumbnailUrl.toUri())
+                                }
+                            }
                             .build()
                     )
                     .build()

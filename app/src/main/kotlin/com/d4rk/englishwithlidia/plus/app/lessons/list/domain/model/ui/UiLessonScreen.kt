@@ -14,4 +14,5 @@ data class UiLessonContent(
     val contentText : String = "" ,
     val contentImageUrl : String = "" ,
     val contentAudioUrl : String = "" ,
+    val contentThumbnailUrl : String = "" ,
 )

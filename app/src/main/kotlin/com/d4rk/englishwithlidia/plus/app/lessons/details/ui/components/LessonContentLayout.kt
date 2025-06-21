@@ -87,7 +87,8 @@ fun LessonContentLayout(
                     LaunchedEffect(key1 = contentItem.contentAudioUrl) {
                         viewModel.preparePlayer(
                             contentItem.contentAudioUrl,
-                            lesson.lessonTitle
+                            lesson.lessonTitle,
+                            contentItem.contentThumbnailUrl
                         )
                     }
 
