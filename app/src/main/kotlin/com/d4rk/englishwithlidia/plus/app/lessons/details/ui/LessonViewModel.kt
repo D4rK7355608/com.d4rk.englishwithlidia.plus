@@ -3,8 +3,8 @@ package com.d4rk.englishwithlidia.plus.app.lessons.details.ui
 import android.app.Application
 import android.content.ComponentName
 import android.content.Intent
-import android.net.Uri
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
@@ -25,6 +25,7 @@ import com.d4rk.englishwithlidia.plus.playback.AudioPlaybackService
 import com.google.common.util.concurrent.ListenableFuture
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
 
 class LessonViewModel(
@@ -87,7 +88,7 @@ class LessonViewModel(
         launch {
             controllerFuture?.await()?.let { controller ->
                 val mediaItem = MediaItem.Builder()
-                    .setUri(Uri.parse(audioUrl))
+                    .setUri(audioUrl.toUri())
                     .setMediaMetadata(
                         MediaMetadata.Builder()
                             .setTitle(title)
@@ -125,14 +126,17 @@ class LessonViewModel(
         positionJob?.cancel()
         positionJob = launch(context = dispatcherProvider.default) {
             while (true) {
-                val currentPosition = withContext(dispatcherProvider.main) {
-                    player?.currentPosition ?: 0L
-                }
                 withContext(dispatcherProvider.main) {
+                    val currentPosition = player?.currentPosition ?: 0L
                     screenState.copyData { copy(playbackPosition = currentPosition) }
+
+                    if (player?.isPlaying != true) {
+                        positionJob?.cancel()
+                        return@withContext
+                    }
                 }
+                if (positionJob?.isCancelled == true) break
                 delay(timeMillis = 500)
-                if (player?.isPlaying != true) break
             }
         }
     }

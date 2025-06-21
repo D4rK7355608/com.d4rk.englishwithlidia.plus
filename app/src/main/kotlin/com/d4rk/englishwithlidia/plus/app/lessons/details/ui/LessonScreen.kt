@@ -5,7 +5,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.platform.LocalContext
 import com.d4rk.android.libs.apptoolkit.core.domain.model.ui.UiStateScreen
 import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.LoadingScreen
 import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.NoDataScreen
@@ -14,22 +13,22 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.navigation.LargeTopAp
 import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.components.LessonContentLayout
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
+import org.koin.compose.koinInject
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LessonScreen(
-    activity : LessonActivity ,
-    viewModel : LessonViewModel ,
+    activity: LessonActivity,
+    viewModel: LessonViewModel,
 ) {
-    val context = LocalContext.current
-    val dataStore = DataStore.getInstance(context)
+    val dataStore: DataStore = koinInject()
     val scrollState = rememberScrollState()
-    val screenState : UiStateScreen<UiLessonScreen> by viewModel.uiState.collectAsState()
+    val screenState: UiStateScreen<UiLessonScreen> by viewModel.uiState.collectAsState()
 
     LargeTopAppBarWithScaffold(
         title = screenState.data?.lessonTitle ?: "",
         onBackClicked = {
-
+            activity.finish()
         }
     ) { paddingValues ->
 
