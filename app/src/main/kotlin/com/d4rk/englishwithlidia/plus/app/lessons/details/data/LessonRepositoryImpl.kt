@@ -43,6 +43,7 @@ class LessonRepositoryImpl(
                                     contentText = networkContent.contentText,
                                     contentAudioUrl = networkContent.contentAudioUrl,
                                     contentImageUrl = networkContent.contentImageUrl,
+                                    contentThumbnailUrl = networkContent.contentThumbnailUrl,
                                 )
                             },
                         ),

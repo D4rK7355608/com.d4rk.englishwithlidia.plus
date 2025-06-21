@@ -20,5 +20,6 @@ data class ApiLessonContent(
     @SerialName("content_type") val contentType : String = "" ,
     @SerialName("content_text") val contentText : String = "" ,
     @SerialName("content_audio_url") val contentAudioUrl : String = "" ,
-    @SerialName("content_image_url") val contentImageUrl : String = ""
+    @SerialName("content_image_url") val contentImageUrl : String = "" ,
+    @SerialName("content_thumbnail_url") val contentThumbnailUrl : String = ""
 )
