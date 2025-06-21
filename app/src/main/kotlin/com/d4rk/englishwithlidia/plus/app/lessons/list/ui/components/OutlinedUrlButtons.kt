@@ -1,6 +1,5 @@
 package com.d4rk.englishwithlidia.plus.app.lessons.list.ui.components
 
-import android.content.Context
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size

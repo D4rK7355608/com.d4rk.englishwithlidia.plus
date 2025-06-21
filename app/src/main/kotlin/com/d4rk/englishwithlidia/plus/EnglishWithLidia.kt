@@ -7,9 +7,9 @@ import android.os.Bundle
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.d4rk.englishwithlidia.plus.core.di.initializeKoin
 import com.d4rk.android.libs.apptoolkit.data.core.BaseCoreManager
 import com.d4rk.android.libs.apptoolkit.data.core.ads.AdsCoreManager
+import com.d4rk.englishwithlidia.plus.core.di.initializeKoin
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ads.AdsConstants
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll

@@ -29,11 +29,7 @@ fun AppNavigationHost(
         navController = navController , startDestination = NavigationRoutes.ROUTE_LESSONS_LIST
     ) {
         composable(route = NavigationRoutes.ROUTE_LESSONS_LIST) {
-           // AppsListScreen(paddingValues = paddingValues)
-
-            val viewModel : HomeViewModel = koinViewModel()
-
-            HomeScreen(viewModel)
+            HomeScreen(paddingValues = paddingValues)
         }
     }
 }

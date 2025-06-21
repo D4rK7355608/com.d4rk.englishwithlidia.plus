@@ -2,11 +2,11 @@ package com.d4rk.englishwithlidia.plus.app.onboarding.utils.interfaces.providers
 
 import android.content.Context
 import android.content.Intent
-import com.d4rk.englishwithlidia.plus.app.main.ui.MainActivity
 import com.d4rk.android.libs.apptoolkit.app.oboarding.domain.data.model.ui.OnboardingPage
 import com.d4rk.android.libs.apptoolkit.app.oboarding.ui.components.pages.CrashlyticsOnboardingPageTab
 import com.d4rk.android.libs.apptoolkit.app.oboarding.ui.components.pages.FinalOnboardingPageTab
 import com.d4rk.android.libs.apptoolkit.app.oboarding.utils.interfaces.providers.OnboardingProvider
+import com.d4rk.englishwithlidia.plus.app.main.ui.MainActivity
 import com.d4rk.englishwithlidia.plus.app.onboarding.utils.constants.OnboardingKeys
 
 class AppOnboardingProvider : OnboardingProvider {

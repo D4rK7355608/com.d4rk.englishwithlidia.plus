@@ -2,8 +2,8 @@ package com.d4rk.englishwithlidia.plus.core.utils.extensions
 
 import android.database.sqlite.SQLiteException
 import com.d4rk.android.libs.apptoolkit.R
-import com.d4rk.englishwithlidia.plus.core.domain.model.network.Errors
 import com.d4rk.android.libs.apptoolkit.core.utils.helpers.UiTextHelper
+import com.d4rk.englishwithlidia.plus.core.domain.model.network.Errors
 import kotlinx.serialization.SerializationException
 import java.net.ConnectException
 import java.net.SocketTimeoutException

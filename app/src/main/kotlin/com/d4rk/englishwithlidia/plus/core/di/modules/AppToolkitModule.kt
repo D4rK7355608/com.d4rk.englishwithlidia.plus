@@ -1,12 +1,12 @@
 package com.d4rk.englishwithlidia.plus.core.di.modules
 
-import com.d4rk.englishwithlidia.plus.BuildConfig
 import com.d4rk.android.libs.apptoolkit.app.help.domain.data.model.HelpScreenConfig
 import com.d4rk.android.libs.apptoolkit.app.issuereporter.domain.model.github.GithubTarget
 import com.d4rk.android.libs.apptoolkit.app.issuereporter.ui.IssueReporterViewModel
 import com.d4rk.android.libs.apptoolkit.app.startup.utils.interfaces.providers.StartupProvider
 import com.d4rk.android.libs.apptoolkit.app.support.domain.usecases.QueryProductDetailsUseCase
 import com.d4rk.android.libs.apptoolkit.app.support.ui.SupportViewModel
+import com.d4rk.englishwithlidia.plus.BuildConfig
 import com.d4rk.englishwithlidia.plus.app.startup.utils.interfaces.providers.AppStartupProvider
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.viewModel

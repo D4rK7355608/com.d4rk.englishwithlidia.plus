@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.app.lessons.list.repository
+package com.d4rk.englishwithlidia.plus.app.lessons.list.data
 
 import com.d4rk.englishwithlidia.plus.BuildConfig
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiHomeLesson

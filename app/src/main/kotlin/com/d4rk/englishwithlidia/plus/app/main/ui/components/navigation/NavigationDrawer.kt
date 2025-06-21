@@ -10,13 +10,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import com.d4rk.englishwithlidia.plus.app.main.domain.model.UiMainScreen
-import com.d4rk.englishwithlidia.plus.app.main.ui.MainScaffoldContent
 import com.d4rk.android.libs.apptoolkit.app.main.ui.components.navigation.NavigationDrawerItemContent
 import com.d4rk.android.libs.apptoolkit.core.domain.model.navigation.NavigationDrawerItem
 import com.d4rk.android.libs.apptoolkit.core.domain.model.ui.UiStateScreen
 import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.hapticDrawerSwipe
 import com.d4rk.android.libs.apptoolkit.core.ui.components.spacers.LargeVerticalSpacer
+import com.d4rk.englishwithlidia.plus.app.main.domain.model.UiMainScreen
+import com.d4rk.englishwithlidia.plus.app.main.ui.MainScaffoldContent
 import kotlinx.coroutines.CoroutineScope
 
 @Composable
