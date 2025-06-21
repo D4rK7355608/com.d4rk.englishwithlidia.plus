@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui
+package com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui
 
 data class UiLessonScreen(
     val isPlaying : Boolean = false ,

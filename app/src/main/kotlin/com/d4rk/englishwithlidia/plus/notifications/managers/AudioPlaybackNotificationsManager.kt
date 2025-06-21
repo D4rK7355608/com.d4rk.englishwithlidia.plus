@@ -6,10 +6,13 @@ import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.media3.common.Player
+import androidx.media3.common.util.UnstableApi
 import androidx.media3.ui.PlayerNotificationManager
 import com.d4rk.englishwithlidia.plus.R
 
-class AudioPlaybackNotificationsManager(private val context: Context) {
+@UnstableApi
+
+class AudioPlaybackNotificationsManager(private val context: Context) { // FIXME: Class "AudioPlaybackNotificationsManager" is never used
     private val channelId = "audio_playback_channel"
     private val notificationId = 1
     private var playerNotificationManager: PlayerNotificationManager? = null

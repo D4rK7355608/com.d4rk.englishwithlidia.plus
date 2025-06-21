@@ -2,8 +2,8 @@ package com.d4rk.englishwithlidia.plus.app.lessons.details.data
 
 import com.d4rk.englishwithlidia.plus.BuildConfig
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.repository.LessonRepository
-import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonContent
-import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
+import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonContent
+import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.core.domain.model.api.ApiLessonResponse
 import com.d4rk.englishwithlidia.plus.core.utils.constants.api.ApiConstants
 import io.ktor.client.HttpClient
@@ -43,7 +43,7 @@ class LessonRepositoryImpl(
                                     contentText = networkContent.contentText,
                                     contentAudioUrl = networkContent.contentAudioUrl,
                                     contentImageUrl = networkContent.contentImageUrl,
-                                    contentThumbnailUrl = networkContent.contentThumbnailUrl,
+                                    contentThumbnailUrl = networkContent.contentImageUrl,
                                 )
                             },
                         ),

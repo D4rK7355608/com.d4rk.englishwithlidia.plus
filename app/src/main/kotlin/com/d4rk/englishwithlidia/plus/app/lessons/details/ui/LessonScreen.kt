@@ -11,7 +11,7 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.NoDataScreen
 import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.ScreenStateHandler
 import com.d4rk.android.libs.apptoolkit.core.ui.components.navigation.LargeTopAppBarWithScaffold
 import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.components.LessonContentLayout
-import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiLessonScreen
+import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
 import org.koin.compose.koinInject
 
