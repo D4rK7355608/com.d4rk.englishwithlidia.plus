@@ -1,49 +1,66 @@
 package com.d4rk.englishwithlidia.plus.app.lessons.list.ui
 
-import android.app.Application
-import androidx.lifecycle.viewModelScope
 import com.d4rk.android.libs.apptoolkit.core.di.DispatcherProvider
+import com.d4rk.android.libs.apptoolkit.core.domain.model.ui.ScreenState
+import com.d4rk.android.libs.apptoolkit.core.domain.model.ui.UiStateScreen
+import com.d4rk.android.libs.apptoolkit.core.domain.model.ui.getData
+import com.d4rk.android.libs.apptoolkit.core.ui.base.ScreenViewModel
+import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.action.HomeAction
+import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.action.HomeEvent
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiHomeScreen
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.usecases.GetHomeLessonsUseCase
-import com.d4rk.englishwithlidia.plus.ui.viewmodel.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class HomeViewModel(
-    application: Application,
     private val getHomeLessonsUseCase: GetHomeLessonsUseCase,
     private val dispatcherProvider: DispatcherProvider,
-) : BaseViewModel(application) {
+) : ScreenViewModel<UiHomeScreen, HomeEvent, HomeAction>(
+    initialState = UiStateScreen(screenState = ScreenState.IsLoading(), data = UiHomeScreen())
+) {
 
-    private val _uiState = MutableStateFlow(UiHomeScreen())
-    val uiState: StateFlow<UiHomeScreen> = _uiState.asStateFlow()
+    private val _visibilityStates = MutableStateFlow<List<Boolean>>(emptyList())
+    val visibilityStates: StateFlow<List<Boolean>> = _visibilityStates.asStateFlow()
 
     init {
-        getHomeLessons()
+        onEvent(HomeEvent.FetchLessons)
+    }
+
+    override fun onEvent(event: HomeEvent) {
+        when (event) {
+            HomeEvent.FetchLessons -> getHomeLessons()
+        }
     }
 
     private fun getHomeLessons() {
-        viewModelScope.launch(coroutineExceptionHandler + dispatcherProvider.io) {
-            showLoading()
+        launch(context = dispatcherProvider.io) {
             val lessons = getHomeLessonsUseCase()
             withContext(dispatcherProvider.main) {
-                _uiState.value = lessons
-                hideLoading()
+                if (lessons.lessons.isEmpty()) {
+                    screenState.update { current ->
+                        current.copy(screenState = ScreenState.NoData(), data = lessons)
+                    }
+                } else {
+                    screenState.update { current ->
+                        current.copy(screenState = ScreenState.Success(), data = lessons)
+                    }
+                }
                 initializeVisibilityStates()
             }
         }
     }
 
     private fun initializeVisibilityStates() {
-        viewModelScope.launch(coroutineExceptionHandler) {
+        launch(context = dispatcherProvider.default) {
             delay(timeMillis = 50L)
-            val lessonCount = _uiState.value.lessons.size
+            val lessonCount = screenState.getData().lessons.size
             _visibilityStates.value = List(lessonCount) { false }
-            _uiState.value.lessons.indices.forEach { index ->
+            screenState.getData().lessons.indices.forEach { index ->
                 delay(timeMillis = index * 8L)
                 _visibilityStates.value = List(lessonCount) { lessonIndex ->
                     lessonIndex == index || _visibilityStates.value[lessonIndex]

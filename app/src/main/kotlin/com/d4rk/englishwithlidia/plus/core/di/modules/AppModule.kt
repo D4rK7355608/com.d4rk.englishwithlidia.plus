@@ -43,7 +43,7 @@ val appModule : Module = module {
     // Lessons
     single<HomeRepository> { HomeRepositoryImpl(client = get()) }
     factory { GetHomeLessonsUseCase(repository = get()) }
-    viewModel { HomeViewModel(application = get(), getHomeLessonsUseCase = get(), dispatcherProvider = get()) }
+    viewModel { HomeViewModel(getHomeLessonsUseCase = get(), dispatcherProvider = get()) }
 
     single<LessonRepository> { LessonRepositoryImpl(client = get()) }
     factory { GetLessonUseCase(repository = get()) }
