@@ -165,4 +165,5 @@
 
     <string name="close">關閉？</string>
     <string name="summary_close">您確定要退出嗎？</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>

@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
+import com.d4rk.englishwithlidia.plus.notifications.managers.AudioPlaybackNotificationsManager
 import com.d4rk.englishwithlidia.plus.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.data.model.ui.screens.home.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.ui.screens.lesson.repository.LessonRepository
@@ -24,10 +25,13 @@ class LessonViewModel(application : Application) : BaseViewModel(application) {
 
 
     private var player : Player? = null
+    private val audioNotificationsManager =
+        AudioPlaybackNotificationsManager(application)
 
     init {
         viewModelScope.launch {
             player = ExoPlayer.Builder(getApplication()).build()
+            player?.let { audioNotificationsManager.show(it) }
         }
     }
 
@@ -74,6 +78,7 @@ class LessonViewModel(application : Application) : BaseViewModel(application) {
                     }
                 })
             }
+            player?.let { audioNotificationsManager.show(it) }
 
             startPositionUpdateJob()
         }
@@ -113,6 +118,7 @@ class LessonViewModel(application : Application) : BaseViewModel(application) {
 
     override fun onCleared() {
         super.onCleared()
+        audioNotificationsManager.hide()
         player?.release()
     }
 }

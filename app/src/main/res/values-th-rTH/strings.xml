@@ -165,4 +165,5 @@
 
     <string name="close">ปิด?</string>
     <string name="summary_close">คุณแน่ใจว่าต้องการออกใช่ไหม?</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
 </resources>
