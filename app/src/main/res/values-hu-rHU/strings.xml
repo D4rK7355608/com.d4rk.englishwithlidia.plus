@@ -161,6 +161,7 @@
     <string name="snack_update_failed">A frissítési folyamat hibát észlelt</string>
     <string name="try_again">Próbáld újra</string>
     <string name="summary_share_message">Nézze meg ezt a csodálatos alkalmazást, amelyet használok! Van néhány igazán klassz funkciója, amelyeket érdekesnek találhat. Letöltheti a Play Áruházból: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">További információ</string>
 
     <string name="close">Közeli?</string>

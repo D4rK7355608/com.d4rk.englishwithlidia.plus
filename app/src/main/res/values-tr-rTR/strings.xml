@@ -161,6 +161,7 @@
     <string name="snack_update_failed">Güncelleme işlemi bir sorunla karşılaştı</string>
     <string name="try_again">Tekrar deneyin</string>
     <string name="summary_share_message">Kullandığım bu harika uygulamaya bir göz atın! İlginizi çekebilecek bazı harika özellikleri var. Bunu Play Store"dan indirebilirsiniz: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">Daha fazla bilgi edin</string>
 
     <string name="close">Kapalı?</string>

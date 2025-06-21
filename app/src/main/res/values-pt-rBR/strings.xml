@@ -161,6 +161,7 @@
     <string name="snack_update_failed">O processo de atualização encontrou um problema</string>
     <string name="try_again">Tentar novamente</string>
     <string name="summary_share_message">Confira este aplicativo incrível que estou usando! Ele tem alguns recursos muito legais que você pode achar interessantes. Você pode baixá-lo na Play Store em: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">Saber mais</string>
 
     <string name="close">Fechar?</string>

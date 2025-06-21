@@ -161,6 +161,7 @@
     <string name="snack_update_failed">Uppdateringsprocessen stötte på ett problem</string>
     <string name="try_again">Försök igen</string>
     <string name="summary_share_message">Kolla in denna fantastiska app som jag använder! Den har några riktigt coola funktioner som du kanske tycker är intressanta. Du kan ladda ner den från Play Butik på: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">Läs mer</string>
 
     <string name="close">Nära?</string>

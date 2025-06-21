@@ -161,6 +161,7 @@
     <string name="snack_update_failed">अद्यतन प्रक्रिया में एक समस्या आई</string>
     <string name="try_again">पुनः प्रयास करें</string>
     <string name="summary_share_message">इस अद्भुत ऐप को देखें जिसका मैं उपयोग कर रहा हूँ! इसमें कुछ बहुत ही बढ़िया विशेषताएं हैं जो आपको दिलचस्प लग सकती हैं। आप इसे Play Store से डाउनलोड कर सकते हैं: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">और अधिक जानें</string>
 
     <string name="close">बंद करना?</string>

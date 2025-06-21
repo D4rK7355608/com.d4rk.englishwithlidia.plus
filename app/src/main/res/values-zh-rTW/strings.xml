@@ -161,6 +161,7 @@
     <string name="snack_update_failed">更新過程遇到問題</string>
     <string name="try_again">再試一次</string>
     <string name="summary_share_message">看看我正在使用的這個神奇的應用程式！它有一些非常酷的功能，您可能會覺得有趣。您可以從 Play 商店下載：%1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">了解更多</string>
 
     <string name="close">關閉？</string>

@@ -161,6 +161,7 @@
     <string name="snack_update_failed">У процесі оновлення виникла проблема</string>
     <string name="try_again">Спробуйте знову</string>
     <string name="summary_share_message">Перегляньте цю дивовижну програму, якою я користуюся! Він має кілька дійсно цікавих функцій, які можуть здатися вам цікавими. Ви можете завантажити його з Play Store за адресою: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">Дізнайтесь більше</string>
 
     <string name="close">Закрити?</string>
