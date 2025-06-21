@@ -161,6 +161,7 @@
     <string name="snack_update_failed">Proses pembaruan mengalami masalah</string>
     <string name="try_again">Coba lagi</string>
     <string name="summary_share_message">Coba lihat aplikasi menakjubkan yang sedang saya gunakan ini! Aplikasi ini memiliki beberapa fitur yang sangat keren yang mungkin menarik bagi Anda. Anda dapat mengunduhnya dari Play Store di: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">Pelajari lebih lanjut</string>
 
     <string name="close">Menutup?</string>

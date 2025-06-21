@@ -161,6 +161,7 @@
     <string name="snack_update_failed">Procesul de actualizare a întâmpinat o problemă</string>
     <string name="try_again">Încearcă din nou</string>
     <string name="summary_share_message">Verificați această aplicație uimitoare pe care o folosesc! Are câteva caracteristici foarte interesante pe care le puteți găsi interesante. Îl puteți descărca din Magazinul Play la: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">Află mai multe</string>
 
     <string name="close">Aproape?</string>

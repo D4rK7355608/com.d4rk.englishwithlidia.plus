@@ -161,6 +161,7 @@
     <string name="snack_update_failed">กระบวนการอัปเดตพบปัญหา</string>
     <string name="try_again">ลองใหม่อีกครั้ง</string>
     <string name="summary_share_message">ลองดูแอปสุดเจ๋งที่ฉันใช้อยู่สิ! แอปนี้มีฟีเจอร์เจ๋งๆ มากมายที่คุณอาจสนใจ คุณสามารถดาวน์โหลดได้จาก Play Store ที่: %1$s</string>
+    <string name="audio_playback_notifications">Audio Playback</string>
     <string name="learn_more">เรียนรู้เพิ่มเติม</string>
 
     <string name="close">ปิด?</string>
