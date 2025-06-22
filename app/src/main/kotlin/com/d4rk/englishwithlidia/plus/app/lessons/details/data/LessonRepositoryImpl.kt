@@ -9,6 +9,7 @@ import com.d4rk.englishwithlidia.plus.core.utils.constants.api.ApiConstants
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
+import io.ktor.client.plugins.timeout
 import kotlinx.serialization.json.Json
 
 class LessonRepositoryImpl(
@@ -28,7 +29,9 @@ class LessonRepositoryImpl(
     override suspend fun getLesson(lessonId: String): UiLessonScreen {
         return runCatching {
             val url = "$baseUrl/api_get_$lessonId.json"
-            val jsonString = client.get(url).bodyAsText()
+            val jsonString = client.get(url) {
+                timeout { requestTimeoutMillis = 15000 }
+            }.bodyAsText()
 
             val lessons = jsonString.takeUnless { it.isBlank() }
                 ?.let { jsonParser.decodeFromString<ApiLessonResponse>(it) }
@@ -43,7 +46,7 @@ class LessonRepositoryImpl(
                                     contentText = networkContent.contentText,
                                     contentAudioUrl = networkContent.contentAudioUrl,
                                     contentImageUrl = networkContent.contentImageUrl,
-                                    contentThumbnailUrl = networkContent.contentImageUrl,
+                                    contentThumbnailUrl = networkContent.contentThumbnailUrl,
                                 )
                             },
                         ),

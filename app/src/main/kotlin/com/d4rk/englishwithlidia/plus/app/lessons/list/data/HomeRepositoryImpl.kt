@@ -9,6 +9,7 @@ import com.d4rk.englishwithlidia.plus.core.utils.constants.api.ApiConstants
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
+import io.ktor.client.plugins.timeout
 import kotlinx.serialization.json.Json
 
 class HomeRepositoryImpl(
@@ -27,7 +28,9 @@ class HomeRepositoryImpl(
 
     override suspend fun getHomeLessons(): UiHomeScreen {
         return runCatching {
-            val jsonString = client.get(baseUrl).bodyAsText()
+            val jsonString = client.get(baseUrl) {
+                timeout { requestTimeoutMillis = 15000 }
+            }.bodyAsText()
             val lessons = jsonString.takeUnless { it.isBlank() }
                 ?.let { jsonParser.decodeFromString<ApiHomeResponse>(it) }
                 ?.takeIf { it.data.isNotEmpty() }?.data?.mapNotNull { networkLesson ->
