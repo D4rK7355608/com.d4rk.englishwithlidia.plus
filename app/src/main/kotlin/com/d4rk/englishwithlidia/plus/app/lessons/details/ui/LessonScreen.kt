@@ -10,10 +10,8 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.LoadingScreen
 import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.NoDataScreen
 import com.d4rk.android.libs.apptoolkit.core.ui.components.layouts.ScreenStateHandler
 import com.d4rk.android.libs.apptoolkit.core.ui.components.navigation.LargeTopAppBarWithScaffold
-import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.components.LessonContentLayout
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
-import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
-import org.koin.compose.koinInject
+import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.components.LessonContentLayout
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -21,7 +19,6 @@ fun LessonScreen(
     activity: LessonActivity,
     viewModel: LessonViewModel,
 ) {
-    val dataStore: DataStore = koinInject()
     val scrollState = rememberScrollState()
     val screenState: UiStateScreen<UiLessonScreen> by viewModel.uiState.collectAsState()
 
@@ -44,7 +41,6 @@ fun LessonScreen(
                 LessonContentLayout(
                     paddingValues = paddingValues,
                     scrollState = scrollState,
-                    dataStore = dataStore,
                     lesson = lesson,
                     viewModel = viewModel,
                 )

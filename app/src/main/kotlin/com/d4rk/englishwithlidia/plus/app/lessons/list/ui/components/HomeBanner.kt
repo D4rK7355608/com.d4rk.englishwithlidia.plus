@@ -15,12 +15,12 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun homeBanner(
-    colorPrimary : Color = MaterialTheme.colorScheme.primary ,
-    colorTertiary : Color = MaterialTheme.colorScheme.tertiary ,
-    colorSecondaryContainer : Color = MaterialTheme.colorScheme.secondaryContainer ,
-    colorPrimaryContainer : Color = MaterialTheme.colorScheme.primaryContainer ,
-    colorOnSecondary : Color = MaterialTheme.colorScheme.onSecondary ,
-    colorOnPrimary : Color = MaterialTheme.colorScheme.onPrimary
+    colorPrimary : Color = MaterialTheme.colorScheme.secondaryContainer ,
+    colorTertiary : Color = MaterialTheme.colorScheme.onTertiaryContainer ,
+    colorSecondaryContainer : Color = MaterialTheme.colorScheme.primary ,
+    colorPrimaryContainer : Color = MaterialTheme.colorScheme.tertiary ,
+    colorOnSecondary : Color = MaterialTheme.colorScheme.primaryContainer ,
+    colorOnPrimary : Color = MaterialTheme.colorScheme.inverseSurface
 ) : ImageVector {
     return remember(
         colorPrimary ,
@@ -46,8 +46,13 @@ fun homeBanner(
                 strokeLineCap = StrokeCap.Butt ,
                 strokeLineJoin = StrokeJoin.Miter ,
                 strokeLineMiter = 1.0f ,
-                pathFillType = PathFillType.NonZero
+                pathFillType = PathFillType.EvenOdd
             ) {
+                moveTo(0f, 0f)
+                horizontalLineTo(640f)
+                verticalLineTo(360f)
+                horizontalLineTo(0f)
+                close()
                 moveTo(0f , 0f)
                 lineTo(0f , 353f)
                 curveTo(273.5f , 94.4f , 435.7f , 218.7f , 640f , 139.6f)
@@ -55,6 +60,7 @@ fun homeBanner(
                 lineTo(0f , 0f)
                 close()
             }
+
             path(
                 fill = SolidColor(colorTertiary) ,
                 fillAlpha = 1.0f ,

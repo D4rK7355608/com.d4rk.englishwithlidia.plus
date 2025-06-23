@@ -33,13 +33,18 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.d4rk.android.libs.apptoolkit.core.domain.model.ads.AdsConfig
+import com.d4rk.android.libs.apptoolkit.core.ui.components.ads.AdBanner
 import com.d4rk.android.libs.apptoolkit.core.ui.components.animations.rememberAnimatedVisibilityState
 import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.animateVisibility
 import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
+import com.d4rk.android.libs.apptoolkit.core.utils.constants.ui.SizeConstants
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiHomeLesson
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonConstants
 import com.d4rk.englishwithlidia.plus.app.main.ui.components.navigation.openLessonDetailActivity
+import org.koin.compose.koinInject
+import org.koin.core.qualifier.named
 
 @Composable
 fun LessonListLayout(
@@ -64,6 +69,10 @@ fun LessonListLayout(
 @Composable
 fun LessonItem(lesson : UiHomeLesson,  modifier : Modifier = Modifier) {
     val context = LocalContext.current
+    val bannerConfig: AdsConfig = koinInject()
+    val mediumRectangleConfig: AdsConfig = koinInject(qualifier = named(name = "banner_medium_rectangle"))
+
+
     when (lesson.lessonType) {
         LessonConstants.TYPE_BANNER_IMAGE_LOCAL -> {
             Image(
@@ -108,12 +117,23 @@ fun LessonItem(lesson : UiHomeLesson,  modifier : Modifier = Modifier) {
         }
 
         LessonConstants.TYPE_AD_VIEW_BANNER -> {
-            //AdBanner(modifier = Modifier.fillMaxWidth() , dataStore = dataStore)
+            AdBanner(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = SizeConstants.MediumSize),
+                adsConfig = bannerConfig
+            )
+
             Spacer(modifier = Modifier.height(16.dp))
         }
 
         LessonConstants.TYPE_AD_VIEW_BANNER_LARGE -> {
-            //LargeBannerAdsComposable(dataStore = dataStore)
+            AdBanner(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = SizeConstants.MediumSize),
+                adsConfig = mediumRectangleConfig
+            )
             Spacer(modifier = Modifier.height(16.dp))
         }
 
