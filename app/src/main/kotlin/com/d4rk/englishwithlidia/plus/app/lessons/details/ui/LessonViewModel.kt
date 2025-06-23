@@ -84,22 +84,32 @@ class LessonViewModel(
         }
     }
 
-    fun preparePlayer(audioUrl: String, title: String, thumbnailUrl: String? = null) {
+    fun preparePlayer(
+        audioUrl: String,
+        title: String,
+        thumbnailUrl: String? = null,
+        artist: String? = null,
+        albumTitle: String? = null,
+        genre: String? = null,
+        description: String? = null,
+        releaseYear: Int? = null
+    ) {
         launch {
             controllerFuture?.await()?.let { controller ->
+                val metadataBuilder = MediaMetadata.Builder()
+                    .setTitle(title)
+                    .setArtworkUri(thumbnailUrl?.toUri())
+                    .setArtist(artist)
+                    .setAlbumTitle(albumTitle)
+                    .setGenre(genre)
+                    .setDescription(description)
+                    .setReleaseYear(releaseYear)
+
                 val mediaItem = MediaItem.Builder()
                     .setUri(audioUrl.toUri())
-                    .setMediaMetadata(
-                        MediaMetadata.Builder()
-                            .setTitle(title)
-                            .apply {
-                                if (!thumbnailUrl.isNullOrBlank()) {
-                                    setArtworkUri(thumbnailUrl.toUri())
-                                }
-                            }
-                            .build()
-                    )
+                    .setMediaMetadata(metadataBuilder.build())
                     .build()
+
                 controller.setMediaItem(mediaItem)
                 controller.prepare()
                 controller.playWhenReady = false

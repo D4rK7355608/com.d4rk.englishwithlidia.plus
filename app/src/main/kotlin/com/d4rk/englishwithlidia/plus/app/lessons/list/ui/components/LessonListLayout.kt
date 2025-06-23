@@ -39,7 +39,7 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
 import com.d4rk.englishwithlidia.plus.R
 import com.d4rk.englishwithlidia.plus.app.lessons.list.domain.model.ui.UiHomeLesson
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonConstants
-import com.d4rk.englishwithlidia.plus.ui.components.navigation.openLessonDetailActivity
+import com.d4rk.englishwithlidia.plus.app.main.ui.components.navigation.openLessonDetailActivity
 
 @Composable
 fun LessonListLayout(

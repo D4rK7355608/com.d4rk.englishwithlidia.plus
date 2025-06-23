@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.ui.components.navigation
+package com.d4rk.englishwithlidia.plus.app.main.ui.components.navigation
 
 import android.content.Context
 import android.content.Intent

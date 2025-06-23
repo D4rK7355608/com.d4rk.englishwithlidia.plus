@@ -20,7 +20,6 @@ class LessonActivity : AppCompatActivity() {
 
         setContent {
             val lessonId = intent?.data?.lastPathSegment
-            println("English with Lidia Plus -> lesson id got is: $lessonId")
             lessonId?.let { lesson ->
                 viewModel.getLesson(lessonId = lesson)
             }

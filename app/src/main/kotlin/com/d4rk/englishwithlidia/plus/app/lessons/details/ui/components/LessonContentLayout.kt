@@ -40,8 +40,8 @@ import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonViewModel
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.core.data.datastore.DataStore
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonContentTypes
-import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.Colors
-import com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style.TextStyles
+import com.d4rk.englishwithlidia.plus.app.settings.display.theme.style.Colors
+import com.d4rk.englishwithlidia.plus.app.settings.display.theme.style.TextStyles
 import ir.mahozad.multiplatform.wavyslider.WaveDirection
 import ir.mahozad.multiplatform.wavyslider.material3.WavySlider
 
@@ -86,9 +86,14 @@ fun LessonContentLayout(
 
                     LaunchedEffect(key1 = contentItem.contentAudioUrl) {
                         viewModel.preparePlayer(
-                            contentItem.contentAudioUrl,
-                            lesson.lessonTitle,
-                            contentItem.contentThumbnailUrl
+                            audioUrl = contentItem.contentAudioUrl,
+                            title = contentItem.contentTitle.ifBlank { lesson.lessonTitle },
+                            thumbnailUrl = contentItem.contentThumbnailUrl,
+                            artist = contentItem.contentArtist,
+                            albumTitle = contentItem.contentAlbumTitle,
+                            genre = contentItem.contentGenre,
+                            description = contentItem.contentDescription,
+                            releaseYear = contentItem.contentReleaseYear
                         )
                     }
 

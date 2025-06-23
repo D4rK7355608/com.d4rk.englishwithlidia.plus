@@ -1,4 +1,4 @@
-package com.d4rk.englishwithlidia.plus.ui.screens.settings.display.theme.style
+package com.d4rk.englishwithlidia.plus.app.settings.display.theme.style
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
