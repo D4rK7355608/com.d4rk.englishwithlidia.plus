@@ -12,7 +12,9 @@ import com.d4rk.android.libs.apptoolkit.app.theme.style.AppTheme
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LessonActivity : ActivityPlayer() {
-    override val viewModel: LessonViewModel by viewModel()
+    override val playbackHandler: LessonViewModel by viewModel()
+    private val viewModel: LessonViewModel
+        get() = playbackHandler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

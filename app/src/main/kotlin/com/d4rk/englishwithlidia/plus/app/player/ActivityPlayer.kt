@@ -12,7 +12,7 @@ import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
-import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonViewModel
+import com.d4rk.englishwithlidia.plus.app.player.PlaybackEventHandler
 import com.d4rk.englishwithlidia.plus.core.utils.extensions.await
 import com.d4rk.englishwithlidia.plus.playback.AudioPlaybackService
 import com.google.common.util.concurrent.ListenableFuture
@@ -24,7 +24,7 @@ import kotlinx.coroutines.Dispatchers
 
 abstract class ActivityPlayer : AppCompatActivity() {
 
-    protected abstract val viewModel: LessonViewModel
+    protected abstract val playbackHandler: PlaybackEventHandler
 
     private var controllerFuture: ListenableFuture<MediaController>? = null
     protected var player: Player? = null
@@ -41,7 +41,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
             player = controllerFuture?.await()
             player?.addListener(object : Player.Listener {
                 override fun onIsPlayingChanged(isPlaying: Boolean) {
-                    viewModel.updateIsPlaying(isPlaying)
+                    playbackHandler.updateIsPlaying(isPlaying)
                     if (isPlaying) {
                         startPositionUpdates()
                     } else {
@@ -52,7 +52,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
                 override fun onPlaybackStateChanged(playbackState: Int) {
                     if (playbackState == Player.STATE_READY) {
                         val duration = player?.duration ?: 0L
-                        viewModel.updatePlaybackDuration(duration)
+                        playbackHandler.updatePlaybackDuration(duration)
                     }
                 }
             })
@@ -112,7 +112,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
             while (true) {
                 withContext(Dispatchers.Main) {
                     val currentPosition = player?.currentPosition ?: 0L
-                    viewModel.updatePlaybackPosition(currentPosition)
+                    playbackHandler.updatePlaybackPosition(currentPosition)
 
                     if (player?.isPlaying != true) {
                         positionJob?.cancel()

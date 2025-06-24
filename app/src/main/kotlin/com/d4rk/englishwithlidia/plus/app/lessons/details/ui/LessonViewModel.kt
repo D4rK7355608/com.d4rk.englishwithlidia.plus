@@ -13,13 +13,14 @@ import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.usecases.GetLes
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
+import com.d4rk.englishwithlidia.plus.app.player.PlaybackEventHandler
 
 class LessonViewModel(
     private val getLessonUseCase: GetLessonUseCase,
     private val dispatcherProvider: DispatcherProvider,
 ) : ScreenViewModel<UiLessonScreen, LessonEvent, LessonAction>(
     initialState = UiStateScreen(screenState = ScreenState.IsLoading(), data = UiLessonScreen())
-) {
+), PlaybackEventHandler {
 
     init {
         // No player initialization here. Player lifecycle is handled by ActivityPlayer.
@@ -47,15 +48,15 @@ class LessonViewModel(
         }
     }
 
-    fun updateIsPlaying(isPlaying: Boolean) {
+    override fun updateIsPlaying(isPlaying: Boolean) {
         screenState.copyData { copy(isPlaying = isPlaying) }
     }
 
-    fun updatePlaybackDuration(duration: Long) {
+    override fun updatePlaybackDuration(duration: Long) {
         screenState.copyData { copy(playbackDuration = duration) }
     }
 
-    fun updatePlaybackPosition(position: Long) {
+    override fun updatePlaybackPosition(position: Long) {
         screenState.copyData { copy(playbackPosition = position) }
     }
 }
