@@ -8,7 +8,7 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.d4rk.android.apps.weddix" />
+                  <option name="appId" value="es.digimobil.micuenta" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
@@ -23,9 +23,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.d4rk.englishwithlidia.plus" />
-                  <option name="mobileSdkAppId" value="1:112794310224:android:edb10eeb87f1faab316355" />
-                  <option name="projectId" value="d4rk-plus-apps---android" />
-                  <option name="projectNumber" value="112794310224" />
+                  <option name="mobileSdkAppId" value="1:92243706550:android:957477a9dcc82329b41c17" />
+                  <option name="projectId" value="english-with-lidia-for-android" />
+                  <option name="projectNumber" value="92243706550" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
