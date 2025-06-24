@@ -41,6 +41,7 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
 import com.d4rk.android.libs.apptoolkit.core.utils.constants.ui.SizeConstants
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
 import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonViewModel
+import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonActivity
 import com.d4rk.englishwithlidia.plus.app.settings.display.theme.style.Colors
 import com.d4rk.englishwithlidia.plus.app.settings.display.theme.style.TextStyles
 import com.d4rk.englishwithlidia.plus.core.utils.constants.ui.lessons.LessonContentTypes
@@ -54,6 +55,7 @@ fun LessonContentLayout(
     paddingValues : PaddingValues ,
     scrollState : ScrollState ,
     lesson : UiLessonScreen ,
+    activity: LessonActivity ,
     viewModel : LessonViewModel ,
 ) {
     val bannerConfig: AdsConfig = koinInject()
@@ -91,7 +93,7 @@ fun LessonContentLayout(
                     val isPlaying = lesson.isPlaying
 
                     LaunchedEffect(key1 = contentItem.contentAudioUrl) {
-                        viewModel.preparePlayer(
+                        activity.preparePlayer(
                             audioUrl = contentItem.contentAudioUrl,
                             title = contentItem.contentTitle.ifBlank { lesson.lessonTitle },
                             thumbnailUrl = contentItem.contentThumbnailUrl,
@@ -103,9 +105,9 @@ fun LessonContentLayout(
                         )
                     }
 
-                    AudioCardView(onPlayClick = { viewModel.playPause() } ,
+                    AudioCardView(onPlayClick = { activity.playPause() } ,
                                   onSeekChange = { newPosition ->
-                                      viewModel.seekTo((newPosition * 1000).toLong())
+                                      activity.seekTo((newPosition * 1000).toLong())
                                   } ,
                                   sliderPosition = sliderPosition.toFloat() / 1000f ,
                                   playbackDuration = playbackDuration.toFloat() / 1000f ,

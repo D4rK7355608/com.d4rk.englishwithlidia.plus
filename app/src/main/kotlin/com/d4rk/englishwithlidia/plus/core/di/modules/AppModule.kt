@@ -47,5 +47,5 @@ val appModule : Module = module {
 
     single<LessonRepository> { LessonRepositoryImpl(client = get()) }
     factory { GetLessonUseCase(repository = get()) }
-    viewModel { LessonViewModel(application = get(), getLessonUseCase = get(), dispatcherProvider = get()) }
+    viewModel { LessonViewModel(getLessonUseCase = get(), dispatcherProvider = get()) }
 }

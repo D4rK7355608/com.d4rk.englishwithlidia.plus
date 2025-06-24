@@ -38,12 +38,13 @@ fun LessonScreen(
                 NoDataScreen()
             },
             onSuccess = { lesson ->
-                LessonContentLayout(
-                    paddingValues = paddingValues,
-                    scrollState = scrollState,
-                    lesson = lesson,
-                    viewModel = viewModel,
-                )
+                    LessonContentLayout(
+                        paddingValues = paddingValues,
+                        scrollState = scrollState,
+                        lesson = lesson,
+                        activity = activity,
+                        viewModel = viewModel,
+                    )
             },
         )
     }
