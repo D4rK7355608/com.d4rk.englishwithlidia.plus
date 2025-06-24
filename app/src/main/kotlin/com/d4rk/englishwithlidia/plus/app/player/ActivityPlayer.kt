@@ -13,6 +13,7 @@ import androidx.media3.common.Player
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonViewModel
+import com.d4rk.englishwithlidia.plus.core.utils.extensions.await
 import com.d4rk.englishwithlidia.plus.playback.AudioPlaybackService
 import com.google.common.util.concurrent.ListenableFuture
 import kotlinx.coroutines.Job
@@ -58,7 +59,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
         }
     }
 
-    protected fun preparePlayer(
+    fun preparePlayer(
         audioUrl: String,
         title: String,
         thumbnailUrl: String? = null,
@@ -91,7 +92,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
         }
     }
 
-    protected fun playPause() {
+    fun playPause() {
         player?.let { controller ->
             if (controller.isPlaying) {
                 controller.pause()
@@ -101,7 +102,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
         }
     }
 
-    protected fun seekTo(position: Long) {
+    fun seekTo(position: Long) {
         player?.seekTo(position)
     }
 

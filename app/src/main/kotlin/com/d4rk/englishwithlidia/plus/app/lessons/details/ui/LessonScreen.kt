@@ -43,7 +43,6 @@ fun LessonScreen(
                         scrollState = scrollState,
                         lesson = lesson,
                         activity = activity,
-                        viewModel = viewModel,
                     )
             },
         )

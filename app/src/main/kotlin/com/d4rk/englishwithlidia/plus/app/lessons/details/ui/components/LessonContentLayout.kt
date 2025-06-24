@@ -40,7 +40,6 @@ import com.d4rk.android.libs.apptoolkit.core.ui.components.ads.AdBanner
 import com.d4rk.android.libs.apptoolkit.core.ui.components.modifiers.bounceClick
 import com.d4rk.android.libs.apptoolkit.core.utils.constants.ui.SizeConstants
 import com.d4rk.englishwithlidia.plus.app.lessons.details.domain.model.ui.UiLessonScreen
-import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonViewModel
 import com.d4rk.englishwithlidia.plus.app.lessons.details.ui.LessonActivity
 import com.d4rk.englishwithlidia.plus.app.settings.display.theme.style.Colors
 import com.d4rk.englishwithlidia.plus.app.settings.display.theme.style.TextStyles
@@ -56,7 +55,6 @@ fun LessonContentLayout(
     scrollState : ScrollState ,
     lesson : UiLessonScreen ,
     activity: LessonActivity ,
-    viewModel : LessonViewModel ,
 ) {
     val bannerConfig: AdsConfig = koinInject()
     val mediumRectangleConfig: AdsConfig = koinInject(qualifier = named(name = "banner_medium_rectangle"))

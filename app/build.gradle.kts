@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 import kotlin.toString
 
@@ -13,7 +14,7 @@ plugins {
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
     namespace = "com.d4rk.englishwithlidia.plus"
     defaultConfig {
         applicationId = "com.d4rk.englishwithlidia.plus"
@@ -90,8 +91,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    kotlinOptions {
-        jvmTarget = "21"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+        }
     }
 
     buildFeatures {
@@ -114,7 +117,7 @@ android {
 
 dependencies {
     // App Core
-    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.34") {
+    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.35") {
         isTransitive = true
     }
 
