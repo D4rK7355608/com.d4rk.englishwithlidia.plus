@@ -3,11 +3,13 @@
     <shortcut
         android:enabled="true"
         android:icon="@mipmap/ic_shortcut_settings"
+        android:shortcutDisabledMessage="@string/settings_disabled_message"
         android:shortcutId="openSettings"
+        android:shortcutLongLabel="@string/long_settings_label"
         android:shortcutShortLabel="@string/settings">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.englishwithlidia.plus.ui.screens.settings.SettingsActivity"
+            android:targetClass="com.d4rk.android.libs.apptoolkit.app.settings.settings.ui.SettingsActivity"
             android:targetPackage="com.d4rk.englishwithlidia.plus" />
     </shortcut>
 </shortcuts>
