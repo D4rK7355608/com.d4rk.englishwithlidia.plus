@@ -20,7 +20,7 @@ android {
         applicationId = "com.d4rk.englishwithlidia.plus"
         minSdk = 23
         targetSdk = 36
-        versionCode = 63
+        versionCode = 64
         versionName = "5.2.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         @Suppress("UnstableApiUsage") androidResources.localeFilters += listOf(
@@ -116,6 +116,7 @@ android {
 }
 
 dependencies {
+
     // App Core
     implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.35") {
         isTransitive = true

@@ -1,3 +1,9 @@
+# Version 5.2.0:
+
+- **Major**: We've made some major changes to the app's internal structure. Think of it like reorganizing a big library to make it easier to find books and add new ones. This helps the app run smoother and makes it easier for us to add new things in the future.
+- **Major**: We've upgraded the way the app plays the audio. This means a more reliable experience when you're listening to lessons, and you'll now see notifications with playback controls.
+- **Minor**: We've swapped out some of our older buttons and menus with newer, more polished ones, and tidied up some old code.
+
 # Version 5.1.0:
 
 - **Major**: Fixed lessons not loading by integrating a more dynamic and robust API for lesson
