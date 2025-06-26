@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_short_description">İngilizce öğrenin ve aynı zamanda rahatlayın! 📚</string>
+  <string name="find_us">Bizi bul</string>
+  <string name="website">Web sitesi</string>
+  <string name="question_1">Lidia Plus ile İngilizce nedir?</string>
+  <string name="summary_preference_faq_1">Lidia Plus ile İngilizce, İngilizce öğretmeni Lidia tarafından yazılmış blog yayınlarını okuyarak veya dinleyerek İngilizce öğrenmenize yardımcı olan bir uygulamadır.</string>
+  <string name="question_2">Uygulamayı nasıl kullanabilirim?</string>
+  <string name="summary_preference_faq_2">Uygulamayı İnternet bağlantısı olmadan kullanabilirsiniz. Bunun yerine blog yayınlarını okumayı veya ses çalmayı seçebilirsiniz. Temayı ve ayarları tercihlerinize göre de ayarlayabilirsiniz.</string>
+  <string name="question_3">Uygulamayı kullanmanın faydaları nelerdir?</string>
+  <string name="summary_preference_faq_3">Uygulama, İngilizce öğrenmenize yardımcı olabilir ve herkes için anlaşılması kolay dersler. Ses oynayarak dinleme becerilerinizi de geliştirebilirsiniz. Uygulamanın daha iyi bir kullanıcı deneyimi için uyarlanabilir temaları ve malzeme tasarımı vardır.</string>
+  <string name="question_4">Hataları nasıl rapor edebilir veya geri bildirim verebilirim?</string>
+  <string name="summary_preference_faq_4">Hataları &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt; adresinden rapor edebilirsiniz. Destek, bilgi ve istekler için d4r7355608@gmail.com ile de iletişime geçebilirsiniz. Uygulamadan memnunsanız, lütfen Google Play'de 5 yıldız değerlendirin.</string>
+  <string name="question_5">Uygulama veya geliştirici hakkında nasıl daha fazla bilgi edinebilirim?</string>
+  <string name="summary_preference_faq_5">Uygulamanın resmi &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; 'ı ziyaret edebilirsiniz. D4RK'yı Google geliştiricileri, XDA, YouTube, DeviantArt, GameJolt, Twitter ve GitHub gibi çeşitli platformlarda da takip edebilirsiniz.</string>
+  <string name="question_6">Uygulama veri gizliliğimi ve güvenliğimi nasıl ele alıyor?</string>
+  <string name="summary_preference_faq_6">Uygulama, üçüncü taraflarla herhangi bir veri paylaşmaz. Uygulama, uygulama bilgisi ve performans gibi bazı veri türlerini toplayabilir. Veriler transit olarak şifrelenir, ancak silinemez. Geliştiricilerin Google Play'de paylaşımı nasıl bildirdikleri hakkında daha fazla bilgi edinebilirsiniz.</string>
+  <string name="question_7">Ses derslerinde müzik ve sesin sahibi kim?</string>
+  <string name="summary_preference_faq_7">Ses derslerinden bazı müzikler kendi sahiplerine aittir ve ana ses Lidia Melinte'den.</string>
+  <string name="question_8">Uygulamaya ne sıklıkla yeni dersler eklenir?</string>
+  <string name="summary_preference_faq_8">Uygulama, yeni dersler ve özelliklerle düzenli olarak güncellenir. En son güncellemeler için Google Play sayfasını kontrol edebilir veya duyurular için sosyal medyada D4RK'yı takip edebilirsiniz.</string>
+  <string name="question_9">Lidia Melinte kimdir ve uygulamadaki rolü nedir?</string>
+  <string name="summary_preference_faq_9">Bir İngilizce öğretmeni olan Lidia Melinte, dersleri oluşturur ve uygulamadaki sesleri anlatır.</string>
+</resources>

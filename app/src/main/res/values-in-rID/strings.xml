@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_short_description">Belajar bahasa Inggris dan bersantai dalam waktu yang sama! 📚</string>
+  <string name="find_us">Temukan kami di</string>
+  <string name="website">Situs web</string>
+  <string name="question_1">Apa itu bahasa Inggris dengan lidia plus?</string>
+  <string name="summary_preference_faq_1">Bahasa Inggris dengan Lidia Plus adalah aplikasi yang membantu Anda belajar bahasa Inggris dengan membaca atau mendengarkan posting blog yang ditulis oleh Lidia, seorang guru bahasa Inggris.</string>
+  <string name="question_2">Bagaimana cara menggunakan aplikasi ini?</string>
+  <string name="summary_preference_faq_2">Anda dapat menggunakan aplikasi tanpa koneksi internet. Anda dapat memilih untuk membaca posting blog atau bermain audio sebagai gantinya. Anda juga dapat menyesuaikan tema dan pengaturan sesuai dengan preferensi Anda.</string>
+  <string name="question_3">Apa manfaat menggunakan aplikasi?</string>
+  <string name="summary_preference_faq_3">Aplikasi ini dapat membantu Anda belajar bahasa Inggris dengan pelajaran yang santai dan mudah dipahami untuk semua orang. Anda juga dapat meningkatkan keterampilan mendengarkan Anda dengan bermain audio. Aplikasi ini memiliki tema adaptif dan desain material-Anda untuk pengalaman pengguna yang lebih baik.</string>
+  <string name="question_4">Bagaimana saya bisa melaporkan bug atau memberikan umpan balik?</string>
+  <string name="summary_preference_faq_4">Anda dapat melaporkan bug di &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt;. Anda juga dapat menghubungi D4RK7355608@gmail.com untuk dukungan, informasi, dan permintaan. Jika Anda senang dengan aplikasi ini, silakan nilai 5 bintang di Google Play.</string>
+  <string name="question_5">Bagaimana saya bisa mempelajari lebih lanjut tentang aplikasi atau pengembang?</string>
+  <string name="summary_preference_faq_5">Anda dapat mengunjungi resmi &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; aplikasi. Anda juga dapat mengikuti D4RK di berbagai platform seperti pengembang Google, XDA, YouTube, DeviantArt, Gamejolt, Twitter, dan Github.</string>
+  <string name="question_6">Bagaimana aplikasi menangani privasi dan keamanan data saya?</string>
+  <string name="summary_preference_faq_6">Aplikasi ini tidak membagikan data apa pun dengan pihak ketiga. Aplikasi ini dapat mengumpulkan beberapa tipe data seperti info aplikasi dan kinerja. Data dienkripsi dalam perjalanan tetapi tidak dapat dihapus. Anda dapat mempelajari lebih lanjut tentang bagaimana pengembang menyatakan berbagi di Google Play.</string>
+  <string name="question_7">Siapa yang memiliki musik dan suara dalam pelajaran audio?</string>
+  <string name="summary_preference_faq_7">Beberapa musik dari pelajaran audio milik pemilik masing -masing dan suara utama berasal dari Lidia Melinte.</string>
+  <string name="question_8">Seberapa sering pelajaran baru ditambahkan ke aplikasi?</string>
+  <string name="summary_preference_faq_8">Aplikasi ini diperbarui secara berkala dengan pelajaran dan fitur baru. Anda dapat memeriksa halaman Google Play untuk pembaruan terbaru atau mengikuti D4RK di media sosial untuk pengumuman.</string>
+  <string name="question_9">Siapakah Lidia Melinte dan apa perannya dalam aplikasi ini?</string>
+  <string name="summary_preference_faq_9">Lidia Melinte, seorang guru bahasa Inggris, menciptakan pelajaran dan menceritakan audio di aplikasi.</string>
+</resources>

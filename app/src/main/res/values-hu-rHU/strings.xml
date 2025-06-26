@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_short_description">Tanuljon meg angolul, és lazítson ugyanabban az időben! 📚</string>
+  <string name="find_us">Keressen minket</string>
+  <string name="website">Weboldal</string>
+  <string name="question_1">Mi az angol a Lidia Plus -val?</string>
+  <string name="summary_preference_faq_1">Angolul a Lidia Plus -val egy olyan alkalmazás, amely segít angolul megtanulni, ha elolvassa vagy meghallgatja a Lidia, az angol tanár által írt blogbejegyzéseket.</string>
+  <string name="question_2">Hogyan használhatom az alkalmazást?</string>
+  <string name="summary_preference_faq_2">Az alkalmazást internetkapcsolat nélkül használhatja. Dönthet úgy, hogy elolvassa a blogbejegyzéseket, vagy ehelyett audio lejátszása. A témát és a beállításokat az Ön preferenciáinak megfelelően módosíthatja.</string>
+  <string name="question_3">Milyen előnyei vannak az alkalmazás használatának?</string>
+  <string name="summary_preference_faq_3">Az alkalmazás segíthet angolul megtanulni pihentető és könnyen érthető tanulságokkal mindenki számára. Audio lejátszásával javíthatja a hallgatási képességeit is. Az alkalmazás adaptív témákkal és anyagi tervezéssel rendelkezik a jobb felhasználói élmény érdekében.</string>
+  <string name="question_4">Hogyan jelenthetem be a hibákat vagy visszajelzést adhatok?</string>
+  <string name="summary_preference_faq_4">A hibákat a &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt; -en jelentheti. A d4rk7355608@gmail.com kapcsolatfelvételt is felveheti támogatás, információk és kérésekért. Ha elégedett az alkalmazással, kérjük, értékelje 5 csillagot a Google Play -en.</string>
+  <string name="question_5">Hogyan tudok többet megtudni az alkalmazásról vagy a fejlesztőről?</string>
+  <string name="summary_preference_faq_5">Látogassa meg az alkalmazás hivatalos &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; -át. Követheti a D4RK -t különféle platformon, például a Google Developers, az XDA, a YouTube, a DeviantArt, a GameJolt, a Twitter és a Github.</string>
+  <string name="question_6">Hogyan kezeli az alkalmazás az adataimat és a biztonságomat?</string>
+  <string name="summary_preference_faq_6">Az alkalmazás nem osztja meg az adatokat harmadik felekkel. Az alkalmazás összegyűjthet néhány adattípust, például az alkalmazásinformációkat és a teljesítményt. Az adatok titkosítva vannak a tranzitban, de nem törölhetők. Tudjon meg többet arról, hogy a fejlesztők hogyan deklarálják a Google Play megosztását.</string>
+  <string name="question_7">Ki tulajdonosa a zenei és a hangja az audio órákban?</string>
+  <string name="summary_preference_faq_7">Az audio órákból származó néhány zene a tulajdonosukhoz tartozik, és a fő hang Lidia Melinte -től származik.</string>
+  <string name="question_8">Milyen gyakran adnak új órákat az alkalmazáshoz?</string>
+  <string name="summary_preference_faq_8">Az alkalmazást rendszeresen frissítik új órákkal és funkciókkal. Ellenőrizheti a Google Play oldalt a legfrissebb frissítésekhez, vagy a D4RK -t a közösségi médiában követheti a bejelentésekhez.</string>
+  <string name="question_9">Ki az a Lidia Melinte, és mi a szerepe az alkalmazásban?</string>
+  <string name="summary_preference_faq_9">Lidia Melinte, egy angol tanár, létrehozza az órákat és elmondja az Audios -t az alkalmazásban.</string>
+</resources>

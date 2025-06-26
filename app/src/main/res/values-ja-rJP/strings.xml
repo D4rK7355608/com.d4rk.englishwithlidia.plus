@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_short_description">英語を学び、同時にリラックスしてください！ 📚</string>
+  <string name="find_us">私たちを見つけてください</string>
+  <string name="website">Webサイト</string>
+  <string name="question_1">Lidia Plusの英語とは何ですか？</string>
+  <string name="summary_preference_faq_1">Lidia Plusと英語は、英語の教師であるLidiaが書いたブログ投稿を読んだり聴いたりすることで、英語を学ぶのに役立つアプリです。</string>
+  <string name="question_2">アプリを使用するにはどうすればよいですか？</string>
+  <string name="summary_preference_faq_2">インターネット接続なしでアプリを使用できます。代わりにブログの投稿を読むか、オーディオを再生することを選択できます。また、好みに応じてテーマと設定を調整することもできます。</string>
+  <string name="question_3">アプリを使用することの利点は何ですか？</string>
+  <string name="summary_preference_faq_3">このアプリは、誰にとってもリラックスして理解しやすいレッスンで英語を学ぶのに役立ちます。また、オーディオをプレイすることでリスニングスキルを向上させることもできます。このアプリには、より良いユーザーエクスペリエンスのための適応テーマと素材の設計があります。</string>
+  <string name="question_4">バグを報告したり、フィードバックをしたりするにはどうすればよいですか？</string>
+  <string name="summary_preference_faq_4">&lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt;でバグを報告できます。サポート、情報、リクエストについては、d4rk7355608@gmail.comにお問い合わせください。アプリに満足している場合は、Google Playで5つ星を評価してください。</string>
+  <string name="question_5">アプリや開発者について詳しく知るにはどうすればよいですか？</string>
+  <string name="summary_preference_faq_5">アプリの公式&lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt;にアクセスできます。 Google開発者、XDA、YouTube、DeviantArt、GameJolt、Twitter、GithubなどのさまざまなプラットフォームでD4RKをフォローすることもできます。</string>
+  <string name="question_6">アプリは私のデータプライバシーとセキュリティをどのように処理しますか？</string>
+  <string name="summary_preference_faq_6">アプリは、サードパーティとデータを共有していません。アプリは、アプリ情報やパフォーマンスなどのデータ型を収集する場合があります。データは輸送中に暗号化されますが、削除することはできません。開発者がGoogle Playで共有を宣言する方法について詳しく知ることができます。</string>
+  <string name="question_7">オーディオレッスンで音楽と声を所有しているのは誰ですか？</string>
+  <string name="summary_preference_faq_7">オーディオレッスンの一部の音楽はそれぞれの所有者に属し、主な声はLidia Melinteのものです。</string>
+  <string name="question_8">アプリに新しいレッスンが追加される頻度はどれくらいですか？</string>
+  <string name="summary_preference_faq_8">アプリは、新しいレッスンと機能を備えた定期的に更新されます。 Google Playページで最新の更新を確認するか、発表のためにソーシャルメディアでD4RKをフォローしてください。</string>
+  <string name="question_9">Lidia Melinteは誰で、アプリでの彼女の役割は何ですか？</string>
+  <string name="summary_preference_faq_9">英語の教師であるLidia Melinteがレッスンを作成し、アプリのオーディオをナレーションします。</string>
+</resources>

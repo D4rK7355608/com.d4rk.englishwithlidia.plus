@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_short_description">Alamin ang Ingles at magpahinga sa parehong oras! 📚</string>
+  <string name="find_us">Hanapin kami sa</string>
+  <string name="website">Website</string>
+  <string name="question_1">Ano ang Ingles na may Lidia Plus?</string>
+  <string name="summary_preference_faq_1">Ang Ingles na may Lidia Plus ay isang app na tumutulong sa iyo na matuto ng Ingles sa pamamagitan ng pagbabasa o pakikinig sa mga post sa blog na isinulat ni Lidia, isang guro ng Ingles.</string>
+  <string name="question_2">Paano ko magagamit ang app?</string>
+  <string name="summary_preference_faq_2">Maaari mong gamitin ang app nang walang koneksyon sa internet. Maaari mong piliing basahin ang mga post sa blog o maglaro ng audio sa halip. Maaari mo ring ayusin ang tema at mga setting ayon sa iyong mga kagustuhan.</string>
+  <string name="question_3">Ano ang mga pakinabang ng paggamit ng app?</string>
+  <string name="summary_preference_faq_3">Ang app ay makakatulong sa iyo na malaman ang Ingles na may nakakarelaks at madaling maunawaan ang mga aralin para sa lahat. Maaari mo ring pagbutihin ang iyong mga kasanayan sa pakikinig sa pamamagitan ng paglalaro ng audio. Ang app ay may mga adaptive na tema at disenyo ng materyal para sa isang mas mahusay na karanasan sa gumagamit.</string>
+  <string name="question_4">Paano ko maiulat ang mga bug o magbigay ng puna?</string>
+  <string name="summary_preference_faq_4">Maaari kang mag -ulat ng mga bug sa &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt;. Maaari ka ring makipag -ugnay sa D4RK7355608@gmail.com para sa suporta, impormasyon, at mga kahilingan. Kung masaya ka sa app, mangyaring i -rate ito ng 5 bituin sa Google Play.</string>
+  <string name="question_5">Paano ko matututo nang higit pa tungkol sa app o sa developer?</string>
+  <string name="summary_preference_faq_5">Maaari mong bisitahin ang opisyal na &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; ng app. Maaari mo ring sundin ang D4RK sa iba't ibang mga platform tulad ng Google Developer, XDA, YouTube, Deviantart, GameJolt, Twitter, at GitHub.</string>
+  <string name="question_6">Paano pinangangasiwaan ng app ang aking privacy at seguridad ng data?</string>
+  <string name="summary_preference_faq_6">Ang app ay hindi nagbabahagi ng anumang data sa mga third party. Ang app ay maaaring mangolekta ng ilang mga uri ng data tulad ng impormasyon sa app at pagganap. Ang data ay naka -encrypt sa transit ngunit hindi matanggal. Maaari kang malaman ang higit pa tungkol sa kung paano ipinahayag ng mga developer ang pagbabahagi sa Google Play.</string>
+  <string name="question_7">Sino ang nagmamay -ari ng musika at boses sa mga aralin sa audio?</string>
+  <string name="summary_preference_faq_7">Ang ilang mga musika mula sa mga aralin sa audio ay kabilang sa kani -kanilang mga may -ari at pangunahing boses ay mula kay Lidia Melinte.</string>
+  <string name="question_8">Gaano kadalas ang mga bagong aralin na idinagdag sa app?</string>
+  <string name="summary_preference_faq_8">Ang app ay regular na na -update sa mga bagong aralin at tampok. Maaari mong suriin ang pahina ng Google Play para sa pinakabagong mga pag -update o sundin ang D4RK sa social media para sa mga anunsyo.</string>
+  <string name="question_9">Sino si Lidia Melinte at ano ang kanyang papel sa app?</string>
+  <string name="summary_preference_faq_9">Si Lidia Melinte, isang guro ng Ingles, ay lumilikha ng mga aralin at nagsasalaysay ng mga audio sa app.</string>
+</resources>

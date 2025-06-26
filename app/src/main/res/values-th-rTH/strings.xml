@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_short_description">เรียนรู้ภาษาอังกฤษและผ่อนคลายในเวลาเดียวกัน!</string>
+  <string name="find_us">ค้นหาเราใน</string>
+  <string name="website">เว็บไซต์</string>
+  <string name="question_1">ภาษาอังกฤษกับ Lidia Plus คืออะไร?</string>
+  <string name="summary_preference_faq_1">ภาษาอังกฤษกับ Lidia Plus เป็นแอพที่ช่วยให้คุณเรียนรู้ภาษาอังกฤษโดยการอ่านหรือฟังโพสต์บล็อกที่เขียนโดย Lidia ครูสอนภาษาอังกฤษ</string>
+  <string name="question_2">ฉันจะใช้แอพได้อย่างไร?</string>
+  <string name="summary_preference_faq_2">คุณสามารถใช้แอพโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต คุณสามารถเลือกอ่านโพสต์บล็อกหรือเล่นเสียงแทน นอกจากนี้คุณยังสามารถปรับธีมและการตั้งค่าตามความชอบของคุณ</string>
+  <string name="question_3">การใช้แอพมีประโยชน์อย่างไร?</string>
+  <string name="summary_preference_faq_3">แอพสามารถช่วยให้คุณเรียนรู้ภาษาอังกฤษได้ด้วยการผ่อนคลายและเข้าใจบทเรียนสำหรับทุกคน นอกจากนี้คุณยังสามารถพัฒนาทักษะการฟังด้วยการเล่นเสียง แอพมีธีมที่ปรับตัวได้และการออกแบบวัสดุเพื่อประสบการณ์การใช้งานที่ดีขึ้น</string>
+  <string name="question_4">ฉันจะรายงานข้อบกพร่องหรือให้ข้อเสนอแนะได้อย่างไร</string>
+  <string name="summary_preference_faq_4">คุณสามารถรายงานข้อบกพร่องใน &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt; นอกจากนี้คุณยังสามารถติดต่อ D4RK7355608@gmail.com เพื่อรับการสนับสนุนข้อมูลและคำขอ หากคุณมีความสุขกับแอพโปรดให้คะแนน 5 ดาวใน Google Play</string>
+  <string name="question_5">ฉันจะเรียนรู้เพิ่มเติมเกี่ยวกับแอพหรือนักพัฒนาได้อย่างไร</string>
+  <string name="summary_preference_faq_5">คุณสามารถเยี่ยมชม &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; อย่างเป็นทางการของแอพ นอกจากนี้คุณยังสามารถติดตาม D4RK บนแพลตฟอร์มต่าง ๆ เช่น Google Developers, XDA, YouTube, Deviantart, GameJolt, Twitter และ GitHub</string>
+  <string name="question_6">แอปจัดการความเป็นส่วนตัวและความปลอดภัยของข้อมูลของฉันอย่างไร</string>
+  <string name="summary_preference_faq_6">แอพไม่แบ่งปันข้อมูลใด ๆ กับบุคคลที่สาม แอพอาจรวบรวมประเภทข้อมูลบางประเภทเช่นข้อมูลแอพและประสิทธิภาพ ข้อมูลถูกเข้ารหัสระหว่างการขนส่ง แต่ไม่สามารถลบได้ คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับวิธีที่นักพัฒนาประกาศการแบ่งปันใน Google Play</string>
+  <string name="question_7">ใครเป็นเจ้าของเพลงและเสียงในบทเรียนเสียง?</string>
+  <string name="summary_preference_faq_7">เพลงบางเพลงจากบทเรียนเสียงเป็นของเจ้าของที่เกี่ยวข้องและเสียงหลักมาจาก Lidia Melinte</string>
+  <string name="question_8">มีการเพิ่มบทเรียนใหม่ในแอพบ่อยแค่ไหน?</string>
+  <string name="summary_preference_faq_8">แอพได้รับการปรับปรุงอย่างสม่ำเสมอด้วยบทเรียนและคุณสมบัติใหม่ ๆ คุณสามารถตรวจสอบหน้า Google Play สำหรับการอัปเดตล่าสุดหรือติดตาม D4RK บนโซเชียลมีเดียเพื่อประกาศ</string>
+  <string name="question_9">Lidia Melinte คือใครและบทบาทของเธอในแอพคืออะไร?</string>
+  <string name="summary_preference_faq_9">Lidia Melinte ครูสอนภาษาอังกฤษสร้างบทเรียนและบรรยายเสียงในแอพ</string>
+</resources>
