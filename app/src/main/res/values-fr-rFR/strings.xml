@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="app_short_description">Apprenez l'anglais et détendez-vous en même temps! 📚</string>
+  <string name="app_short_description">Apprenez l\'anglais et détendez-vous en même temps! 📚</string>
   <string name="find_us">Nous trouver sur</string>
   <string name="website">Site web</string>
-  <string name="question_1">Qu'est-ce que l'anglais avec Lidia Plus?</string>
-  <string name="summary_preference_faq_1">L'anglais avec Lidia Plus est une application qui vous aide à apprendre l'anglais en lisant ou en écoutant des articles de blog écrits par Lidia, un professeur d'anglais.</string>
-  <string name="question_2">Comment puis-je utiliser l'application?</string>
-  <string name="summary_preference_faq_2">Vous pouvez utiliser l'application sans connexion Internet. Vous pouvez choisir de lire les articles de blog ou de lire audio à la place. Vous pouvez également ajuster le thème et les paramètres en fonction de vos préférences.</string>
-  <string name="question_3">Quels sont les avantages de l'utilisation de l'application?</string>
-  <string name="summary_preference_faq_3">L'application peut vous aider à apprendre l'anglais avec des leçons relaxantes et faciles à comprendre pour tout le monde. Vous pouvez également améliorer vos compétences d'écoute en jouant audio. L'application a des thèmes adaptatifs et une conception de matériaux pour une meilleure expérience utilisateur.</string>
+  <string name="question_1">Qu\'est-ce que l\'anglais avec Lidia Plus?</string>
+  <string name="summary_preference_faq_1">L\'anglais avec Lidia Plus est une application qui vous aide à apprendre l\'anglais en lisant ou en écoutant des articles de blog écrits par Lidia, un professeur d\'anglais.</string>
+  <string name="question_2">Comment puis-je utiliser l\'application?</string>
+  <string name="summary_preference_faq_2">Vous pouvez utiliser l\'application sans connexion Internet. Vous pouvez choisir de lire les articles de blog ou de lire audio à la place. Vous pouvez également ajuster le thème et les paramètres en fonction de vos préférences.</string>
+  <string name="question_3">Quels sont les avantages de l\'utilisation de l\'application?</string>
+  <string name="summary_preference_faq_3">L\'application peut vous aider à apprendre l\'anglais avec des leçons relaxantes et faciles à comprendre pour tout le monde. Vous pouvez également améliorer vos compétences d\'écoute en jouant audio. L\'application a des thèmes adaptatifs et une conception de matériaux pour une meilleure expérience utilisateur.</string>
   <string name="question_4">Comment puis-je signaler des bogues ou donner des commentaires?</string>
-  <string name="summary_preference_faq_4">Vous pouvez signaler les bogues sur &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt;. Vous pouvez également contacter d4rk7355608@gmail.com pour l'assistance, les informations et les demandes. Si vous êtes satisfait de l'application, veuillez le noter 5 étoiles sur Google Play.</string>
-  <string name="question_5">Comment puis-je en savoir plus sur l'application ou le développeur?</string>
-  <string name="summary_preference_faq_5">Vous pouvez visiter le fonctionnaire &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; de l'application. Vous pouvez également suivre D4RK sur diverses plates-formes telles que Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter et GitHub.</string>
-  <string name="question_6">Comment l'application gère-t-elle ma confidentialité et ma sécurité des données?</string>
-  <string name="summary_preference_faq_6">L'application ne partage aucune donnée avec des tiers. L'application peut collecter certains types de données tels que les informations et les performances de l'application. Les données sont chiffrées en transit mais ne peuvent pas être supprimées. Vous pouvez en savoir plus sur la façon dont les développeurs déclarent le partage sur Google Play.</string>
+  <string name="summary_preference_faq_4">Vous pouvez signaler les bogues sur <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. Vous pouvez également contacter d4rk7355608@gmail.com pour l\'assistance, les informations et les demandes. Si vous êtes satisfait de l\'application, veuillez le noter 5 étoiles sur Google Play.</string>
+  <string name="question_5">Comment puis-je en savoir plus sur l\'application ou le développeur?</string>
+  <string name="summary_preference_faq_5">Vous pouvez visiter le fonctionnaire <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">website/blog</a> de l\'application. Vous pouvez également suivre D4RK sur diverses plates-formes telles que Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter et GitHub.</string>
+  <string name="question_6">Comment l\'application gère-t-elle ma confidentialité et ma sécurité des données?</string>
+  <string name="summary_preference_faq_6">L\'application ne partage aucune donnée avec des tiers. L\'application peut collecter certains types de données tels que les informations et les performances de l\'application. Les données sont chiffrées en transit mais ne peuvent pas être supprimées. Vous pouvez en savoir plus sur la façon dont les développeurs déclarent le partage sur Google Play.</string>
   <string name="question_7">À qui appartient la musique et la voix dans les leçons audio?</string>
   <string name="summary_preference_faq_7">Certaines musiques des leçons audio appartiennent à leurs propriétaires respectifs et à leur voix principale proviennent de Lidia Melinte.</string>
-  <string name="question_8">À quelle fréquence les nouvelles leçons sont-elles ajoutées à l'application?</string>
-  <string name="summary_preference_faq_8">L'application est mise à jour régulièrement avec de nouvelles leçons et fonctionnalités. Vous pouvez consulter la page Google Play pour les dernières mises à jour ou suivre D4RK sur les réseaux sociaux pour les annonces.</string>
-  <string name="question_9">Qui est Lidia Melinte et quel est son rôle dans l'application?</string>
-  <string name="summary_preference_faq_9">Lidia Melinte, professeur d'anglais, crée les leçons et raconte les audios de l'application.</string>
+  <string name="question_8">À quelle fréquence les nouvelles leçons sont-elles ajoutées à l\'application?</string>
+  <string name="summary_preference_faq_8">L\'application est mise à jour régulièrement avec de nouvelles leçons et fonctionnalités. Vous pouvez consulter la page Google Play pour les dernières mises à jour ou suivre D4RK sur les réseaux sociaux pour les annonces.</string>
+  <string name="question_9">Qui est Lidia Melinte et quel est son rôle dans l\'application?</string>
+  <string name="summary_preference_faq_9">Lidia Melinte, professeur d\'anglais, crée les leçons et raconte les audios de l\'application.</string>
 </resources>
