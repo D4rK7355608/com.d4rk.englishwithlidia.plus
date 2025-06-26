@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_short_description">Learn English and relax in the same time! 📚</string>
-
-    <string name="find_us">Find us on</string>
-    <string name="website">Website</string>
-
-    <string name="question_1">What is English with Lidia Plus?</string>
-    <string name="summary_preference_faq_1">English with Lidia Plus is an app that helps you learn English by reading or listening to blog posts written by Lidia, an English teacher.</string>
-    <string name="question_2">How can I use the app?</string>
-    <string name="summary_preference_faq_2">You can use the app without internet connection. You can choose to read the blog posts or play audio instead. You can also adjust the theme and settings according to your preferences.</string>
-    <string name="question_3">What are the benefits of using the app?</string>
-    <string name="summary_preference_faq_3">The app can help you learn English with relaxing and easy to understand lessons for everyone. You can also improve your listening skills by playing audio. The app has adaptive themes and Material-You design for a better user experience.</string>
-    <string name="question_4">How can I report bugs or give feedback?</string>
-    <string name="summary_preference_faq_4">You can report bugs on <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. You can also contact d4rk7355608@gmail.com for support, information, and requests. If you are happy with the app, please rate it 5 stars on Google Play.</string>
-    <string name="question_5">How can I learn more about the app or the developer?</string>
-    <string name="summary_preference_faq_5">You can visit the official <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">website/blog</a> of the app. You can also follow D4rK on various platforms such as Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter, and GitHub.</string>
-    <string name="question_6">How does the app handle my data privacy and security?</string>
-    <string name="summary_preference_faq_6">The app does not share any data with third parties. The app may collect some data types such as app info and performance. The data is encrypted in transit but cannot be deleted. You can learn more about how developers declare sharing on Google Play.</string>
-    <string name="question_7">Who owns the music and voice in the audio lessons?</string>
-    <string name="summary_preference_faq_7">Some music from the audio lessons belong to their respective owners and principal voice is from Lidia Melinte.</string>
-    <string name="question_8">How often are new lessons added to the app?</string>
-    <string name="summary_preference_faq_8">The app is updated regularly with new lessons and features. You can check the Google Play page for the latest updates or follow D4rK on social media for announcements.</string>
-    <string name="question_9">Who is Lidia Melinte and what is her role in the app?</string>
-    <string name="summary_preference_faq_9">Lidia Melinte, an English teacher, creates the lessons and narrates the audios in the app.</string>
+  <string name="app_short_description">انگریزی سیکھیں اور ایک ہی وقت میں آرام کریں! 📚</string>
+  <string name="find_us">ہمیں تلاش کریں</string>
+  <string name="website">ویب سائٹ</string>
+  <string name="question_1">لڈیا پلس کے ساتھ انگریزی کیا ہے؟</string>
+  <string name="summary_preference_faq_1">انگریزی کے ساتھ لڈیا پلس ایک ایسی ایپ ہے جو آپ کو انگریزی کے استاد لڈیا کے لکھے ہوئے بلاگ پوسٹس کو پڑھ کر یا سن کر انگریزی سیکھنے میں مدد کرتی ہے۔</string>
+  <string name="question_2">میں ایپ کو کس طرح استعمال کرسکتا ہوں؟</string>
+  <string name="summary_preference_faq_2">آپ انٹرنیٹ کنکشن کے بغیر ایپ کا استعمال کرسکتے ہیں۔ آپ بلاگ پوسٹس کو پڑھنے یا اس کے بجائے آڈیو کھیلنے کا انتخاب کرسکتے ہیں۔ آپ اپنی ترجیحات کے مطابق تھیم اور ترتیبات کو بھی ایڈجسٹ کرسکتے ہیں۔</string>
+  <string name="question_3">ایپ کو استعمال کرنے کے کیا فوائد ہیں؟</string>
+  <string name="summary_preference_faq_3">ایپ آپ کو آرام دہ اور ہر ایک کے لئے اسباق کو سمجھنے میں آسانی کے ساتھ انگریزی سیکھنے میں مدد فراہم کرسکتی ہے۔ آپ آڈیو کھیل کر اپنی سننے کی مہارت کو بھی بہتر بنا سکتے ہیں۔ ایپ کے پاس بہتر صارف کے تجربے کے لئے انکولی تھیمز اور مادی آپ ڈیزائن ہیں۔</string>
+  <string name="question_4">میں کیڑے کی اطلاع کیسے دے سکتا ہوں یا رائے دے سکتا ہوں؟</string>
+  <string name="summary_preference_faq_4">آپ &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt; پر کیڑے کی اطلاع دے سکتے ہیں۔ مدد ، معلومات اور درخواستوں کے لئے آپ D4RK7355608@gmail.com سے بھی رابطہ کرسکتے ہیں۔ اگر آپ ایپ سے خوش ہیں تو ، براہ کرم اسے گوگل پلے پر 5 ستاروں کی درجہ بندی کریں۔</string>
+  <string name="question_5">میں ایپ یا ڈویلپر کے بارے میں مزید کیسے سیکھ سکتا ہوں؟</string>
+  <string name="summary_preference_faq_5">آپ ایپ کے آفیشل &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; پر جا سکتے ہیں۔ آپ مختلف پلیٹ فارمز جیسے گوگل ڈویلپرز ، ایکس ڈی اے ، یوٹیوب ، ڈیئنٹارٹ ، گیمجولٹ ، ٹویٹر ، اور گٹ ہب پر بھی D4RK کی پیروی کرسکتے ہیں۔</string>
+  <string name="question_6">ایپ میرے ڈیٹا کی رازداری اور سلامتی کو کس طرح سنبھالتی ہے؟</string>
+  <string name="summary_preference_faq_6">ایپ تیسرے فریق کے ساتھ کوئی ڈیٹا شیئر نہیں کرتی ہے۔ ایپ کچھ ڈیٹا کی قسمیں جمع کرسکتی ہے جیسے ایپ کی معلومات اور کارکردگی۔ اعداد و شمار کو ٹرانزٹ میں خفیہ کیا گیا ہے لیکن اسے حذف نہیں کیا جاسکتا۔ آپ اس بارے میں مزید جان سکتے ہیں کہ ڈویلپر کس طرح گوگل پلے پر اشتراک کا اعلان کرتے ہیں۔</string>
+  <string name="question_7">آڈیو اسباق میں موسیقی اور آواز کا مالک کون ہے؟</string>
+  <string name="summary_preference_faq_7">آڈیو اسباق کی کچھ موسیقی ان کے متعلقہ مالکان سے تعلق رکھتی ہے اور پرنسپل آواز لڈیا میلنٹے کی ہے۔</string>
+  <string name="question_8">ایپ میں کتنے بار نئے اسباق شامل کیے جاتے ہیں؟</string>
+  <string name="summary_preference_faq_8">ایپ کو نئے اسباق اور خصوصیات کے ساتھ باقاعدگی سے اپ ڈیٹ کیا جاتا ہے۔ آپ تازہ ترین تازہ کاریوں کے لئے گوگل پلے پیج کو چیک کرسکتے ہیں یا اعلانات کے لئے سوشل میڈیا پر D4RK کی پیروی کرسکتے ہیں۔</string>
+  <string name="question_9">لیڈیا میلینٹ کون ہے اور ایپ میں اس کا کیا کردار ہے؟</string>
+  <string name="summary_preference_faq_9">ایک انگریزی ٹیچر ، لڈیا میلنٹے اسباق تیار کرتی ہے اور ایپ میں آڈیو کو بیان کرتی ہے۔</string>
 </resources>

@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_short_description">Learn English and relax in the same time! 📚</string>
-
-    <string name="find_us">Find us on</string>
-    <string name="website">Website</string>
-
-    <string name="question_1">What is English with Lidia Plus?</string>
-    <string name="summary_preference_faq_1">English with Lidia Plus is an app that helps you learn English by reading or listening to blog posts written by Lidia, an English teacher.</string>
-    <string name="question_2">How can I use the app?</string>
-    <string name="summary_preference_faq_2">You can use the app without internet connection. You can choose to read the blog posts or play audio instead. You can also adjust the theme and settings according to your preferences.</string>
-    <string name="question_3">What are the benefits of using the app?</string>
-    <string name="summary_preference_faq_3">The app can help you learn English with relaxing and easy to understand lessons for everyone. You can also improve your listening skills by playing audio. The app has adaptive themes and Material-You design for a better user experience.</string>
-    <string name="question_4">How can I report bugs or give feedback?</string>
-    <string name="summary_preference_faq_4">You can report bugs on <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. You can also contact d4rk7355608@gmail.com for support, information, and requests. If you are happy with the app, please rate it 5 stars on Google Play.</string>
-    <string name="question_5">How can I learn more about the app or the developer?</string>
-    <string name="summary_preference_faq_5">You can visit the official <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">website/blog</a> of the app. You can also follow D4rK on various platforms such as Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter, and GitHub.</string>
-    <string name="question_6">How does the app handle my data privacy and security?</string>
-    <string name="summary_preference_faq_6">The app does not share any data with third parties. The app may collect some data types such as app info and performance. The data is encrypted in transit but cannot be deleted. You can learn more about how developers declare sharing on Google Play.</string>
-    <string name="question_7">Who owns the music and voice in the audio lessons?</string>
-    <string name="summary_preference_faq_7">Some music from the audio lessons belong to their respective owners and principal voice is from Lidia Melinte.</string>
-    <string name="question_8">How often are new lessons added to the app?</string>
-    <string name="summary_preference_faq_8">The app is updated regularly with new lessons and features. You can check the Google Play page for the latest updates or follow D4rK on social media for announcements.</string>
-    <string name="question_9">Who is Lidia Melinte and what is her role in the app?</string>
-    <string name="summary_preference_faq_9">Lidia Melinte, an English teacher, creates the lessons and narrates the audios in the app.</string>
+  <string name="app_short_description">เรียนรู้ภาษาอังกฤษและผ่อนคลายในเวลาเดียวกัน!</string>
+  <string name="find_us">ค้นหาเราใน</string>
+  <string name="website">เว็บไซต์</string>
+  <string name="question_1">ภาษาอังกฤษกับ Lidia Plus คืออะไร?</string>
+  <string name="summary_preference_faq_1">ภาษาอังกฤษกับ Lidia Plus เป็นแอพที่ช่วยให้คุณเรียนรู้ภาษาอังกฤษโดยการอ่านหรือฟังโพสต์บล็อกที่เขียนโดย Lidia ครูสอนภาษาอังกฤษ</string>
+  <string name="question_2">ฉันจะใช้แอพได้อย่างไร?</string>
+  <string name="summary_preference_faq_2">คุณสามารถใช้แอพโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต คุณสามารถเลือกอ่านโพสต์บล็อกหรือเล่นเสียงแทน นอกจากนี้คุณยังสามารถปรับธีมและการตั้งค่าตามความชอบของคุณ</string>
+  <string name="question_3">การใช้แอพมีประโยชน์อย่างไร?</string>
+  <string name="summary_preference_faq_3">แอพสามารถช่วยให้คุณเรียนรู้ภาษาอังกฤษได้ด้วยการผ่อนคลายและเข้าใจบทเรียนสำหรับทุกคน นอกจากนี้คุณยังสามารถพัฒนาทักษะการฟังด้วยการเล่นเสียง แอพมีธีมที่ปรับตัวได้และการออกแบบวัสดุเพื่อประสบการณ์การใช้งานที่ดีขึ้น</string>
+  <string name="question_4">ฉันจะรายงานข้อบกพร่องหรือให้ข้อเสนอแนะได้อย่างไร</string>
+  <string name="summary_preference_faq_4">คุณสามารถรายงานข้อบกพร่องใน &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt; นอกจากนี้คุณยังสามารถติดต่อ D4RK7355608@gmail.com เพื่อรับการสนับสนุนข้อมูลและคำขอ หากคุณมีความสุขกับแอพโปรดให้คะแนน 5 ดาวใน Google Play</string>
+  <string name="question_5">ฉันจะเรียนรู้เพิ่มเติมเกี่ยวกับแอพหรือนักพัฒนาได้อย่างไร</string>
+  <string name="summary_preference_faq_5">คุณสามารถเยี่ยมชม &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; อย่างเป็นทางการของแอพ นอกจากนี้คุณยังสามารถติดตาม D4RK บนแพลตฟอร์มต่าง ๆ เช่น Google Developers, XDA, YouTube, Deviantart, GameJolt, Twitter และ GitHub</string>
+  <string name="question_6">แอปจัดการความเป็นส่วนตัวและความปลอดภัยของข้อมูลของฉันอย่างไร</string>
+  <string name="summary_preference_faq_6">แอพไม่แบ่งปันข้อมูลใด ๆ กับบุคคลที่สาม แอพอาจรวบรวมประเภทข้อมูลบางประเภทเช่นข้อมูลแอพและประสิทธิภาพ ข้อมูลถูกเข้ารหัสระหว่างการขนส่ง แต่ไม่สามารถลบได้ คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับวิธีที่นักพัฒนาประกาศการแบ่งปันใน Google Play</string>
+  <string name="question_7">ใครเป็นเจ้าของเพลงและเสียงในบทเรียนเสียง?</string>
+  <string name="summary_preference_faq_7">เพลงบางเพลงจากบทเรียนเสียงเป็นของเจ้าของที่เกี่ยวข้องและเสียงหลักมาจาก Lidia Melinte</string>
+  <string name="question_8">มีการเพิ่มบทเรียนใหม่ในแอพบ่อยแค่ไหน?</string>
+  <string name="summary_preference_faq_8">แอพได้รับการปรับปรุงอย่างสม่ำเสมอด้วยบทเรียนและคุณสมบัติใหม่ ๆ คุณสามารถตรวจสอบหน้า Google Play สำหรับการอัปเดตล่าสุดหรือติดตาม D4RK บนโซเชียลมีเดียเพื่อประกาศ</string>
+  <string name="question_9">Lidia Melinte คือใครและบทบาทของเธอในแอพคืออะไร?</string>
+  <string name="summary_preference_faq_9">Lidia Melinte ครูสอนภาษาอังกฤษสร้างบทเรียนและบรรยายเสียงในแอพ</string>
 </resources>

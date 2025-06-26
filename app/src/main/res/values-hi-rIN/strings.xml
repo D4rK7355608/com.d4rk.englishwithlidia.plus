@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_short_description">Learn English and relax in the same time! 📚</string>
-
-    <string name="find_us">Find us on</string>
-    <string name="website">Website</string>
-
-    <string name="question_1">What is English with Lidia Plus?</string>
-    <string name="summary_preference_faq_1">English with Lidia Plus is an app that helps you learn English by reading or listening to blog posts written by Lidia, an English teacher.</string>
-    <string name="question_2">How can I use the app?</string>
-    <string name="summary_preference_faq_2">You can use the app without internet connection. You can choose to read the blog posts or play audio instead. You can also adjust the theme and settings according to your preferences.</string>
-    <string name="question_3">What are the benefits of using the app?</string>
-    <string name="summary_preference_faq_3">The app can help you learn English with relaxing and easy to understand lessons for everyone. You can also improve your listening skills by playing audio. The app has adaptive themes and Material-You design for a better user experience.</string>
-    <string name="question_4">How can I report bugs or give feedback?</string>
-    <string name="summary_preference_faq_4">You can report bugs on <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">GitHub</a>. You can also contact d4rk7355608@gmail.com for support, information, and requests. If you are happy with the app, please rate it 5 stars on Google Play.</string>
-    <string name="question_5">How can I learn more about the app or the developer?</string>
-    <string name="summary_preference_faq_5">You can visit the official <a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues">website/blog</a> of the app. You can also follow D4rK on various platforms such as Google Developers, XDA, YouTube, DeviantArt, GameJolt, Twitter, and GitHub.</string>
-    <string name="question_6">How does the app handle my data privacy and security?</string>
-    <string name="summary_preference_faq_6">The app does not share any data with third parties. The app may collect some data types such as app info and performance. The data is encrypted in transit but cannot be deleted. You can learn more about how developers declare sharing on Google Play.</string>
-    <string name="question_7">Who owns the music and voice in the audio lessons?</string>
-    <string name="summary_preference_faq_7">Some music from the audio lessons belong to their respective owners and principal voice is from Lidia Melinte.</string>
-    <string name="question_8">How often are new lessons added to the app?</string>
-    <string name="summary_preference_faq_8">The app is updated regularly with new lessons and features. You can check the Google Play page for the latest updates or follow D4rK on social media for announcements.</string>
-    <string name="question_9">Who is Lidia Melinte and what is her role in the app?</string>
-    <string name="summary_preference_faq_9">Lidia Melinte, an English teacher, creates the lessons and narrates the audios in the app.</string>
+  <string name="app_short_description">अंग्रेजी सीखें और एक ही समय में आराम करें! 📚</string>
+  <string name="find_us">हमें खोजें</string>
+  <string name="website">वेबसाइट</string>
+  <string name="question_1">लिडिया प्लस के साथ अंग्रेजी क्या है?</string>
+  <string name="summary_preference_faq_1">लिडिया प्लस के साथ अंग्रेजी एक ऐसा ऐप है जो एक अंग्रेजी शिक्षक, लिडिया द्वारा लिखित ब्लॉग पोस्ट को पढ़कर या सुनकर अंग्रेजी सीखने में मदद करता है।</string>
+  <string name="question_2">मैं ऐप का उपयोग कैसे कर सकता हूं?</string>
+  <string name="summary_preference_faq_2">आप इंटरनेट कनेक्शन के बिना ऐप का उपयोग कर सकते हैं। आप इसके बजाय ब्लॉग पोस्ट पढ़ने या ऑडियो खेलने के लिए चुन सकते हैं। आप अपनी प्राथमिकताओं के अनुसार थीम और सेटिंग्स को भी समायोजित कर सकते हैं।</string>
+  <string name="question_3">ऐप का उपयोग करने के क्या लाभ हैं?</string>
+  <string name="summary_preference_faq_3">ऐप आपको आराम करने और सभी के लिए सबक समझने में आसान के साथ अंग्रेजी सीखने में मदद कर सकता है। आप ऑडियो खेलकर अपने सुनने के कौशल में भी सुधार कर सकते हैं। ऐप में बेहतर उपयोगकर्ता अनुभव के लिए अनुकूली विषय और सामग्री-यू डिज़ाइन है।</string>
+  <string name="question_4">मैं बग्स की रिपोर्ट कैसे कर सकता हूं या प्रतिक्रिया दे सकता हूं?</string>
+  <string name="summary_preference_faq_4">आप &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;GitHub&lt;/a&gt; पर बग रिपोर्ट कर सकते हैं। आप समर्थन, सूचना और अनुरोधों के लिए D4RK7355608@gmail.com से भी संपर्क कर सकते हैं। यदि आप ऐप से खुश हैं, तो कृपया इसे Google Play पर 5 सितारों को रेट करें।</string>
+  <string name="question_5">मैं ऐप या डेवलपर के बारे में अधिक कैसे सीख सकता हूं?</string>
+  <string name="summary_preference_faq_5">आप ऐप के आधिकारिक &lt;a href="https://github.com/D4rK7355608/com.d4rk.englishwithlidia.plus/issues"&gt;website/blog&lt;/a&gt; पर जा सकते हैं। आप Google डेवलपर्स, XDA, YouTube, Deviantart, GameJolt, Twitter और Github जैसे विभिन्न प्लेटफार्मों पर D4RK का अनुसरण भी कर सकते हैं।</string>
+  <string name="question_6">ऐप मेरे डेटा गोपनीयता और सुरक्षा को कैसे संभालता है?</string>
+  <string name="summary_preference_faq_6">ऐप किसी भी डेटा को तीसरे पक्ष के साथ साझा नहीं करता है। ऐप कुछ डेटा प्रकार जैसे ऐप जानकारी और प्रदर्शन एकत्र कर सकता है। डेटा को पारगमन में एन्क्रिप्ट किया गया है, लेकिन इसे हटाया नहीं जा सकता है। आप इस बारे में अधिक जान सकते हैं कि डेवलपर्स Google Play पर साझा करने की घोषणा कैसे करते हैं।</string>
+  <string name="question_7">ऑडियो पाठों में संगीत और आवाज कौन है?</string>
+  <string name="summary_preference_faq_7">ऑडियो पाठों से कुछ संगीत उनके संबंधित मालिकों से संबंधित हैं और प्रिंसिपल वॉयस लिडिया मेलिंटे से है।</string>
+  <string name="question_8">ऐप में कितनी बार नए पाठ जोड़े जाते हैं?</string>
+  <string name="summary_preference_faq_8">ऐप को नए पाठों और सुविधाओं के साथ नियमित रूप से अपडेट किया जाता है। आप नवीनतम अपडेट के लिए Google Play पेज की जांच कर सकते हैं या घोषणाओं के लिए सोशल मीडिया पर D4RK का पालन कर सकते हैं।</string>
+  <string name="question_9">लिडिया मेलिंटे कौन है और ऐप में उसकी क्या भूमिका है?</string>
+  <string name="summary_preference_faq_9">एक अंग्रेजी शिक्षक, लिडिया मेलिंटे, सबक बनाते हैं और ऐप में ऑडियोस बताते हैं।</string>
 </resources>
