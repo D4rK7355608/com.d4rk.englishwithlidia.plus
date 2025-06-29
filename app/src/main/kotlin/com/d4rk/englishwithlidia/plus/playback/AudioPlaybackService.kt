@@ -6,6 +6,7 @@ import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
+import com.d4rk.englishwithlidia.plus.playback.CustomNotificationProvider
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 
@@ -16,8 +17,16 @@ class AudioPlaybackService : MediaSessionService() {
         ExoPlayer.Builder(this).setAudioAttributes(audioAttributes , true).build()
     }
 
+    private val notificationProvider: CustomNotificationProvider by lazy {
+        CustomNotificationProvider(this)
+    }
+
     private val mediaSession : MediaSession by lazy {
-        MediaSession.Builder(this , player).setCallback(MediaSessionCallback()).build()
+        MediaSession.Builder(this , player)
+            .setCallback(MediaSessionCallback())
+            .setMediaNotificationProvider(notificationProvider)
+            .setMediaButtonResumptionEnabled(false)
+            .build()
     }
 
     override fun onCreate() {
