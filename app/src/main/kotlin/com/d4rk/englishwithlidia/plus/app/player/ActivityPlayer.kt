@@ -4,7 +4,6 @@ import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaItem
@@ -34,7 +33,7 @@ abstract class ActivityPlayer : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val context = applicationContext
         val intent = Intent(context, AudioPlaybackService::class.java)
-        ContextCompat.startForegroundService(context, intent)
+        context.startService(intent)
         val sessionToken = SessionToken(context, ComponentName(context, AudioPlaybackService::class.java))
         controllerFuture = MediaController.Builder(context, sessionToken).buildAsync()
         lifecycleScope.launch {
